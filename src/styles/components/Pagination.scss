@@ -1,0 +1,32 @@
+.paginationLayout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5em;
+}
+
+.pagination {
+  .page-item {
+    margin: 0 2px;
+    a {
+      line-height: 35px;
+      display: block;
+      width: 33px;
+      padding: 0;
+      text-align: center;
+      border-radius: 3px;
+      overflow: hidden;
+      color: $theme-black-2;
+
+      &.active {
+        color: $white;
+        background: $theme-black-3 !important;
+      }
+    }
+  }
+  .page-item--arrow {
+    a {
+      background: $theme-gray-8;
+    }
+  }
+}

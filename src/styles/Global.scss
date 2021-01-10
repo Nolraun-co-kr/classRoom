@@ -1,0 +1,208 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  vertical-align: baseline;
+  font-family: 'Noto Sans KR', san-serif;
+  letter-spacing: -0.02em;
+  box-sizing: border-box;
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+  }
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.wrap {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+button {
+  outline-width: 0;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+
+.wrapper {
+  display: flex;
+
+  .lnb {
+    flex: none;
+    width: 250px;
+    height: 100vh;
+    overflow: auto;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .content {
+    flex: 1;
+  }
+  .content__inner {
+    min-height: calc(100vh - 60px);
+    @include theme('background', 'content-bg');
+  }
+}
+
+.content {
+
+}
+
+img {
+  max-width: 100%;
+}
+
+.content {
+  @include theme('background', 'background');
+  max-width: calc(100% - 250px);
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    padding-top: 60px;
+  }
+}
+.content__inner {
+  border-top-left-radius: 30px;
+  @include theme('background', 'content-bg');
+  width: 100%;
+}
+
+select {
+  appearance: none;
+  border: none;
+}
+
+

@@ -1,0 +1,99 @@
+.header {
+  height: 60px;
+  @include theme('background', 'background');
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    padding:0 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 5000;
+  }
+
+  ._breadcrumb {
+    background:none;
+    display: flex;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    a {
+      font-size: 14px;
+      @include theme('color', 'default-color');
+      & ~ a {
+        background: url('#{$image-path}/bread-right.png') no-repeat 8px center;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .mobile-header-title {
+    display: none;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
+
+    .menu {
+      background: url('#{$image-path}/hamburger-icon.png') no-repeat center;
+      background-size: 100% auto;
+      width: 20px;
+      height: 30px;
+      margin-right: 10px;
+
+      .theme-dark & {
+        background: url('#{$image-path}/hamburger-icon2.png') no-repeat center;
+        background-size: 100% auto;
+      }
+    }
+    h2 {
+      @include theme('color', 'nav-block-name');
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+  .haeder__right {
+    display: flex;
+    padding-right: 30px;
+    margin-left: auto;
+    @media screen and (max-width: 768px) {
+      padding-right: 0;
+    }
+
+    button {
+      height: 30px;
+      min-width: 30px;
+      margin-left: 10px;
+      position: relative;
+      outline-width: 0;
+      @media screen and (max-width: 768px) {
+        min-width: auto;
+
+      }
+      .new {
+        position: absolute;
+        background:#f00;
+        color:#fff;
+        font-size: 10px;
+        width: 15px;
+        height: 15px;
+        display: block;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 15px;
+        left:-2px;
+        top: 0px;
+      }
+    }
+
+    .drop-button {
+      font-size: 14px;
+      text-align: left;
+      padding-right: 20px;
+      background: url('#{$image-path}/small-arrow-bottom.png') no-repeat right center;
+      @include theme('color', 'header-text');
+    }
+  }
+}

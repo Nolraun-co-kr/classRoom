@@ -1,0 +1,55 @@
+.lnb {
+  @include theme('background', 'background')
+}
+
+.lnb__header {
+  padding:0 30px;
+  a {
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+
+.lnb__body {
+  padding:0 30px;
+}
+
+.lnb__block {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+
+}
+
+.lnb__block-name {
+  font-size: 1rem;
+  line-height:20px;
+  width: 100%;
+  text-align: left;
+  background: url('#{$image-path}/nav-toggle-down.png') no-repeat right center;
+  @include theme('color', 'nav-block-name');
+  &.active {
+    background: url('#{$image-path}/nav-toggle-up.png') no-repeat right center;
+  }
+}
+
+.lnb__block-depth {
+  margin-top: 15px;
+  a {
+    line-height: 30px;
+    display: block;
+    padding-left: 30px;
+    font-size: 14px;
+    @include theme('color', 'default-color');
+
+    @for $i from 1 through 18 {
+      &.lnb-#{$i} {
+        background: url('#{$image-path}/lnb-#{$i}.png') no-repeat left center;
+      }
+    }
+  }
+
+
+}

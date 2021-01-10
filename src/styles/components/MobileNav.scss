@@ -1,0 +1,93 @@
+.mobileNav {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: $white;
+  z-index: 6000;
+  transition: all 0.5s;
+  @include theme('background-color', 'MobileNavBg2');
+  &.active {
+    left: 0;
+  }
+}
+
+.mobileNav__header {
+  @include theme('background', 'mobileUserMenuHeader');
+  border-bottom: 1px solid #000;
+  .wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding:0 20px;
+    height: 90px;
+    padding-top: 40px;
+    a {
+    }
+    .close {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+      color: $white;
+      @include theme('color', 'nav-block-name');
+      z-index: 2;
+      font-size: 1.5rem;
+
+    }
+
+    .search {
+      flex: 1;
+      display: flex;
+      background:#eeeeee;
+      border-radius: 2em;
+      overflow: hidden;
+      margin-left: 20px;
+
+      input {
+        flex: 1;
+        border: none;
+        background: none;
+        padding:0 15px;
+        font-size: 14px;
+      }
+      button {
+        text-indent: -9999px;
+        overflow: hidden;
+        width: 35px;
+        height: 35px;
+        background: url('#{$image-path}/search-icon.png') no-repeat center;
+        background-size: auto 15px;
+      }
+
+    }
+  }
+}
+
+.mobileNav__links {
+
+  .lnb__block {
+    padding: 0;
+    @include theme('border-color', 'MobileNavBg');
+  }
+  .lnb__block-name {
+    padding:0 20px;
+    height: 45px;
+    background: url('#{$image-path}/nav-toggle-down.png') no-repeat calc(100% - 20px) center;
+    @include theme('background-color', 'MobileNavBg2');
+    &.active {
+      background: url('#{$image-path}/nav-toggle-up.png') no-repeat calc(100% - 20px) center;
+      @include theme('background-color', 'MobileNavBg2');
+    }
+  }
+  .lnb__block-depth {
+    margin: 0;
+    padding: 10px 20px 10px 40px;
+    @include theme('background', 'MobileNavBg');
+  }
+
+}

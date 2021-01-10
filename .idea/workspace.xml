@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Home/MobileHomeBottomNav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Home/MobileHomeNav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/Footer/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/Header/BreadCrumb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/Header/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/ListPage/Wrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/Lnb/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/MobileNav/MobileNavItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/MobileNav/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/MobileUserMenu/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/Nav/NavBlock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/Nav/NavBody.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Layout/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ScrollToTop/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/Home/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/RouterApp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useWindowDemensions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useWindowPosition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/Global.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/Footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/Header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/Lnb.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/MobileNav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/MobileUserMenu.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/Pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/listwrapper.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/containers/Home.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/mixins/theme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/variables/color.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1msptQ4m5Nkgus8xizOiEYzw5Ix" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Layout/Nav" />
+      <recent name="$PROJECT_DIR$/src/components/Layout" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="" />
+      <created>1610292366879</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610292366879</updated>
+      <workItem from="1610292368275" duration="15854000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

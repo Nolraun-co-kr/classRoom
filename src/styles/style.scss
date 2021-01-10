@@ -1,0 +1,25 @@
+// variable
+
+$image-path: 'http://localhost:5000/assets/images';
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+// variables
+@import 'variables/color';
+
+// mixin
+@import 'mixins/theme';
+
+@import 'Global';
+
+// containers
+@import 'containers/Home';
+
+// components
+@import 'components/Footer';
+@import 'components/Header';
+@import 'components/MobileUserMenu';
+@import 'components/MobileNav';
+@import 'components/Pagination';
+@import 'components/Lnb';
+@import 'components/listwrapper';

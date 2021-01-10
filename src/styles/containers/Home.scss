@@ -1,0 +1,225 @@
+.list__body {
+  overflow: auto;
+  padding-bottom: 70px;
+}
+
+._row {
+  display: flex;
+}
+._col {
+  width: 260px;
+  flex: none;
+
+  & ~ ._col {
+    margin-left: 30px;
+  }
+
+  ._col-list {
+
+  }
+  ._col-create {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 3px;
+    @include theme('color', 'create-btn');
+    @include theme('background', 'create-bg');
+  }
+  ._col-info {
+    @include theme('background', 'info-bg');
+    padding: 15px;
+    border-radius: 3px;
+    h4 {
+      @include theme('color', 'info-title-color');
+    }
+    p {
+      font-size: 14px;
+      line-height: 18px;
+      color:#666666;
+    }
+  }
+  ._col-more {
+    font-size: 14px;
+    color:#67758a;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  ._col-list-item {
+    margin-bottom: 10px;
+    a {
+      display: block;
+      width: 260px;
+      height: 123px;
+      background: url('#{$image-path}/box-bg1.png') no-repeat center;
+      padding: 20px 20px 0;
+      .theme-dark & {
+        background: url('#{$image-path}/box-bg2.png') no-repeat center;
+      }
+    }
+
+    .tags {
+      display: flex;
+
+      span {
+        font-size: 14px;
+        line-height: 24px;
+        padding:0 10px;
+        border-radius: 3px;
+        & ~ span {
+          margin-left: 5px;
+        }
+        &.tag1 {
+          color:#fff;
+          @include theme('background', 'tag1');
+        }
+        &.tag2 {
+          color:#666;
+          @include theme('background', 'tag2');
+        }
+        &.tag3 {
+          color:#fff;
+          @include theme('background', 'tag3');
+        }
+      }
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 8px;
+      @include theme('color', 'nav-block-name');
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 10px;
+      @include theme('color', 'default-color');
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  ._col-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    height: 20px;
+
+    h3 {
+      position: relative;
+      font-size: 18px;
+      font-weight: 600;
+      padding-left: 15px;
+      line-height: 20px;
+      @include theme('color', 'nav-block-name');
+      &:after {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 11px;
+        transform: translateY(-50%);
+        background:#999999;
+      }
+      &.active:after {
+        background:#57a827;
+      }
+      &.warning:after {
+        background:#f00;
+      }
+    }
+  }
+}
+
+.mobileHomeNav {
+  display: none;
+  overflow: auto;
+  padding:0 10px;
+  @include theme('background', 'background');
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+  a {
+    flex: 1;
+    text-align: center;
+    height: 40px;
+    white-space: nowrap;
+    padding:5px 0 0;
+    margin:0 10px;
+    color:#999999;
+
+    &.active {
+      color:#000;
+      border-bottom: 3px solid #000;
+      @include theme('color', 'mobile-nav-active');
+      @include theme('border-color', 'mobile-nav-active');
+    }
+  }
+}
+
+.mobileHomeBottomNav {
+  display: none;
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  @include theme('background', 'background');
+  box-shadow: 0px 0px 20px rgba(0,0,0,.1);
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+  a {
+    flex: 1;
+    text-align: center;
+
+    @for $i from 1 through 4 {
+      &.mbn#{$i} {
+        p {
+          background: url('#{$image-path}/mobile-bottom-nav#{$i}.png') no-repeat center top;
+          background-size: auto 20px;
+          padding-top: 25px;
+          height: 40px;
+          font-size: 12px;
+          color:#666666;
+        }
+      }
+      &.active.mbn#{$i} {
+        p {
+          background: url('#{$image-path}/mobile-bottom-nav#{$i}-active.png') no-repeat center top;
+          background-size: auto 20px;
+          color:#2e8bc5;
+        }
+      }
+    }
+  }
+
+}
+
+.home {
+  min-height: calc(100vh - 60px);
+}
+
+
+.list1 {
+  display: flex;
+  height: 100%;
+
+  ._row {
+    & ~ ._row {
+      margin-left: 30px;
+      padding-left: 30px;
+      border-left: 2px dashed #ddd;
+      @include theme('border-color', 'border2');
+    }
+  }
+}

@@ -1,0 +1,83 @@
+$themes: (
+  light: (
+    background: #ffffff,
+    header-text: #666,
+    nav-block-name: #000,
+    default-color: #666,
+    content-bg: #f6f8fb,
+    border: #ddd,
+    border2: #ddd,
+          tag1: #505662,
+          tag2: #ececec,
+          tag3: #9659cf,
+    create-btn: #67758a,
+    create-bg: #e8ebf0,
+    info-title-color: #000,
+    info-bg: #eeeeee,
+          mobile-nav-active: #000,
+          mobileUserMenuBg: #fff,
+          mobileUserMenuHeader: #fff,
+          MobileNavBg: #f6f8fb,
+          MobileNavBg2: #fff,
+  ),
+
+  dark: (
+    background: #1d1f22,
+    header-text: #fff,
+    nav-block-name: #fff,
+    default-color: #999,
+    content-bg: #2c3038,
+    border: #50555c,
+    border2: #67758a,
+          tag1: #505662,
+          tag2: #ececec,
+          tag3: #9659cf,
+    create-btn: #fff,
+    create-bg: #3b3f49,
+    info-title-color: #999999,
+    info-bg: #1d1f22,
+          mobile-nav-active: #2e8bc5,
+          mobileUserMenuBg: #2c3038,
+          mobileUserMenuHeader: #1d1f22,
+          MobileNavBg: #1d1f22,
+          MobileNavBg2: #2c3038,
+  )
+);
+
+
+//-------------------------------
+
+$black: #333;
+$white: #fff;
+
+$theme-red: #e72e35;
+
+$theme-gray-1: #e5e5e5;
+$theme-gray-2: #d2d2d2;
+$theme-gray-3: #eee;
+$theme-gray-4: #ddd;
+$theme-gray-5: #666;
+$theme-gray-6: #999;
+$theme-gray-7: #626262;
+$theme-gray-8: #cecece;
+$theme-gray-9: #959595;
+$theme-gray-10: #eaeaea;
+$theme-gray-11: #bfbfbf;
+
+$theme-black-2: #000;
+$theme-black-3: #535353;
+$theme-black-4: #272b37;
+$theme-black-5: #2b2f3b;
+$theme-black-6: #434343;
+$theme-black-7: #3e3e3e;
+
+$theme-white-1: #fafafb;
+$theme-white-2: #fff4f4;
+$theme-white-3: #f8f8f8;
+
+$theme-blue-1: #4a63ae;
+$theme-blue-2: #3e5599;
+
+$color-facebook: #2970e5;
+$color-google: #ef4239;
+$color-twitter: #39a9e0;
