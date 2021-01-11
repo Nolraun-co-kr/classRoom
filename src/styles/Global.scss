@@ -157,7 +157,8 @@ a:hover {
 
 .wrapper {
   display: flex;
-
+  overflow-x: hidden;
+  width: 100%;
   .lnb {
     flex: none;
     width: 250px;
