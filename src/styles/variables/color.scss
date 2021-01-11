@@ -19,6 +19,12 @@ $themes: (
           mobileUserMenuHeader: #fff,
           MobileNavBg: #f6f8fb,
           MobileNavBg2: #fff,
+          progress-bg: #eaeef4,
+          progress-bar: #9dc8e9,
+          content-hover-bg: #e5eaf1,
+          dots-color: #dddddd,
+          dots-color-active: #666666,
+
   ),
 
   dark: (
@@ -41,6 +47,11 @@ $themes: (
           mobileUserMenuHeader: #1d1f22,
           MobileNavBg: #1d1f22,
           MobileNavBg2: #2c3038,
+          progress-bg: #292d34,
+          progress-bar: #6f9bbc,
+          content-hover-bg: #1d1f22,
+          dots-color: #1d1f22,
+          dots-color-active: #2e8bc5,
   )
 );
 

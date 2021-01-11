@@ -14,6 +14,7 @@ $image-path: 'http://localhost:5000/assets/images';
 
 // containers
 @import 'containers/Home';
+@import 'containers/CourseDetail';
 
 // components
 @import 'components/Footer';
@@ -23,3 +24,7 @@ $image-path: 'http://localhost:5000/assets/images';
 @import 'components/Pagination';
 @import 'components/Lnb';
 @import 'components/listwrapper';
+@import 'components/progress';
+@import 'components/Tabs';
+@import 'components/Contents';
+@import 'components/Communication';

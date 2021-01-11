@@ -36,12 +36,12 @@ const lnbData = [
         title: '내 강좌'
       },
       {
-        path: '/',
+        path: '/module',
         className: 'lnb-6',
         title: '내 학습모듈'
       },
       {
-        path: '/',
+        path: '/activity',
         className: 'lnb-7',
         title: '내 학습활동'
       },

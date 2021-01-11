@@ -1,0 +1,127 @@
+.contents {
+
+
+  .contents__block {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    & ~ .contents__block {
+      margin-top: 20px;
+    }
+    @include theme('background', 'background');
+    @include theme('border-color', 'border');
+
+
+  }
+  .contents__header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding:0 20px;
+    @include theme('border-color', 'border');
+
+    h2 {
+      font-size:1.125rem;
+      font-weight: 700;
+
+      @include theme('color', 'nav-block-name');
+    }
+
+    ._progress {
+      flex: 1;
+      max-width: 300px;
+
+      @media screen and (max-width: 768px) {
+        max-width: 150px;
+      }
+    }
+  }
+
+  .contents__body {
+    padding: 0 20px;
+    p {
+      font-size: 14px;
+      padding: 1em 0;
+      @include theme('color', 'default-color');
+    }
+  }
+
+  .contents__footer {
+    button {
+      display: block;
+      text-align: center;
+      height: 50px;
+      width: 100%;
+      font-size: 14px;
+      @include theme('color', 'nav-block-name');
+    }
+  }
+
+  .contents__detail {
+
+  }
+
+  .contents__detail-block {
+    padding: 20px 10px;
+    @include theme('background', 'content-bg');
+    border-radius: 10px;
+
+    & ~ .contents__detail-block {
+      margin-top: 10px;
+    }
+
+    h3 {
+      padding:0 20px;
+      font-size: 1rem;
+      color:#2e8bc5;
+      @media screen and (max-width: 768px) {
+        padding:0 10px;
+      }
+    }
+    ul {
+      margin-top: 15px;
+      @media screen and (max-width: 768px) {
+        margin-top: 10px;
+      }
+    }
+    li {
+      padding:0 20px;
+      display: flex;
+      align-items: center;
+      height: 30px;
+      border-radius: 2em;
+      @include theme('color', 'nav-block-name');
+      &:hover {
+        @include theme('background', 'content-hover-bg');
+      }
+      @media screen and (max-width: 768px) {
+        padding:0 10px;
+      }
+
+      h4 {
+        width: 160px;
+        flex: none;
+        @media screen and (max-width: 768px) {
+          width: 130px;
+        }
+      }
+      .icons {
+        display: flex;
+        align-items: center;
+        span {
+          margin-right: 10px;
+
+          img {
+            vertical-align: middle;
+          }
+        }
+      }
+      p {
+        margin-left: auto;
+        @include theme('color', 'nav-block-name');
+      }
+    }
+  }
+}

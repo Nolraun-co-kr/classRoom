@@ -1,0 +1,32 @@
+._progress {
+  display: flex;
+  align-items: center;
+
+  .progress__number {
+    flex: none;
+    font-size: 14px;
+    @include theme('color', 'default-color');
+  }
+  .progress__bar {
+    flex: 1;
+    border-radius: 2em;
+    height: 4px;
+    margin-left: 10px;
+    overflow: hidden;
+    @include theme('background', 'progress-bg');
+    i {
+      display: block;
+      height: 4px;
+      @include theme('background', 'progress-bar');
+    }
+  }
+}
+
+.completeCheck {
+  height: 21px;
+  text-align: right;
+  img {
+    height: 21px;
+    vertical-align: top;
+  }
+}

@@ -161,7 +161,7 @@ a:hover {
   .lnb {
     flex: none;
     width: 250px;
-    height: 100vh;
+    min-height: 100vh;
     overflow: auto;
 
     @media screen and (max-width: 768px) {
@@ -192,6 +192,7 @@ img {
   @media screen and (max-width: 768px) {
     max-width: 100%;
     padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 .content__inner {

@@ -7,10 +7,13 @@ import {
   Header, MobileNav, MobileUserMenu, Lnb
 } from '../components/Layout';
 
-import Home from './Home';
+import { MyCourse, MyCourseDetail } from './MyCourse';
+import { MyLeaningActivityDetail, MyLeaningActivity } from './MyLeaningActivity';
+import { MyLeaningModule, InteractiveLayout, PanelLayout, StackedLayout } from './MyLeaningModule';
 
 import ScrollToTop from '../components/ScrollToTop';
-import useWindowPosition from '../hooks/useWindowPosition';
+import MobileHomeNav from '../components/Home/MobileHomeNav';
+import MobileHomeBottomNav from '../components/Home/MobileHomeBottomNav';
 
 const RouterApp = () => {
   const [openUserMenu, setOpenUserMenu] = useState(false);
@@ -34,7 +37,7 @@ const RouterApp = () => {
   }, [theme]);
 
   return (
-    <div className={`theme-${theme} wrapper ${useWindowPosition() > 10 ? 'fixed' : ''}`}>
+    <div className={`theme-${theme} wrapper }`}>
       <Router>
         <ScrollToTop />
 
@@ -50,9 +53,20 @@ const RouterApp = () => {
             theme={theme}
           />
           <div className="content__inner">
+            <MobileHomeNav />
             <Switch>
-              <Route exact path="/" component={() => <Home theme={theme} />}/>
+              <Route exact path="/" component={() => <MyCourse theme={theme} />}/>
+              <Route exact path="/course/detail" component={() => <MyCourseDetail theme={theme} />}/>
+
+              <Route exact path="/module" component={() => <MyLeaningModule theme={theme} />}/>
+              <Route exact path="/module/detail1" component={() => <InteractiveLayout theme={theme} />}/>
+              <Route exact path="/module/detail2" component={() => <PanelLayout theme={theme} />}/>
+              <Route exact path="/module/detail3" component={() => <StackedLayout theme={theme} />}/>
+
+              <Route exact path="/activity" component={() => <MyLeaningActivity theme={theme} />}/>
+              <Route exact path="/activity/detail" component={() => <MyLeaningActivityDetail theme={theme} />}/>
             </Switch>
+            <MobileHomeBottomNav />
           </div>
         </div>
       </Router>

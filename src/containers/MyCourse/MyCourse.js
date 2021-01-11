@@ -1,13 +1,10 @@
 import React from 'react';
 import ListWrapper from '../../components/Layout/ListPage/Wrapper';
 import { Link } from 'react-router-dom';
-import MobileHomeNav from '../../components/Home/MobileHomeNav';
-import MobileHomeBottomNav from '../../components/Home/MobileHomeBottomNav';
 
-const Index = ({ theme }) => {
+const MyCourse = ({ theme }) => {
   return (
     <div className={'home'}>
-      <MobileHomeNav />
 
       <ListWrapper title={'내 강좌'} options={[]}>
         <div className={'list1'}>
@@ -128,9 +125,8 @@ const Index = ({ theme }) => {
         </div>
       </ListWrapper>
 
-      <MobileHomeBottomNav />
     </div>
   );
 };
 
-export default Index;
+export default MyCourse;

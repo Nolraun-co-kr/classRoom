@@ -1,0 +1,32 @@
+._tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  @include theme('border-color', 'border');
+
+  button {
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 40px;
+    max-width: 180px;
+    flex: 1;
+    @include theme('color', 'default-color');
+    @include theme('border-color', 'border');
+    background: linear-gradient(to bottom, #fff, #efefef);
+    &.active {
+      color:#fff;
+      border-color:#33373f;
+      background: linear-gradient(to bottom, #737474, #4a4b4b);
+      font-weight: 600;
+    }
+    .theme-dark & {
+      background: #1d1f22;
+
+      &.active {
+        background: #50555c;
+      }
+    }
+  }
+}

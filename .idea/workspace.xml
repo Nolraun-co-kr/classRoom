@@ -2,54 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Home/MobileHomeBottomNav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Home/MobileHomeNav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/Footer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/Header/BreadCrumb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/Header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/ListPage/Wrapper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/Lnb/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/MobileNav/MobileNavItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/MobileNav/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/MobileUserMenu/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/Nav/NavBlock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/Nav/NavBody.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Layout/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ScrollToTop/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Home/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/RouterApp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useWindowDemensions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useWindowPosition.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/Global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Lnb.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/MobileNav.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/MobileUserMenu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/listwrapper.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/containers/Home.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/mixins/theme.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/variables/color.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/not-complete-check2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Communication/SlideItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Communication/SlideList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Communication/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contents/ContentsBlock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Contents/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CourseDetail/CourseDetailHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CourseDetail/CourseDetailInfoItems.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CourseDetail/CourseDetailInformation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Home/ActivityState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Home/CompleteCheck.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Home/Progress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/MyCourse/MyCourseDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/MyCourse/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningActivity/MyLeaningActivity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningActivity/MyLeaningActivityDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningActivity/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/InteractiveLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/MyLeaningModule.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/PanelLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/StackedLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/Communication.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/Contents.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/Progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/Tabs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/containers/CourseDetail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Nav/NavBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Nav/NavBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyCourse/MyCourse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/RouterApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/RouterApp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/Lnb.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Lnb.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/listwrapper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/listwrapper.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/containers/Home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/Home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/variables/color.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/variables/color.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +78,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/src/components/Layout/Nav" />
       <recent name="$PROJECT_DIR$/src/components/Layout" />
       <recent name="$PROJECT_DIR$" />
@@ -102,7 +92,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610292366879</updated>
-      <workItem from="1610292368275" duration="15854000" />
+      <workItem from="1610292368275" duration="15944000" />
+      <workItem from="1610339141062" duration="14000" />
+      <workItem from="1610343094447" duration="11764000" />
     </task>
     <servers />
   </component>
@@ -119,6 +111,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
