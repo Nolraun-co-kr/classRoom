@@ -10,7 +10,8 @@ const ContentWrapper = ({
   openUserMenu,
   handleChangeOpenUserMenu,
   handleChangeTheme,
-  theme
+  theme,
+  gradient
 }) => {
   return (
     <>
@@ -24,6 +25,7 @@ const ContentWrapper = ({
           onChangeOpenMobileNav={handleChangeOpenMobileNav}
           handleChangeTheme={handleChangeTheme}
           theme={theme}
+          gradient={gradient}
         />
         <div className="content__inner">
           <MobileHomeNav />

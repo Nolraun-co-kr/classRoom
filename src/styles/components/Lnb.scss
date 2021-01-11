@@ -29,9 +29,15 @@
   width: 100%;
   text-align: left;
   background: url('#{$image-path}/nav-toggle-down.png') no-repeat right center;
+  .gradient & {
+    background: url('#{$image-path}/nav-toggle-down-white.png') no-repeat right center;
+  }
   @include theme('color', 'nav-block-name');
   &.active {
     background: url('#{$image-path}/nav-toggle-up.png') no-repeat right center;
+    .gradient & {
+      background: url('#{$image-path}/nav-toggle-up-white.png') no-repeat right center;
+    }
   }
 }
 
@@ -47,6 +53,12 @@
     @for $i from 1 through 18 {
       &.lnb-#{$i} {
         background: url('#{$image-path}/lnb-#{$i}.png') no-repeat left center;
+      }
+    }
+
+    @for $i from 1 through 18 {
+      .gradient &.lnb-#{$i} {
+        background: url('#{$image-path}/lnb-#{$i}-white.png') no-repeat left center;
       }
     }
   }

@@ -207,3 +207,25 @@ select {
 }
 
 
+
+
+.gradient.wrapper {
+  .lnb {
+    background:linear-gradient(to bottom, #c83d58, #d58b33);
+
+    * {
+      color:#fff !important;
+
+      .lnb__block-name {
+        color:#ffeb7b !important;
+      }
+    }
+  }
+  .header {
+    background:linear-gradient(to right, #c83d58, #d58b33);
+
+    * {
+      color:#fff !important;
+    }
+  }
+}

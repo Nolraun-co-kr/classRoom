@@ -24,6 +24,9 @@
       @include theme('color', 'default-color');
       & ~ a {
         background: url('#{$image-path}/bread-right.png') no-repeat 8px center;
+        .gradient & {
+          background: url('#{$image-path}/bread-right-white.png') no-repeat 8px center;
+        }
         padding-left: 20px;
       }
     }

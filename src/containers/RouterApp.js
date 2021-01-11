@@ -11,6 +11,7 @@ import ScrollToTop from '../components/ScrollToTop';
 import { ContentWrapper, VideoWrapper } from '../components/Wrapper';
 
 const RouterApp = () => {
+  const [gradient] = useState(false);
   const [openUserMenu, setOpenUserMenu] = useState(false);
   const [openMobileNav, setOpenMobileNav] = useState(false);
   const [theme, setTheme] = useState('light');
@@ -32,7 +33,7 @@ const RouterApp = () => {
   }, [theme]);
 
   return (
-    <div className={`theme-${theme} wrapper }`}>
+    <div className={`theme-${theme} wrapper ${gradient ? 'gradient' : ''}`}>
       <Router>
         <ScrollToTop />
 
@@ -45,6 +46,7 @@ const RouterApp = () => {
               handleChangeOpenUserMenu={handleChangeOpenUserMenu}
               handleChangeTheme={handleChangeTheme}
               theme={theme}
+              gradient={gradient}
             >
               <MyCourse theme={theme} />
             </ContentWrapper>
@@ -57,6 +59,7 @@ const RouterApp = () => {
               handleChangeOpenUserMenu={handleChangeOpenUserMenu}
               handleChangeTheme={handleChangeTheme}
               theme={theme}
+              gradient={gradient}
             >
               <MyCourseDetail theme={theme} />
             </ContentWrapper>
@@ -70,6 +73,7 @@ const RouterApp = () => {
               handleChangeOpenUserMenu={handleChangeOpenUserMenu}
               handleChangeTheme={handleChangeTheme}
               theme={theme}
+              gradient={gradient}
             >
               <MyLeaningModule theme={theme} />
             </ContentWrapper>
@@ -103,6 +107,7 @@ const RouterApp = () => {
               handleChangeOpenUserMenu={handleChangeOpenUserMenu}
               handleChangeTheme={handleChangeTheme}
               theme={theme}
+              gradient={gradient}
             >
               <MyLeaningActivity theme={theme} />
             </ContentWrapper>
@@ -115,6 +120,7 @@ const RouterApp = () => {
               handleChangeOpenUserMenu={handleChangeOpenUserMenu}
               handleChangeTheme={handleChangeTheme}
               theme={theme}
+              gradient={gradient}
             >
               <MyLeaningActivityDetail theme={theme} />
             </ContentWrapper>

@@ -2,13 +2,13 @@ import React from 'react';
 import BreadCrumb from './BreadCrumb';
 import useWindowDimensions from '../../../hooks/useWindowDemensions';
 
-const Header = ({ handleChangeTheme, theme, onChangeOpenUserMenu, onChangeOpenMobileNav }) => {
+const Header = ({ gradient, handleChangeTheme, theme, onChangeOpenUserMenu, onChangeOpenMobileNav }) => {
   const { width } = useWindowDimensions();
 
   return (
     <header className="header">
 
-      <BreadCrumb />
+      <BreadCrumb gradient={gradient}/>
 
       <div className={'mobile-header-title'}>
         <button className={'menu'} onClick={onChangeOpenMobileNav} />
@@ -17,14 +17,21 @@ const Header = ({ handleChangeTheme, theme, onChangeOpenUserMenu, onChangeOpenMo
 
       <div className={'haeder__right'}>
         <button onClick={handleChangeTheme}>
-          <img src={`/assets/images/theme-icon${theme === 'light' ? '' : '2'}.png`} alt=""/>
+          {gradient
+            ? <img src={'/assets/images/theme-icon2.png'} alt=""/>
+            : <img src={`/assets/images/theme-icon${theme === 'light' ? '' : '2'}.png`} alt=""/>}
         </button>
         <button>
-          <img src={`/assets/images/notification-icon${theme === 'light' ? '' : '2'}.png`} alt=""/>
+          {gradient
+            ? <img src={'/assets/images/notification-icon2.png'} alt=""/>
+            : <img src={`/assets/images/notification-icon${theme === 'light' ? '' : '2'}.png`} alt=""/>}
+
           <i className={'new'}>N</i>
         </button>
         <button>
-          <img src={`/assets/images/info-icon${theme === 'light' ? '' : '2'}.png`} alt=""/>
+          {gradient
+            ? <img src={'/assets/images/info-icon2.png'} alt=""/>
+            : <img src={`/assets/images/info-icon${theme === 'light' ? '' : '2'}.png`} alt=""/>}
         </button>
 
         {width > 768
