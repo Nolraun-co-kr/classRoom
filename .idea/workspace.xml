@@ -2,43 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/not-complete-check2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Communication/SlideItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Communication/SlideList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Communication/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contents/ContentsBlock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Contents/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CourseDetail/CourseDetailHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CourseDetail/CourseDetailInfoItems.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CourseDetail/CourseDetailInformation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Home/ActivityState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Home/CompleteCheck.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Home/Progress.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MyCourse/MyCourseDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MyCourse/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningActivity/MyLeaningActivity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningActivity/MyLeaningActivityDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningActivity/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/InteractiveLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/MyLeaningModule.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/PanelLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/StackedLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Communication.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Contents.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Progress.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Tabs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/containers/CourseDetail.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/containers/ActivityDetail.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Nav/NavBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Nav/NavBody.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyCourse/MyCourse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/RouterApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/RouterApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Lnb.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Lnb.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/listwrapper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/listwrapper.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/containers/Home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/Home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/MyLeaningActivity/MyLeaningActivityDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyLeaningActivity/MyLeaningActivityDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/variables/color.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/variables/color.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +62,7 @@
       <updated>1610292366879</updated>
       <workItem from="1610292368275" duration="15944000" />
       <workItem from="1610339141062" duration="14000" />
-      <workItem from="1610343094447" duration="11764000" />
+      <workItem from="1610343094447" duration="13034000" />
     </task>
     <servers />
   </component>

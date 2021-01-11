@@ -1,0 +1,56 @@
+.ActivityDetail  {
+  padding: 30px;
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+
+.ActivityDetail__header {
+  display: flex;
+  margin-bottom: 1.5em;
+
+  .info {
+    display: flex;
+    align-items: center;
+
+    .type {
+      text-align: center;
+      img {
+        display: block;
+        margin:0 auto;
+        vertical-align: top;
+      }
+      span {
+        font-size: 12px;
+        display: block;
+        margin-top: 5px;
+        line-height: 1em;
+      }
+    }
+    h2 {
+      margin-left: .5em;
+      font-size: 1.875rem;
+      font-weight: 700;
+    }
+  }
+
+  .actions {
+    margin-left: auto;
+
+    button {
+      height: 30px;
+      padding:0 1em;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      border-radius: 3px;
+      margin-right: 5px;
+      @include theme('border-color', 'border');
+      @include theme('background', 'background');
+      @include theme('color', 'default-color');
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

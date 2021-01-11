@@ -15,6 +15,7 @@ $image-path: 'http://localhost:5000/assets/images';
 // containers
 @import 'containers/Home';
 @import 'containers/CourseDetail';
+@import 'containers/ActivityDetail';
 
 // components
 @import 'components/Footer';
