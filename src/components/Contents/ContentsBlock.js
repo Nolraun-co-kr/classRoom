@@ -4,7 +4,7 @@ import { RiArrowDropDownLine } from 'react-icons/all';
 import { RiArrowDropUpLine } from 'react-icons/ri';
 
 const ContentsBlock = ({ theme }) => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   return (
     <div className="contents__block">
       <div className="contents__header">
@@ -93,7 +93,7 @@ const ContentsBlock = ({ theme }) => {
       <div className="contents__footer">
         <button onClick={() => setToggle(!toggle)}>
           자세히 보기
-          {toggle ? <RiArrowDropDownLine /> : <RiArrowDropUpLine />}
+          {toggle ? <RiArrowDropUpLine /> : <RiArrowDropDownLine />}
         </button>
       </div>
     </div>

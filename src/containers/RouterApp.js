@@ -75,7 +75,15 @@ const RouterApp = () => {
             </ContentWrapper>
           )}/>
 
-          <Route exact path="/module/detail1" component={() => <InteractiveLayout theme={theme} />}/>
+          <Route exact path="/module/detail1" component={() => (
+            <VideoWrapper
+              theme={theme}
+              handleChangeTheme={handleChangeTheme}
+              onChangeOpenUserMenu={handleChangeOpenUserMenu}
+            >
+              <InteractiveLayout theme={theme} />
+            </VideoWrapper>
+          )}/>
           <Route exact path="/module/detail2" component={() => (
             <VideoWrapper
               theme={theme}

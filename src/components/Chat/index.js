@@ -1,15 +1,17 @@
 import React from 'react';
 
-const Chat = () => {
+const Chat = ({ headerHidden }) => {
   return (
     <div className={'chat'}>
-      <div className="chat__header">
-        <strong>댓글과 질문</strong>
-        <div className="actions">
-          <button className={'action1'} />
-          <button className={'action2'} />
+      {!headerHidden && (
+        <div className="chat__header">
+          <strong>댓글과 질문</strong>
+          <div className="actions">
+            <button className={'action1'} />
+            <button className={'action2'} />
+          </div>
         </div>
-      </div>
+      )}
 
       <div className={'chat__body'}>
         <div className="chat__item">

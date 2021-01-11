@@ -2,7 +2,7 @@ import React from 'react';
 import useWindowDimensions from '../../hooks/useWindowDemensions';
 import { BsArrowLeft, BsArrowRight, GiHamburgerMenu } from 'react-icons/all';
 
-const Header = ({ handleChangeTheme, theme, onChangeOpenUserMenu }) => {
+const Header = ({ handleChangeTheme, theme, setToggleContent }) => {
   const { width } = useWindowDimensions();
 
   return (
@@ -20,7 +20,7 @@ const Header = ({ handleChangeTheme, theme, onChangeOpenUserMenu }) => {
             <button className={'cntl__prev'}>
               <BsArrowLeft />
             </button>
-            <button className={'cntl__current'}>
+            <button className={'cntl__current'} onClick={() => setToggleContent(true)}>
               <GiHamburgerMenu />
               <span>변수와 함수</span>
             </button>

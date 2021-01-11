@@ -3,6 +3,41 @@
   padding-bottom: 0;
 }
 
+.ContentListPopup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000;
+  border-radius: 5px;
+  background:#f0f0f0;
+  width: 100%;
+  max-width: 800px;
+  z-index: 9999;
+  padding:0 20px 20px 20px;
+  .theme-dark & {
+    background:#2c3038;
+  }
+
+  .ContentListPopup__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      line-height: 65px;
+      font-size: 1.5rem;
+      @include theme('color', 'nav-block-name');
+      font-weight: 600;
+    }
+    button {
+      svg {
+        @include theme('color', 'nav-block-name');
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
 .videoWrapper__header {
   width: 100%;
   border-bottom: 1px solid #ddd;

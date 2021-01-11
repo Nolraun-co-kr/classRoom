@@ -205,3 +205,86 @@
     }
   }
 }
+
+
+.interactiveLayout {
+
+  & > .splitter-layout {
+    height: calc(100% - 60px);
+  }
+  .videoLayout {
+    width: 100%;
+    max-width: 820px;
+    margin: auto;
+  }
+
+  .chat{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .chat__body {
+      flex: 1;
+      max-height: none;
+    }
+  }
+
+  .block {
+    @include theme('background', 'whitenblack');
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .block__tabs {
+    border-bottom: 1px solid #ddd;
+    @include theme('border-color', 'border');
+    button {
+      height: 35px;
+      padding:0 20px;
+      @include theme('background', 'block-tab-bg');
+      @include theme('color', 'default-color');
+
+      span {
+        padding-left: 1.25em;
+      }
+      &.video {
+        span {
+          background: url('#{$image-path}/activity2-icon.png') no-repeat left center;
+          .theme-dark & {
+            background: url('#{$image-path}/activity2-icon2.png') no-repeat left center;
+          }
+        }
+      }
+
+      &.comment {
+        span {
+          background: url('#{$image-path}/activity1-icon.png') no-repeat left center;
+          .theme-dark & {
+            background: url('#{$image-path}/activity1-icon2.png') no-repeat left center;
+          }
+        }
+      }
+
+      &.training {
+        span {
+          background: url('#{$image-path}/activity6-icon.png') no-repeat left center;
+          .theme-dark & {
+            background: url('#{$image-path}/activity6-icon2.png') no-repeat left center;
+          }
+        }
+      }
+      &.book {
+        span {
+          background: url('#{$image-path}/activity3-icon.png') no-repeat left center;
+        }
+      }
+
+      &.active {
+        position:relative;
+        top: 1px;
+        @include theme('background', 'whitenblack');
+        @include theme('color', 'nav-block-name');
+      }
+    }
+  }
+}
