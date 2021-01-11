@@ -3,17 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import '../styles/style.scss';
 
-import {
-  Header, MobileNav, MobileUserMenu, Lnb
-} from '../components/Layout';
-
 import { MyCourse, MyCourseDetail } from './MyCourse';
 import { MyLeaningActivityDetail, MyLeaningActivity } from './MyLeaningActivity';
 import { MyLeaningModule, InteractiveLayout, PanelLayout, StackedLayout } from './MyLeaningModule';
 
 import ScrollToTop from '../components/ScrollToTop';
-import MobileHomeNav from '../components/Home/MobileHomeNav';
-import MobileHomeBottomNav from '../components/Home/MobileHomeBottomNav';
+import { ContentWrapper, VideoWrapper } from '../components/Wrapper';
 
 const RouterApp = () => {
   const [openUserMenu, setOpenUserMenu] = useState(false);
@@ -41,34 +36,82 @@ const RouterApp = () => {
       <Router>
         <ScrollToTop />
 
-        <MobileNav openMobileNav={openMobileNav} onChangeOpenMobileNav={handleChangeOpenMobileNav} />
-        <MobileUserMenu openUserMenu={openUserMenu} onChangeOpenUserMenu={handleChangeOpenUserMenu}/>
+        <Switch>
+          <Route exact path="/" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+            >
+              <MyCourse theme={theme} />
+            </ContentWrapper>
+          )}/>
+          <Route exact path="/course/detail" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+            >
+              <MyCourseDetail theme={theme} />
+            </ContentWrapper>
+          )}/>
 
-        <Lnb />
-        <div className="content">
-          <Header
-            onChangeOpenUserMenu={handleChangeOpenUserMenu}
-            onChangeOpenMobileNav={handleChangeOpenMobileNav}
-            handleChangeTheme={handleChangeTheme}
-            theme={theme}
-          />
-          <div className="content__inner">
-            <MobileHomeNav />
-            <Switch>
-              <Route exact path="/" component={() => <MyCourse theme={theme} />}/>
-              <Route exact path="/course/detail" component={() => <MyCourseDetail theme={theme} />}/>
+          <Route exact path="/module" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+            >
+              <MyLeaningModule theme={theme} />
+            </ContentWrapper>
+          )}/>
 
-              <Route exact path="/module" component={() => <MyLeaningModule theme={theme} />}/>
-              <Route exact path="/module/detail1" component={() => <InteractiveLayout theme={theme} />}/>
-              <Route exact path="/module/detail2" component={() => <PanelLayout theme={theme} />}/>
-              <Route exact path="/module/detail3" component={() => <StackedLayout theme={theme} />}/>
+          <Route exact path="/module/detail1" component={() => <InteractiveLayout theme={theme} />}/>
+          <Route exact path="/module/detail2" component={() => (
+            <VideoWrapper
+              theme={theme}
+              handleChangeTheme={handleChangeTheme}
+              onChangeOpenUserMenu={handleChangeOpenUserMenu}
+            >
+              <PanelLayout theme={theme} />
+            </VideoWrapper>
+          )}/>
+          <Route exact path="/module/detail3" component={() => <StackedLayout theme={theme} />}/>
 
-              <Route exact path="/activity" component={() => <MyLeaningActivity theme={theme} />}/>
-              <Route exact path="/activity/detail" component={() => <MyLeaningActivityDetail theme={theme} />}/>
-            </Switch>
-            <MobileHomeBottomNav />
-          </div>
-        </div>
+          <Route exact path="/activity" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+            >
+              <MyLeaningActivity theme={theme} />
+            </ContentWrapper>
+          )}/>
+          <Route exact path="/activity/detail" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+            >
+              <MyLeaningActivityDetail theme={theme} />
+            </ContentWrapper>
+          )}/>
+        </Switch>
       </Router>
     </div>
   );

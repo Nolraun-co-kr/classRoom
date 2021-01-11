@@ -16,6 +16,7 @@ $image-path: 'http://localhost:8080/assets/images';
 @import 'containers/Home';
 @import 'containers/CourseDetail';
 @import 'containers/ActivityDetail';
+@import 'containers/ModuleDetail';
 
 // components
 @import 'components/Footer';
@@ -29,3 +30,6 @@ $image-path: 'http://localhost:8080/assets/images';
 @import 'components/Tabs';
 @import 'components/Contents';
 @import 'components/Communication';
+@import 'components/VideoWrapper';
+@import 'components/chat';
+@import 'components/videoPagination';

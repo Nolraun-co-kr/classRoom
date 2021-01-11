@@ -1,0 +1,39 @@
+.video__pagination {
+  display: flex;
+  @include theme('background', 'pg-bg');
+  a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    svg {
+      @include theme('color', 'nav-block-name');
+      font-size: 30px;
+      margin: 0 15px;
+      @media screen and (max-width: 768px) {
+        font-size: 20px;
+        margin:0 10px;
+      }
+    }
+    &.next {
+      justify-content: flex-end;
+      text-align: right;
+    }
+
+    div {
+      padding: 20px 0;
+      span {
+        font-size: .875rem;
+        @include theme('color', 'default-color');
+        line-height: 1em;
+        display: block;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1em;
+        @include theme('color', 'nav-block-name');
+        margin-top: 10px;
+      }
+    }
+  }
+}

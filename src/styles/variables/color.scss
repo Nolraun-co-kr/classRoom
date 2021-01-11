@@ -1,5 +1,6 @@
 $themes: (
   light: (
+    whitenblack: #fff,
     background: #ffffff,
     header-text: #666,
     nav-block-name: #000,
@@ -24,10 +25,17 @@ $themes: (
           content-hover-bg: #e5eaf1,
           dots-color: #dddddd,
           dots-color-active: #666666,
+          meta-bg: #eeeeee,
+          chat-form-bg: #fafafa,
+          chat-form-bg2: #fff,
+          pg-bg: #ffffff,
+          PanelContentList-top: #ddd,
+          PanelContentList-info: #f6f8fb,
 
   ),
 
   dark: (
+    whitenblack: #000,
     background: #1d1f22,
     header-text: #fff,
     nav-block-name: #fff,
@@ -52,6 +60,12 @@ $themes: (
           content-hover-bg: #1d1f22,
           dots-color: #1d1f22,
           dots-color-active: #2e8bc5,
+          meta-bg: #1d1f22,
+          chat-form-bg: #1d1f22,
+          chat-form-bg2: #1d1f22,
+          pg-bg: #50555c,
+          PanelContentList-top: #50555c,
+          PanelContentList-info: #1d1f22,
   )
 );
 

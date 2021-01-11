@@ -1,0 +1,116 @@
+.chat {
+  border: 1px solid #ddd;
+  @include theme('background', 'background');
+  @include theme('border-color', 'border');
+}
+
+.chat__header {
+  height: 40px;
+  display: flex;
+  padding:0 5px 0 10px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  @include theme('background', 'background');
+  @include theme('border-color', 'border');
+
+  strong {
+    font-size: 1rem;
+    background: url('#{$image-path}/activity1-icon.png') no-repeat left 8px;
+    padding-left: 1.5em;
+    @include theme('color', 'nav-block-name');
+    .theme-dark & {
+      background: url('#{$image-path}/activity1-icon2.png') no-repeat left 8px;
+    }
+  }
+
+  .actions {
+    margin-left: auto;
+
+    button {
+      width: 30px;
+      height: 30px;
+      vertical-align: top;
+    }
+    .action1 {
+      background: url('#{$image-path}/video-action1.png') no-repeat center;
+    }
+    .action2 {
+      background: url('#{$image-path}/video-action2.png') no-repeat center;
+    }
+  }
+}
+
+.chat__footer {
+  @include theme('background', 'chat-form-bg');
+  padding: 10px;
+}
+.chat__form {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  @include theme('border-color', 'border');
+  @include theme('background', 'chat-form-bg2');
+  border-radius: 5px;
+  overflow: hidden;
+  padding-right: 5px;
+  button {
+    width: 40px;
+    height: 40px;
+    background: url('#{$image-path}/chat-submit.png') no-repeat center;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+  textarea {
+    flex: 1;
+    border: none;
+    font-size: 14px;
+    padding: 5px;
+    line-height: 20px;
+    height: 50px;
+    resize: none;
+    background: none;
+    @include theme('color', 'nav-block-name');
+  }
+}
+
+.chat__body {
+  padding: 20px;
+  @include theme('background', 'chat-form-bg2');
+  border-bottom: 1px solid #ddd;
+  @include theme('border-color', 'border');
+  max-height: 250px;
+  overflow: auto;
+
+  .chat__item {
+    & ~ .chat__item {
+      margin-top: 1em;
+    }
+  }
+  .chat__item-header {
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 12px;
+      @include theme('color', 'default-color');
+      margin-left: 1em;
+    }
+  }
+  .chat__author {
+    line-height: 24px;
+    padding:0 1em;
+    border-radius: 2em;
+    font-size: 12px;
+    @include theme('color', 'default-color');
+    background:#ecf2da;
+
+    &.teach {
+      background:#daeef2;
+    }
+
+  }
+  .chat__item-content {
+    font-size: 14px;
+    margin-top: .5em;
+    @include theme('color', 'nav-block-name');
+  }
+}

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import DetailInfo from '../../components/Activity/DetailInfo';
+import Preview from '../../components/Activity/Preview';
 
 const MyLeaningActivityDetail = ({ theme }) => {
   const [tab, setTab] = useState(1);
@@ -7,7 +9,7 @@ const MyLeaningActivityDetail = ({ theme }) => {
       <div className={'ActivityDetail__header'}>
         <div className="info">
           <div className={'type'}>
-            <img src={'/assets/images/video-icon.png'} alt=""/>
+            <img src={`/assets/images/video-icon${theme === 'dark' ? '2' : ''}.png`} alt=""/>
             <span>동영상</span>
           </div>
           <h2>미적분을 풀어보세요</h2>
@@ -30,6 +32,19 @@ const MyLeaningActivityDetail = ({ theme }) => {
         <button onClick={() => setTab(2)} className={tab === 2 && 'active'}>상세한 정보</button>
       </div>
 
+      <div className={'ActivityDetail__view'}>
+        {
+          tab === 1 && (
+            <Preview theme={theme}/>
+          )
+        }
+
+        {
+          tab === 2 && (
+            <DetailInfo theme={theme} />
+          )
+        }
+      </div>
     </div>
   );
 };
