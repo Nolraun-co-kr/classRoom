@@ -20,7 +20,11 @@ const videoJsOptions = {
     playToggle: true,
     pictureInPictureToggle: true,
     remainingTimeDisplay: true,
-    progressControl: true
+    progressControl: true,
+    volumePanel: {
+      inline: false,
+      vertical: true
+    }
   }
 
 };

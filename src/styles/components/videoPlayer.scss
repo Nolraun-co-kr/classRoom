@@ -4,11 +4,15 @@
     font-size: 10px !important;
   }
 
+  .vjs-big-play-button {
+    display: none !important;
+  }
   .vjs-control-bar {
     position: relative !important;
     padding: 20px 10px 10px;
     opacity: 1 !important;
     height: 60px !important;
+    display:flex !important;
 
   }
 
