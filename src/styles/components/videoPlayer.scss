@@ -1,7 +1,21 @@
 .playerWrapper {
   font-size: 10px;
+  padding-bottom: 60px;
   * {
     font-size: 10px !important;
+  }
+  track {
+  }
+
+  .vjs-icon-subtitles,
+  .vjs-icon-hd {
+    &:before {
+      font-size: 20px;
+    }
+    &:focus:before ,
+    &:hover:before {
+      text-shadow: none !important;
+    }
   }
 
   .vjs-big-play-button {
@@ -49,15 +63,38 @@
   }
 
 
-  .vjs-picture-in-picture-control {
-    order: 7;
+
+  .vjs-control {
+    &:focus {
+      text-shadow: none !important;
+    }
+  }
+  .vjs-button-icon-theme {
+    order: 9;
+    background: url('#{$image-path}/video-button-toggle-theme2.png') no-repeat center !important;
     margin-left: auto !important;
+
+  }
+  .vjs-button-icon-hd {
+    order: 10;
+    background: url('#{$image-path}/video-button-hd.png') no-repeat center;
+  }
+  .vjs-button-icon-subtitles {
+    order: 11;
+    background: url('#{$image-path}/video-button-bottom-track.png') no-repeat center;
+  }
+  .vjs-button-icon-right-track {
+    order: 12;
+    background: url('#{$image-path}/video-button-right-track.png') no-repeat center;
+  }
+  .vjs-picture-in-picture-control {
+    order: 18;
   }
   .vjs-volume-panel {
-    order: 9;
+    order: 19;
   }
   .vjs-fullscreen-control {
-    order: 10;
+    order: 20;
   }
 
   .video-js .vjs-progress-control {
