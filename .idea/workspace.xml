@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/CodeEditor/Editor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CodeEditor/EditorWrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CodeEditor/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MyLeaningModule/InteractiveLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/InteractiveLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MyLeaningModule/StackedLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/StackedLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/RouterApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/RouterApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/codeEditor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/codeEditor.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/videoPlayer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/videoPlayer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/containers/ModuleDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/ModuleDetail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +66,7 @@
       <workItem from="1610339141062" duration="14000" />
       <workItem from="1610343094447" duration="35297000" />
       <workItem from="1610527853146" duration="6636000" />
-      <workItem from="1610538227004" duration="21460000" />
+      <workItem from="1610538227004" duration="21560000" />
     </task>
     <servers />
   </component>

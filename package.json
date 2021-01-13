@@ -3,12 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fullcalendar/daygrid": "^5.4.0",
-    "@fullcalendar/react": "^5.4.0",
     "@silvermine/videojs-quality-selector": "^1.2.4",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "@uiw/react-codemirror": "^3.0.2",
     "@youon/videojs-pip": "^1.0.3",
     "babel-polyfill": "^6.26.0",
@@ -34,7 +29,8 @@
     "subtitles-parser-vtt": "0.0.8",
     "videojs-event-tracking": "^1.0.1",
     "videojs-max-quality-selector": "^0.9.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "video.js": "^7.10.2"
   },
   "scripts": {
     "server": "nodemon server.js delay -500",
@@ -72,7 +68,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.21.5",
-    "video.js": "^7.10.2"
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10"
   },
   "proxy": "http://localhost:8080"
 }
