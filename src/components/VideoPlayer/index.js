@@ -29,7 +29,7 @@ const Index = () => {
   ]);
 
   useEffect(() => {
-    fetch('http://localhost:8080/track')
+    fetch('http://nolraun.co.kr/track')
       .then(result => {
         return result.json();
       })
