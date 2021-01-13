@@ -22,9 +22,46 @@
   }
 }
 
+.editor__tab {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  @include theme('border-color', 'border');
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  button {
+    width: 100px;
+    height: 40px;
+    background:#eeeeee;
+    color:#666;
+
+    &.active {
+      background:#333333;
+      color:#fff !important;
+    }
+
+    &:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    &:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+
 .editor__card {
   width: 100%;
   border-radius: 3px;
+
+  &.hidden {
+    display: none !important;
+  }
 }
 .editor__card-header {
   @include theme('background', 'editor__card-header');

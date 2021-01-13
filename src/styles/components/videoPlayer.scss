@@ -4,7 +4,11 @@
 
 
   &.showRightTrack {
-    padding-right: 250px;
+
+    .vjs-text-track-display,
+    .vjs-tech {
+      width:calc(100% - 250px);
+    }
   }
 
   .trackLayout {
@@ -15,8 +19,8 @@
     position: absolute;
     right: 0;
     top: 0;
-    height: calc(100% + 60px);
-    background:#eee;
+    height: calc(100%);
+    background:#fff;
   }
   .trackText {
     display: block;
@@ -24,6 +28,7 @@
     text-align: left;
     margin-bottom: .5em;
     outline-width: 0;
+    color:#000;
     &.active {
       color:#f00;
     }

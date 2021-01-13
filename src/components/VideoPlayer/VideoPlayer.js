@@ -44,11 +44,13 @@ export default class VideoPlayer extends React.Component {
       themeButton.on('click', function () {
         _this.props.handleChangeTheme();
       });
+      themeButton.on('touchend', function () {
+        _this.props.handleChangeTheme();
+      });
 
       // sub Toggle track
       const subTrackButton = this.controlBar.addChild('button', {});
-      subTrackButton.addClass('vjs-button-icon-subtitles');
-      subTrackButton.on('click', function (e) {
+      const subTrackFunc = () => {
         _this.props.onToggleShowBottomTrack();
         const track = this.player_.textTracks_.tracks_[0];
         if (_this.props.showBottomTrack) {
@@ -56,6 +58,13 @@ export default class VideoPlayer extends React.Component {
         } else {
           track.mode = 'hidden';
         }
+      };
+      subTrackButton.addClass('vjs-button-icon-subtitles');
+      subTrackButton.on('click', function (e) {
+        subTrackFunc();
+      });
+      subTrackButton.on('touchend', function (e) {
+        subTrackFunc();
       });
 
       // right toggle track
@@ -64,6 +73,16 @@ export default class VideoPlayer extends React.Component {
       rightTrackButton.on('click', function (e) {
         _this.props.onToggleShowRightTrack();
       });
+      rightTrackButton.on('touchend', function (e) {
+        _this.props.onToggleShowRightTrack();
+      });
+    });
+
+    this.player.on('play', (e) => {
+      const playBtn = document.querySelector('.play-control');
+      if (playBtn) {
+        playBtn.classList.add('play');
+      }
     });
 
     this.player.on('timeupdate', (e) => {
@@ -71,6 +90,61 @@ export default class VideoPlayer extends React.Component {
       this.setState({
         currentTime
       });
+
+      const current = document.querySelector('.detailLayout3__progress .current');
+      if (current) {
+        // 타이머 업데이트
+        const currentMinutes = Math.floor(currentTime / 60);
+        const currentSeconds = Math.floor(currentTime - currentMinutes * 60);
+
+        current.innerHTML = `${currentMinutes}:${currentSeconds < 10 ? `0${currentSeconds}` : currentSeconds}`;
+
+        // 프로그래스 바 업데이트
+        const time = this.player.cache_.duration;
+        const timePercent = currentTime / time * 100;
+        const progressBar = document.querySelector('.detailLayout3__progress .inner_progress-bar');
+        progressBar.style.width = `${timePercent}%`;
+      }
+    });
+
+    this.player.on('pause', (e) => {
+      const playBtn = document.querySelector('.play-control');
+      if (playBtn) {
+        playBtn.classList.remove('play');
+      }
+    });
+
+    this.player.on('loadedmetadata', (e) => {
+      const playBtn = document.querySelector('.play-control');
+      const duration = document.querySelector('.detailLayout3__progress .duration');
+      const progress = document.querySelector('.detailLayout3__progress .inner_progress');
+      if (duration) {
+        const time = this.player.cache_.duration;
+        const durationMinutes = Math.floor(time / 60);
+        const durationSeconds = Math.floor(time - durationMinutes * 60);
+
+        duration.innerHTML = `${durationMinutes}:${durationSeconds}`;
+
+        playBtn.addEventListener('click', (e) => {
+          // 재생중인지 체크
+          e.stopPropagation();
+          const isPlaying = playBtn.classList.contains('play');
+          if (isPlaying) {
+            this.player.pause();
+          } else {
+            this.player.play();
+          }
+        });
+
+        progress.addEventListener('click', (e) => {
+          const outerWidth = progress.offsetWidth;
+          const percent = e.clientX / outerWidth * 100;
+          const time = this.player.cache_.duration;
+
+          const targetTime = percent * time / 100;
+          this.player.currentTime(targetTime);
+        });
+      }
     });
 
     this.setState({
