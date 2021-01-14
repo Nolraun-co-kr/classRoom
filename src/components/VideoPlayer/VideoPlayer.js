@@ -3,6 +3,8 @@ import React from 'react';
 import videojs from 'video.js';
 import 'video.js/dist/video-js.min.css';
 import TrackRow from './TrackRow';
+import 'videojs-landscape-fullscreen';
+
 require('@silvermine/videojs-quality-selector')(videojs);
 
 export default class VideoPlayer extends React.Component {
@@ -76,6 +78,14 @@ export default class VideoPlayer extends React.Component {
       rightTrackButton.on('touchend', function (e) {
         _this.props.onToggleShowRightTrack();
       });
+    });
+
+    this.player.landscapeFullscreen({
+      fullscreen: {
+        enterOnRotate: true,
+        alwaysInLandscapeMode: true,
+        iOS: true
+      }
     });
 
     this.player.on('play', (e) => {

@@ -27,10 +27,11 @@
     "read-file": "^0.2.0",
     "slick-carousel": "^1.8.1",
     "subtitles-parser-vtt": "0.0.8",
+    "video.js": "^7.10.2",
     "videojs-event-tracking": "^1.0.1",
+    "videojs-landscape-fullscreen": "^11.1.0",
     "videojs-max-quality-selector": "^0.9.1",
-    "web-vitals": "^0.2.4",
-    "video.js": "^7.10.2"
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "server": "nodemon server.js delay -500",
