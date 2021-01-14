@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Footer/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/Communication.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Communication.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/Footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/MobileNav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/MobileNav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/Pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/variables/color.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/variables/color.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +74,7 @@
       <workItem from="1610527853146" duration="6636000" />
       <workItem from="1610538227004" duration="22249000" />
       <workItem from="1610606173625" duration="365000" />
+      <workItem from="1610624571681" duration="692000" />
     </task>
     <servers />
   </component>
