@@ -341,17 +341,36 @@
 
     .inner_progress {
       flex: 1;
-      background:#e5eaf1;
       height: 5px;
       border-radius: 3px;
       margin-right: 10px;
       position: relative;
       cursor: pointer;
+      margin-left:  65px;
+      @media screen and (max-width: 768px) {
+        margin-left:  0px;
+      }
+
+      ._section-list {
+        display: flex;
+        ._section {
+          flex: none;
+          background:#e5eaf1;
+          height: 5px;
+          margin-right: 3px;
+          position: relative;
+
+          &:hover {
+            top: -2px;
+            height: 9px;
+          }
+        }
+      }
 
       .play-control {
         box-shadow: 0px 0px 5px rgba(0,0,0,.5);
         position: absolute;
-        left: 55px;
+        left: -13px;
         top: 50%;
         transform: translateY(-50%);
         width: 25px;
@@ -360,6 +379,9 @@
         border-radius: 50%;
         background: #fff url('#{$image-path}/play-icon.png') no-repeat center;
         background-size:auto 10px;
+        @media screen and (max-width: 768px) {
+          left: 55px;
+        }
         &.play {
           background: #fff url('#{$image-path}/pause-icon.png') no-repeat 9px center;
         }
@@ -604,8 +626,7 @@
       @for $i from 1 through 6 {
         &.tab#{$i} {
           background: url('#{$image-path}/inter-icon#{$i}.png') no-repeat center;
-          &.active,
-          &:hover {
+          &.active{
             background: #eff3f9 url('#{$image-path}/inter-icon#{$i}.png') no-repeat center;
           }
         }

@@ -97,6 +97,9 @@ export default class VideoPlayer extends React.Component {
 
     this.player.on('timeupdate', (e) => {
       const currentTime = _this.player.currentTime();
+
+      this.props.handleChangeTimer(currentTime);
+
       this.setState({
         currentTime
       });

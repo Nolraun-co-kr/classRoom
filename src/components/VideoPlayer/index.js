@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import VideoPlayer from './VideoPlayer';
 
-const Index = () => {
+const Index = ({ vdata, setVdata }) => {
   const [showBottomTrack, setShowBottomTrack] = useState(true);
   const [showRightTrack, setShowRightTrack] = useState(true);
   const [trackInfo, setTrackInfo] = useState([]);
@@ -27,6 +27,20 @@ const Index = () => {
   }, [
     theme
   ]);
+
+  const handleChangeTimer = useCallback((currentTime) => {
+    const section = vdata.section.map(sec => {
+      return ({
+        ...sec,
+        active: sec.startTime <= currentTime && currentTime < sec.endTime
+      });
+    });
+
+    setVdata({
+      ...vdata,
+      section
+    });
+  }, [vdata]);
 
   useEffect(() => {
     fetch('http://nolraun.co.kr/track')
@@ -93,7 +107,8 @@ const Index = () => {
     showRightTrack: showRightTrack,
     onToggleShowRightTrack: handleToggleShowRightTrack,
     trackInfo: trackInfo,
-    handleChangeTheme: handleChangeTheme
+    handleChangeTheme: handleChangeTheme,
+    handleChangeTimer
   };
 
   return (
