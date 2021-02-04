@@ -49,7 +49,7 @@ const CourseDetailInfoItems = ({ theme, setOpenModal }) => {
          <div className={'share__popover'}>
            <div className={'share__popoverHeader'}>
              <h3>SNS에 교육과정을 공유해주세요.</h3>
-             <button onClick={() => setOpenModal(false)}>
+             <button onClick={handleClickShowPopover}>
                <GrClose />
              </button>
            </div>
