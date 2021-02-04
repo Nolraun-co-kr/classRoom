@@ -28,18 +28,18 @@ const RouterApp = () => {
     const body = document.body;
     if (theme === 'light') {
       setTheme('dark');
-      body.classList.remove('light');
-      body.classList.add('dark');
+      body.classList.remove('theme-light');
+      body.classList.add('theme-dark');
     } else {
       setTheme('light');
-      body.classList.remove('dark');
-      body.classList.add('light');
+      body.classList.remove('theme-dark');
+      body.classList.add('theme-light');
       // document.getElementsByTagName('body').classList.add('light');
     }
   }, [theme]);
 
   return (
-    <div className={`theme-${theme} wrapper ${gradient ? 'gradient' : ''}`}>
+    <div className={`wrapper ${gradient ? 'gradient' : ''}`}>
       <Router>
         <ScrollToTop />
 

@@ -644,6 +644,9 @@
           background: url('#{$image-path}/inter-icon#{$i}.png') no-repeat center;
           &.active{
             background: #eff3f9 url('#{$image-path}/inter-icon#{$i}.png') no-repeat center;
+            .theme-dark & {
+              background: #1d1f22 url('#{$image-path}/inter-icon#{$i}.png') no-repeat center;
+            }
           }
         }
       }
@@ -669,25 +672,20 @@
 }
 
 ._wedget-header {
-  border: none !important;
-  border-bottom: 1px solid #eee !important;
-  border-color:#ddd !important;
-  background: #fff !important;
-  strong {
-    font-size: 1rem;
-    padding-left: 1.5em;
-    background: url('#{$image-path}/activity2-icon.png') no-repeat left 8px;
-    color:#000 !important;
-  }
-  body.dark & {
-    background: #1d1f22 !important;
-    border-color:#50555c !important;
-    strong {
-      background: url('#{$image-path}/activity2-icon2.png') no-repeat left 8px;
-      color:#fff !important;
-    }
+  border-top: none !important;
+  border-left: none !important;
+  border-top: none !important;
+  border-bottom: 1px solid #eee;
+  @include theme('border-color', 'border');
+
+  background: #fff;
+
+  .theme-dark & {
+    background: #1d1f22;
   }
 
+  @include theme('background', 'background');
+  @include theme('border-color', 'border');
 
   & > div:not(.jqx-window-close-button-background) {
     margin: 0 !important;
@@ -701,18 +699,11 @@
   }
 }
 
-.jqx-window-content {
-  background: #fff !important;
-  * {
-    border-color:#ddd !important;
-  }
-  body.dark & {
-    background: #1d1f22 !important;
-    * {
-      border-color:#50555c !important;
-    }
-  }
+.jqx-widget-content {
+  @include theme('background', 'background');
+  @include theme('border-color', 'border');
 }
+
 
 .hidden {
   display: none !important;

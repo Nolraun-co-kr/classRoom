@@ -6,17 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.31cdeda5.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.31cdeda5.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.cbf85bc6.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.cbf85bc6.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/TrackRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/TrackRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MyLeaningModule/StackedLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/StackedLayout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/RouterApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/RouterApp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/containers/ModuleDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/ModuleDetail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/variables/color.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/variables/color.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +80,7 @@
       <workItem from="1610606173625" duration="365000" />
       <workItem from="1610624571681" duration="934000" />
       <workItem from="1612416966708" duration="19594000" />
-      <workItem from="1612443663736" duration="7698000" />
+      <workItem from="1612443663736" duration="8230000" />
     </task>
     <servers />
   </component>
