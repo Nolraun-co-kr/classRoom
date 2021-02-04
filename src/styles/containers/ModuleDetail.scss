@@ -558,6 +558,20 @@
         margin: 0;
         flex: 1;
         margin-right: 5px;
+        display: none;
+
+        &.active {
+          display:block;
+          button {
+            background:#2e8bc5 !important;
+            .theme-dark & {
+              background:#1d1f22 !important;
+            }
+            span {
+              color:#fff !important;
+            }
+          }
+        }
 
         &:last-child {
           padding-right: 10px;
@@ -659,13 +673,8 @@
         width: 100%;
         border-radius:5px;
         min-width: 100px;
+        @include theme('border-color', 'border');
 
-        &.active {
-          background:#2e8bc5 !important;
-          span {
-            color:#fff !important;
-          }
-        }
       }
     }
   }

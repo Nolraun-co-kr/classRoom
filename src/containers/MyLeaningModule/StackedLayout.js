@@ -210,42 +210,42 @@ const StackedLayout = () => {
           {vdata.section.map(section => {
             return section.active && (
               <>
-                <div className={'block'}>
-                  <button className={`tab1  ${section.window.video.active ? 'active' : ''}`} onClick={() => handleClickVideoTab(section.window.video.active)}>
+                <div className={`block ${section.window.video.active ? 'active' : ''}`}>
+                  <button className={`tab1 ${section.window.video.active ? 'active' : ''}`} onClick={() => handleClickVideoTab(section.window.video.active)}>
                     <i className={section.window.video.active ? '' : 'hidden'}>{section.window.video.count}</i>
                     <span>동영상</span>
                   </button>
                 </div>
 
-                <div className={'block'}>
-                  <button className={`tab2  ${section.window.file.active ? 'active' : ''}`} onClick={() => handleClickFileTab(section.window.file.active)}>
+                <div className={`block ${section.window.file.active ? 'active' : ''}`}>
+                  <button className={`tab2 ${section.window.file.active ? 'active' : ''}`} onClick={() => handleClickFileTab(section.window.file.active)}>
                     <i className={section.window.file.active ? '' : 'hidden'}>{section.window.file.count}</i>
                     <span>교안</span>
                   </button>
                 </div>
 
-                <div className={'block'}>
-                  <button className={`tab3  ${section.window.quiz.active ? 'active' : ''}`} onClick={() => handleClickQuizTab(section.window.quiz.active)}>
+                <div className={`block ${section.window.quiz.active ? 'active' : ''}`}>
+                  <button className={`tab3 ${section.window.quiz.active ? 'active' : ''}`} onClick={() => handleClickQuizTab(section.window.quiz.active)}>
                    <i className={section.window.quiz.active ? '' : 'hidden'}>{section.window.quiz.count}</i>
                     <span>퀴즈</span>
                   </button>
                 </div>
 
-                <div className={'block'}>
+                <div className={`block ${section.window.comments.active ? 'active' : ''}`}>
                   <button className={`tab4 ${section.window.comments.active ? 'active' : ''}`} onClick={() => handleClickCommentTab(section.window.comments.active)}>
                    <i className={section.window.comments.active ? '' : 'hidden'}>{section.window.comments.count}</i>
                     <span>댓글과 질문</span>
                   </button>
                 </div>
 
-                <div className={'block'}>
-                  <button className={`tab5  ${section.window.documents.active ? 'active' : ''}`} onClick={() => handleClickDocumentTab(section.window.documents.active)}>
+                <div className={`block ${section.window.documents.active ? 'active' : ''}`}>
+                  <button className={`tab5 ${section.window.documents.active ? 'active' : ''}`} onClick={() => handleClickDocumentTab(section.window.documents.active)}>
                    <i className={section.window.documents.active ? '' : 'hidden'}>{section.window.documents.count}</i>
                     <span>자료</span>
                   </button>
                 </div>
 
-                <div className={'block'}>
+                <div className={`block ${section.window.practice.active ? 'active' : ''}`}>
                   <button className={`tab6 ${section.window.practice.active ? 'active' : ''}`} onClick={() => handleClickPracticeTab(section.window.practice.active)}>
                    <i className={section.window.practice.active ? '' : 'hidden'}>{section.window.practice.count}</i>
                     <span>실습창</span>
@@ -329,10 +329,10 @@ const StackedLayout = () => {
               >
                 <div className="Video__header _wedget-header">
                   <strong>동영상</strong>
-                   <div className="actions">
-                     <button className={'action1 video--action1'}/>
+                  <div className="actions">
+                    <button className={'action1 video--action1'}/>
                     <button className={'action2'} />
-                   </div>
+                  </div>
                 </div>
                 <div className={'Video'}>
                   {
@@ -365,7 +365,6 @@ const StackedLayout = () => {
                   <iframe src="http://www.africau.edu/images/default/sample.pdf" frameBorder="0"></iframe>
                 </div>
               </JqxWindow>
-
               <JqxWindow
                 ref={quizRef}
                 width={810}
