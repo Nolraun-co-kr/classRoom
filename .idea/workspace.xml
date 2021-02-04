@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/MyLeaningModule/StackedLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/StackedLayout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/containers/ModuleDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/ModuleDetail.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/videodata.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/videodata.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,7 @@
       <workItem from="1610606173625" duration="365000" />
       <workItem from="1610624571681" duration="934000" />
       <workItem from="1612416966708" duration="19594000" />
-      <workItem from="1612443663736" duration="3361000" />
+      <workItem from="1612443663736" duration="4162000" />
     </task>
     <servers />
   </component>

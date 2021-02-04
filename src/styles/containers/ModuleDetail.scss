@@ -686,7 +686,9 @@
 }
 
 
-
+.hidden {
+  display: none !important;
+}
 .jqx-window,
 .detailLayout3__pc {
   flex: 1;

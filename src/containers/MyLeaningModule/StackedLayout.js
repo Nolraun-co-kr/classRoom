@@ -10,17 +10,24 @@ import JqxWindow from 'jqwidgets-scripts/jqwidgets-react-tsx/jqxwindow';
 const StackedLayout = () => {
   // video, chat, editor
   const videoRef = useRef(null);
+  const [showVideo, setShowVideo] = useState(true);
   const fileRef = useRef(null);
+  const [showFile, setShowFile] = useState(true);
   const quizRef = useRef(null);
+  const [showQuiz, setShowQuiz] = useState(true);
   const commentsRef = useRef(null);
+  const [showComment, setShowComment] = useState(true);
   const documentsRef = useRef(null);
+  const [showDocument, setShowDocument] = useState(true);
   const practiceRef = useRef(null);
+  const [showPractice, setShowPractice] = useState(true);
   const { width } = useWindowDimensions();
   const [vdata, setVdata] = useState(videoData);
   const [mobileTab, setMobileTab] = useState('video');
   const [tabState, setTabState] = useState('code');
 
   const handleClickVideoTab = (active) => {
+    setShowVideo(true);
     if (active) {
       width > 769 && videoRef.current.open();
       setMobileTab('video');
@@ -28,6 +35,7 @@ const StackedLayout = () => {
   };
 
   const handleClickFileTab = (active) => {
+    setShowFile(true);
     if (active) {
       width > 769 && fileRef.current.open();
       setMobileTab('file');
@@ -35,6 +43,7 @@ const StackedLayout = () => {
   };
 
   const handleClickQuizTab = (active) => {
+    setShowQuiz(true);
     if (active) {
       width > 769 && quizRef.current.open();
       setMobileTab('quiz');
@@ -42,6 +51,7 @@ const StackedLayout = () => {
   };
 
   const handleClickCommentTab = (active) => {
+    setShowComment(true);
     if (active) {
       width > 769 && commentsRef.current.open();
       setMobileTab('chat');
@@ -49,6 +59,7 @@ const StackedLayout = () => {
   };
 
   const handleClickDocumentTab = (active) => {
+    setShowDocument(true);
     if (active) {
       width > 769 && documentsRef.current.open();
       setMobileTab('document');
@@ -56,6 +67,7 @@ const StackedLayout = () => {
   };
 
   const handleClickPracticeTab = (active) => {
+    setShowPractice(true);
     if (active) {
       width > 769 && practiceRef.current.open();
       setMobileTab('editor');
@@ -64,21 +76,27 @@ const StackedLayout = () => {
 
   useEffect(() => {
     document.querySelector('.video--action1').addEventListener('click', () => {
+      setShowVideo(false);
       videoRef.current.close();
     });
     document.querySelector('.file--action1').addEventListener('click', () => {
+      setShowFile(false);
       fileRef.current.close();
     });
     document.querySelector('.quiz--action1').addEventListener('click', () => {
+      setShowQuiz(false);
       quizRef.current.close();
     });
     document.querySelector('.comment--action1').addEventListener('click', () => {
+      setShowComment(false);
       commentsRef.current.close();
     });
     document.querySelector('.document--action1').addEventListener('click', () => {
+      setShowDocument(false);
       documentsRef.current.close();
     });
     document.querySelector('.practice--action1').addEventListener('click', () => {
+      setShowPractice(false);
       practiceRef.current.close();
     });
     vdata.section.forEach(section => {
@@ -217,7 +235,11 @@ const StackedLayout = () => {
                  <div className="Video__header">
                    <strong>동영상</strong>
                  </div>
-                 <VideoPlayer vdata={vdata} setVdata={setVdata} />
+                 {
+                   width < 769 && (
+                     <VideoPlayer vdata={vdata} setVdata={setVdata} />
+                   )
+                 }
                </div>
 
                <div className={`Video mobileView ${mobileTab === 'file' ? 'active' : ''}`}>
@@ -276,6 +298,7 @@ const StackedLayout = () => {
                 height={450}
                 position={{ x: 130, y: 130 }}
                 showCloseButton={false}
+                className={showVideo ? 'jqx-rc-all jqx-window jqx-popup jqx-widget jqx-widget-content' : 'hidden'}
               >
                 <div className="Video__header _wedget-header">
                   <strong>동영상</strong>
@@ -285,7 +308,12 @@ const StackedLayout = () => {
                    </div>
                 </div>
                 <div className={'Video'}>
-                  <VideoPlayer vdata={vdata} setVdata={setVdata} />
+                  {
+                    width > 768 && (
+                      <VideoPlayer vdata={vdata} setVdata={setVdata} />
+                    )
+                  }
+
                 </div>
               </JqxWindow>
               <JqxWindow
@@ -294,6 +322,7 @@ const StackedLayout = () => {
                 height={795}
                 position={{ x: 960, y: 130 }}
                 showCloseButton={false}
+                className={showFile ? 'jqx-rc-all jqx-window jqx-popup jqx-widget jqx-widget-content' : 'hidden'}
               >
                 <div className="Video__header _wedget-header">
                   <strong>교안</strong>
@@ -313,6 +342,7 @@ const StackedLayout = () => {
                 height={450}
                 position={{ x: 130, y: 130 }}
                 showCloseButton={false}
+                className={showQuiz ? 'jqx-rc-all jqx-window jqx-popup jqx-widget jqx-widget-content' : 'hidden'}
               >
                 <div className="Video__header _wedget-header">
                   <strong>퀴즈</strong>
@@ -328,6 +358,7 @@ const StackedLayout = () => {
                 height={335}
                 position={{ x: 130, y: 590 }}
                 showCloseButton={false}
+                className={showComment ? 'jqx-rc-all jqx-window jqx-popup jqx-widget jqx-widget-content' : 'hidden'}
               >
                 <div className={'chat__header _wedget-header'}>
                   <strong>댓글과 질문</strong>
@@ -346,6 +377,7 @@ const StackedLayout = () => {
                 height={795}
                 position={{ x: 960, y: 130 }}
                 showCloseButton={false}
+                className={showDocument ? 'jqx-rc-all jqx-window jqx-popup jqx-widget jqx-widget-content' : 'hidden'}
               >
                 <div className="Video__header _wedget-header">
                   <strong>자료</strong>
@@ -366,6 +398,7 @@ const StackedLayout = () => {
                 height={795}
                 position={{ x: 960, y: 130 }}
                 showCloseButton={false}
+                className={showPractice ? 'jqx-rc-all jqx-window jqx-popup jqx-widget jqx-widget-content' : 'hidden'}
               >
                 <div className="Video__header _wedget-header">
                   <strong>실습창</strong>
