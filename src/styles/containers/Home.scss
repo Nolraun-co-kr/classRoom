@@ -3,6 +3,12 @@
   padding-bottom: 70px;
 }
 
+._divide {
+  margin: 20px 0;
+  border-top: 1px dashed #333;
+  @include theme('border-color', 'default-color');
+}
+
 ._row {
   display: flex;
 }

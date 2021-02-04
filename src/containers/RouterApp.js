@@ -38,7 +38,7 @@ const RouterApp = () => {
         <ScrollToTop />
 
         <Switch>
-          <Route exact path="/" component={() => (
+          <Route exact path="/mycourseware" component={() => (
             <ContentWrapper
               openMobileNav={openMobileNav}
               handleChangeOpenMobileNav={handleChangeOpenMobileNav}

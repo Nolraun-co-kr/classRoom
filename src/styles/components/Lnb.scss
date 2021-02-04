@@ -8,7 +8,31 @@
     display: block;
     line-height: 60px;
     text-align: center;
+  }
+}
+
+.lnb__tabs {
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content:'';
+    height: 40px;
+    flex: 1;
     border-bottom: 1px solid #ddd;
+  }
+
+  button {
+    height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    @include theme('color', 'default-color');
+
+    &.active {
+      border: 1px solid #ddd;
+      border-bottom: none;
+    }
   }
 }
 
