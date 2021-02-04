@@ -11,21 +11,24 @@ const videoData = {
           count: 1
         },
         file: {
-          active: true,
+          active: false,
           count: 1
         },
         quiz: {
-          active: true,
+          active: false,
           count: 2
         },
         comments: {
-          active: false
+          active: true,
+          count: 2
         },
         documents: {
-          active: false
+          active: false,
+          count: 2
         },
         practice: {
-          active: false
+          active: true,
+          count: 2
         }
       }
     },
@@ -119,7 +122,8 @@ const videoData = {
       endTime: 46,
       window: {
         video: {
-          active: false
+          active: true,
+          count: 1
         },
         file: {
           active: false
@@ -132,7 +136,7 @@ const videoData = {
           count: 1
         },
         documents: {
-          active: true,
+          active: false,
           count: 1
         },
         practice: {

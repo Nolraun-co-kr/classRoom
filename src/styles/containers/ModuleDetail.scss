@@ -210,6 +210,18 @@
     }
   }
 }
+.pdfLayout {
+  width: 100%;
+  margin: auto;
+  flex: 1;
+  iframe {
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width: 768px) {
+      min-height: 400px;
+    }
+  }
+}
 
 .interactiveLayout {
 
@@ -223,15 +235,7 @@
     margin: auto;
   }
 
-  .pdfLayout {
-    width: 100%;
-    margin: auto;
-    flex: 1;
-    iframe {
-      width: 100%;
-      height: 100%;
-    }
-  }
+
 
   .chat{
     flex: 1;
@@ -669,8 +673,15 @@
   border-bottom: 1px solid #eee !important;
   @include theme('border-color', 'border');
   background:#fff !important;
-  div {
+  & > div:not(.jqx-window-close-button-background) {
     margin: 0 !important;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .actions {
+    margin-left: auto !important;
   }
 }
 
@@ -681,7 +692,7 @@
   flex: 1;
   display: flex;
   @media screen and (max-width: 768px) {
-    display: none;
+    display: none !important;
   }
 }
 
