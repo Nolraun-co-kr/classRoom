@@ -6,10 +6,10 @@ const Chat = ({ headerHidden }) => {
       {!headerHidden && (
         <div className="chat__header">
           <strong>댓글과 질문</strong>
-          <div className="actions">
-            <button className={'action1'} />
-            <button className={'action2'} />
-          </div>
+          {/* <div className="actions"> */}
+          {/*  <button className={'action1'} /> */}
+          {/*  <button className={'action2'} /> */}
+          {/* </div> */}
         </div>
       )}
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import CourseDetailInfoItems from './CourseDetailInfoItems';
 
-const CourseDetailHeader = ({ theme }) => {
+const CourseDetailHeader = ({ theme, setOpenModal }) => {
   return (
     <div className="courseDetail__header">
       <div className={'thumb'}>
@@ -14,7 +14,7 @@ const CourseDetailHeader = ({ theme }) => {
         <span className={'info__tags'}>
           #장비교육, #레이저커터, #아크릴조명
         </span>
-        <CourseDetailInfoItems theme={theme} />
+        <CourseDetailInfoItems setOpenModal={setOpenModal} theme={theme} />
       </div>
     </div>
   );

@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ListWrapper from '../../components/Layout/ListPage/Wrapper';
 import { Link } from 'react-router-dom';
 import Progress from '../../components/Home/Progress';
 import CompleteCheck from '../../components/Home/CompleteCheck';
 
 const MyLeaningModule = ({ theme }) => {
+  const [col1, setCol1] = useState({
+    counts: 7,
+    datas: ['', '', '', '', '']
+  });
+  const handleClickAddCol1 = () => {
+    setCol1({
+      counts: 7,
+      datas: ['', '', '', '', '', '', '']
+    });
+  };
+
   return (
     <div className={'home'}>
 
@@ -16,24 +27,28 @@ const MyLeaningModule = ({ theme }) => {
                 <h3 className={'active'}>지난주</h3>
               </div>
               <ul className={'_col-list'}>
-                <li className={'_col-list-item'}>
-                  <Link to={'/'}>
-                    <h3>베트남의 실생활</h3>
-                    <div className={'mt-3'}>
-                      <Progress percent={66} />
-                    </div>
-                  </Link>
-                </li>
-                <li className={'_col-list-item'}>
-                  <Link to={'/'}>
-                    <h3>베트남의 실생활</h3>
-                    <div className={'mt-3'}>
-                      <Progress percent={66} />
-                    </div>
-                  </Link>
-                </li>
+                {col1.datas.map((data, index) => {
+                  return (
+                    <li className={'_col-list-item'} key={index}>
+                      <Link to={'/'}>
+                        <h3>{data}베트남의 실생활</h3>
+                        <div className={'mt-3'}>
+                          <Progress percent={66} />
+                        </div>
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
-              <button className={'_col-more'}>+ 5개 더 불러오기</button>
+              {
+                (col1.datas.length < col1.counts)
+                  // eslint-disable-next-line multiline-ternary
+                  ? (
+                    <button className={'_col-more'} onClick={handleClickAddCol1}>+ 더보기</button>
+                    ) : (
+                    <button className={'_col-more'}>-</button>
+                    )
+              }
             </div>
             <div className="_col">
               <div className={'_col-header'}>
@@ -57,7 +72,7 @@ const MyLeaningModule = ({ theme }) => {
                   </Link>
                 </li>
               </ul>
-              <button className={'_col-more'}>+ 5개 더 불러오기</button>
+              <button className={'_col-more'}>-</button>
             </div>
             <div className="_col">
               <div className={'_col-header'}>
@@ -84,7 +99,7 @@ const MyLeaningModule = ({ theme }) => {
                   </Link>
                 </li>
               </ul>
-              <button className={'_col-more'}>+ 5개 더 불러오기</button>
+              <button className={'_col-more'}>-</button>
             </div>
           </div>
           <div className="_row">
@@ -110,7 +125,7 @@ const MyLeaningModule = ({ theme }) => {
                   </Link>
                 </li>
               </ul>
-              <button className={'_col-more'}>+ 5개 더 불러오기</button>
+              <button className={'_col-more'}>-</button>
             </div>
           </div>
         </div>

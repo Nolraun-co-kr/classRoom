@@ -11,6 +11,13 @@
   justify-content: center;
 }
 
+._modal__description {
+  font-size: 16px;
+  @include theme('color', 'default-color');
+  line-height: 1.5em;
+  padding-bottom: 1.5em;
+}
+
 ._modal__content {
   width: 100%;
   max-width: 450px;
@@ -70,7 +77,14 @@
       border-radius: 5px;
       border: 1px solid #ddd;
       @include theme('border-color', 'border');
-
+    }
+    textarea {
+      width: 100%;
+      background:#fff;
+      height: 120px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      @include theme('border-color', 'border');
     }
   }
 }

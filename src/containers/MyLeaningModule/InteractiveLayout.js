@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SplitterLayout from 'react-splitter-layout';
 import 'react-splitter-layout/lib/index.css';
 import VideoPlayer from '../../components/VideoPlayer';
@@ -8,6 +8,10 @@ import EditorWrap from '../../components/CodeEditor/EditorWrap';
 
 const InteractiveLayout = () => {
   const { width } = useWindowDimensions();
+  const [practiceTab, setPracticeTab] = useState(1);
+  const handleClickShowPdf = () => {
+    window.open('http://www.africau.edu/images/default/sample.pdf');
+  };
   return (
     <>
       {/* eslint-disable-next-line multiline-ternary */}
@@ -17,7 +21,7 @@ const InteractiveLayout = () => {
           <div className={'block block--video'}>
             <div className="block__tabs">
               <button className={'video active'}><span>동영상</span></button>
-              <button className={'book'}><span>교안</span></button>
+              <button className={'book'} onClick={handleClickShowPdf}><span>교안</span></button>
             </div>
             <div className={'videoLayout'}>
               <VideoPlayer/>
@@ -27,18 +31,25 @@ const InteractiveLayout = () => {
           <div className={'block'}>
             <div className="block__tabs">
               <button className={'comment active'}><span>댓글과 질문</span></button>
-              <button className={'book'}><span>교안</span></button>
+              <button className={'book'} onClick={handleClickShowPdf}><span>교안</span></button>
             </div>
             <Chat headerHidden={true}/>
           </div>
 
           <div className={'block'}>
             <div className="block__tabs">
-              <button className={'training active'}><span>실습창</span></button>
-              <button className={'video'}><span>동영상</span></button>
+              <button className={`training ${practiceTab === 1 ? 'active' : ''}`} onClick={() => setPracticeTab(1)}><span>실습창</span></button>
+              <button className={`video ${practiceTab === 2 ? 'active' : ''}`} onClick={() => setPracticeTab(2)}><span>동영상</span></button>
             </div>
 
-            <EditorWrap />
+            {/* eslint-disable-next-line multiline-ternary */}
+            {practiceTab === 1 ? (
+              <EditorWrap />
+            ) : (
+              <div className={'videoLayout'}>
+                <VideoPlayer/>
+              </div>
+            )}
 
           </div>
         </div>
@@ -51,7 +62,7 @@ const InteractiveLayout = () => {
                 <div className={'block block--video'}>
                   <div className="block__tabs">
                     <button className={'video active'}><span>동영상</span></button>
-                    <button className={'book'}><span>교안</span></button>
+                    <button className={'book'} onClick={handleClickShowPdf}><span>교안</span></button>
                   </div>
                   <div className={'videoLayout'}>
                     <VideoPlayer/>
@@ -61,7 +72,7 @@ const InteractiveLayout = () => {
                 <div className={'block'}>
                   <div className="block__tabs">
                     <button className={'comment active'}><span>댓글과 질문</span></button>
-                    <button className={'book'}><span>교안</span></button>
+                    <button className={'book'} onClick={handleClickShowPdf}><span>교안</span></button>
                   </div>
                   <Chat headerHidden={true}/>
                 </div>
@@ -70,11 +81,19 @@ const InteractiveLayout = () => {
             </SplitterLayout>
             <div className={'block'}>
               <div className="block__tabs">
-                <button className={'training active'}><span>실습창</span></button>
-                <button className={'video'}><span>동영상</span></button>
+                <button className={`training ${practiceTab === 1 ? 'active' : ''}`} onClick={() => setPracticeTab(1)}><span>실습창</span></button>
+                <button className={`video ${practiceTab === 2 ? 'active' : ''}`} onClick={() => setPracticeTab(2)}><span>동영상</span></button>
               </div>
 
-              <EditorWrap />
+              {/* eslint-disable-next-line multiline-ternary */}
+              {practiceTab === 1 ? (
+                <EditorWrap />
+              ) : (
+                <div className={'videoLayout'}>
+                  <VideoPlayer/>
+                </div>
+              )}
+
             </div>
           </SplitterLayout>
         </div>

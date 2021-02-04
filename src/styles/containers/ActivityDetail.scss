@@ -82,6 +82,15 @@
       &:last-child {
         margin-right: 0;
       }
+
+      &.star {
+        i {
+          margin-right: 3px;
+          color:#F7D83B
+        }
+        svg {
+        }
+      }
     }
   }
 }

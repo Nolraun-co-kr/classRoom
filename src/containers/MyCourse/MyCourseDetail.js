@@ -5,15 +5,17 @@ import useWindowDimensions from '../../hooks/useWindowDemensions';
 import CourseDetailInfoItems from '../../components/CourseDetail/CourseDetailInfoItems';
 import CourseDetailInformation from '../../components/CourseDetail/CourseDetailInformation';
 import Communication from '../../components/Communication';
+import Modal from '../../components/Modal/Modal';
 
 const MyCourseDetail = ({ theme }) => {
+  const [openModal, setOpenModal] = useState(false);
   const [tab, setTab] = useState(1);
   const { width } = useWindowDimensions();
   return (
     <div className={'courseDetail'}>
-      <CourseDetailHeader theme={theme} />
+      <CourseDetailHeader setOpenModal={setOpenModal} theme={theme} />
       {width < 768 && (
-        <CourseDetailInfoItems/>
+        <CourseDetailInfoItems setOpenModal={setOpenModal}/>
       )}
 
       <div className={'courseDetail__body'}>
@@ -35,6 +37,30 @@ const MyCourseDetail = ({ theme }) => {
           }
         </div>
       </div>
+
+      {openModal && (
+        <Modal
+          title={'수강 신청하기'}
+          onClickClose={() => setOpenModal(false)}
+        >
+          <div className="_modal__row">
+            <label htmlFor="">신청내용</label>
+            <div className="input">
+              <input type="text" placeholder={'신청내용'}/>
+            </div>
+          </div>
+
+          <div className="_modal__row mt-10">
+            <label htmlFor="">첨부파일</label>
+            <input type="file"/>
+          </div>
+
+          <div className={'_modal__actions'}>
+            <button className={'submit'}>신청하기</button>
+            <button>취소하기</button>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 };

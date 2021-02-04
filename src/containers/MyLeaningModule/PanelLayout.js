@@ -25,10 +25,10 @@ const PanelLayout = () => {
         <div className={'Video'}>
           <div className="Video__header">
             <strong>동영상</strong>
-            <div className="actions">
-              <button className={'action1'} />
-              <button className={'action2'} />
-            </div>
+            {/* <div className="actions"> */}
+            {/*  <button className={'action1'} /> */}
+            {/*  <button className={'action2'} /> */}
+            {/* </div> */}
           </div>
           <VideoPlayer />
         </div>

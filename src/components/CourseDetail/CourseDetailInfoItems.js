@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const CourseDetailInfoItems = ({ theme }) => {
+const CourseDetailInfoItems = ({ theme, setOpenModal }) => {
+  const [popover, setPopover] = useState(false);
+
+  const handleClickShowPopover = (e) => {
+    e.stopPropagation();
+    setPopover(!popover);
+  };
+
   return (
    <>
      <ul className={'info__items'}>
@@ -25,18 +32,33 @@ const CourseDetailInfoItems = ({ theme }) => {
        <li>
          <strong>신청유형</strong>
          <p>
-                <span>
-                  개인(20명)
-                </span>
+            <span>
+              개인(20명)
+            </span>
          </p>
        </li>
      </ul>
      <div className={'action'}>
-       <button className={'submit'}>신청하기</button>
-       <button className={'share'}>
+       <button className={'submit'} onClick={() => setOpenModal(true)} >신청하기</button>
+       <button className={'share'} onClick={handleClickShowPopover}>
          <img src={`/assets/images/courseShare${theme === 'dark' ? '2' : ''}.png`} alt=""/>
        </button>
+       {popover && (
+         <div className={'share__popover'}>
+           <h3>SNS에 교육과정을 공유해주세요.</h3>
+           <div className={'share__items'}>
+             <button>f</button>
+             <button>t</button>
+             <button>g</button>
+           </div>
+           <div className={'copy'}>
+             <input type="text" value='https://kacademy.kist.co.kr' readOnly/>
+             <button>Copy URL</button>
+           </div>
+         </div>
+       )}
      </div>
+
    </>
   );
 };
