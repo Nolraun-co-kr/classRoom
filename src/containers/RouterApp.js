@@ -25,10 +25,16 @@ const RouterApp = () => {
   }, [openMobileNav]);
 
   const handleChangeTheme = useCallback(() => {
+    const body = document.body;
     if (theme === 'light') {
       setTheme('dark');
+      body.classList.remove('light');
+      body.classList.add('dark');
     } else {
       setTheme('light');
+      body.classList.remove('dark');
+      body.classList.add('light');
+      // document.getElementsByTagName('body').classList.add('light');
     }
   }, [theme]);
 

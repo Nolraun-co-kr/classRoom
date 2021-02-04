@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import VideoPlayer from '../../components/VideoPlayer';
 import Chat from '../../components/Chat';
 import EditorWrap from '../../components/CodeEditor/EditorWrap';
@@ -11,16 +11,22 @@ const StackedLayout = () => {
   // video, chat, editor
   const videoRef = useRef(null);
   const [showVideo, setShowVideo] = useState(true);
+  const [postionVideo, setPositionVideo] = useState({ x: 130, y: 130 });
   const fileRef = useRef(null);
   const [showFile, setShowFile] = useState(true);
+  const [positionFile, setPositionFile] = useState({ x: 960, y: 130 });
   const quizRef = useRef(null);
   const [showQuiz, setShowQuiz] = useState(true);
+  const [positionQuiz, setPositionQuiz] = useState({ x: 130, y: 130 });
   const commentsRef = useRef(null);
   const [showComment, setShowComment] = useState(true);
+  const [positionComment, setPositionComment] = useState({ x: 130, y: 590 });
   const documentsRef = useRef(null);
   const [showDocument, setShowDocument] = useState(true);
+  const [positionDocument, setPositionDocument] = useState({ x: 960, y: 130 });
   const practiceRef = useRef(null);
   const [showPractice, setShowPractice] = useState(true);
+  const [positionPractice, setPositionPractice] = useState({ x: 960, y: 130 });
   const { width } = useWindowDimensions();
   const [vdata, setVdata] = useState(videoData);
   const [mobileTab, setMobileTab] = useState('video');
@@ -73,6 +79,26 @@ const StackedLayout = () => {
       setMobileTab('editor');
     }
   };
+
+  const handleMovdeVideoWidget = useCallback((e) => {
+    setPositionVideo({ x: e.args.x, y: e.args.y });
+  }, []);
+
+  const handleMovdeVFileWidget = useCallback((e) => {
+    setPositionFile({ x: e.args.x, y: e.args.y });
+  }, []);
+  const handleMovdeQuizWidget = useCallback((e) => {
+    setPositionQuiz({ x: e.args.x, y: e.args.y });
+  }, []);
+  const handleMovdeCommentWidget = useCallback((e) => {
+    setPositionComment({ x: e.args.x, y: e.args.y });
+  }, []);
+  const handleMovdeDocumentWidget = useCallback((e) => {
+    setPositionDocument({ x: e.args.x, y: e.args.y });
+  }, []);
+  const handleMovdePracticeWidget = useCallback((e) => {
+    setPositionPractice({ x: e.args.x, y: e.args.y });
+  }, []);
 
   useEffect(() => {
     document.querySelector('.video--action1').addEventListener('click', () => {
@@ -296,8 +322,9 @@ const StackedLayout = () => {
                 ref={videoRef}
                 width={810}
                 height={450}
-                position={{ x: 130, y: 130 }}
+                position={postionVideo}
                 showCloseButton={false}
+                onMoved={handleMovdeVideoWidget}
                 className={showVideo ? 'jqx-rc-all jqx-window jqx-popup jqx-widget jqx-widget-content' : 'hidden'}
               >
                 <div className="Video__header _wedget-header">
@@ -310,7 +337,9 @@ const StackedLayout = () => {
                 <div className={'Video'}>
                   {
                     width > 768 && (
-                      <VideoPlayer vdata={vdata} setVdata={setVdata} />
+                      <div>
+                        <VideoPlayer vdata={vdata} setVdata={setVdata} />
+                      </div>
                     )
                   }
 
@@ -320,8 +349,9 @@ const StackedLayout = () => {
                 ref={fileRef}
                 width={810}
                 height={795}
-                position={{ x: 960, y: 130 }}
+                position={positionFile}
                 showCloseButton={false}
+                onMoved={handleMovdeVFileWidget}
                 className={showFile ? 'jqx-rc-all jqx-window jqx-popup jqx-widget jqx-widget-content' : 'hidden'}
               >
                 <div className="Video__header _wedget-header">
@@ -340,8 +370,9 @@ const StackedLayout = () => {
                 ref={quizRef}
                 width={810}
                 height={450}
-                position={{ x: 130, y: 130 }}
+                position={positionQuiz}
                 showCloseButton={false}
+                onMoved={handleMovdeQuizWidget}
                 className={showQuiz ? 'jqx-rc-all jqx-window jqx-popup jqx-widget jqx-widget-content' : 'hidden'}
               >
                 <div className="Video__header _wedget-header">
@@ -356,8 +387,9 @@ const StackedLayout = () => {
                 ref={commentsRef}
                 width={810}
                 height={335}
-                position={{ x: 130, y: 590 }}
+                position={positionComment}
                 showCloseButton={false}
+                onMoved={handleMovdeCommentWidget}
                 className={showComment ? 'jqx-rc-all jqx-window jqx-popup jqx-widget jqx-widget-content' : 'hidden'}
               >
                 <div className={'chat__header _wedget-header'}>
@@ -375,8 +407,9 @@ const StackedLayout = () => {
                 ref={documentsRef}
                 width={810}
                 height={795}
-                position={{ x: 960, y: 130 }}
+                position={positionDocument}
                 showCloseButton={false}
+                onMoved={handleMovdeDocumentWidget}
                 className={showDocument ? 'jqx-rc-all jqx-window jqx-popup jqx-widget jqx-widget-content' : 'hidden'}
               >
                 <div className="Video__header _wedget-header">
@@ -396,8 +429,9 @@ const StackedLayout = () => {
                 ref={practiceRef}
                 width={810}
                 height={795}
-                position={{ x: 960, y: 130 }}
+                position={positionPractice}
                 showCloseButton={false}
+                onMoved={handleMovdePracticeWidget}
                 className={showPractice ? 'jqx-rc-all jqx-window jqx-popup jqx-widget jqx-widget-content' : 'hidden'}
               >
                 <div className="Video__header _wedget-header">

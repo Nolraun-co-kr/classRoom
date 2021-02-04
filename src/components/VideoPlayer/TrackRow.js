@@ -4,8 +4,7 @@ const TrackRow = ({
   start,
   end,
   text,
-  currentTime,
-  setCurrentTime
+  currentTime
 }) => {
   const [active, setActive] = useState(false);
 
@@ -18,7 +17,7 @@ const TrackRow = ({
   }, [currentTime]);
 
   return (
-    <button className={`trackText ${active ? 'active' : ''}`} onClick={() => setCurrentTime(start)}>
+    <button className={`${active ? 'active' : ''} trackText`} data-start={start}>
         {text}
     </button>
   );

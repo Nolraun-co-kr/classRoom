@@ -36,6 +36,12 @@ export default class VideoPlayer extends React.Component {
   componentDidMount () {
     const _this = this;
 
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('trackText')) {
+        this.setCurrentTime(parseFloat(e.target.dataset.start, 10));
+      }
+    });
+
     this.player = videojs(this.videoNode, this.props, function onPlayerReady () {
       // quality
       const hdButton = this.controlBar.addChild('QualitySelector');
@@ -195,14 +201,13 @@ export default class VideoPlayer extends React.Component {
           <div className={'trackLayout'}>
             {this.state.trackInfo.map((track, index) => {
               return (
-                <TrackRow
-                  key={index}
-                  start={track.start}
-                  end={track.end}
-                  text={track.text}
-                  currentTime={this.state.currentTime}
-                  setCurrentTime={this.setCurrentTime}
-                />
+                  <TrackRow
+                    key={index}
+                    start={track.start}
+                    end={track.end}
+                    text={track.text}
+                    currentTime={this.state.currentTime}
+                  />
               );
             })}
           </div>
