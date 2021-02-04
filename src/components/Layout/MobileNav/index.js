@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiOutlineClose } from 'react-icons/all';
 import { Link } from 'react-router-dom';
 import NavBody from '../Nav/NavBody';
+import NavBodyEdu from '../Nav/NavBodyEdu';
+import { CgMenuGridR } from 'react-icons/cg';
 
 const MobileNav = ({ openMobileNav, onChangeOpenMobileNav }) => {
+  const [tab, setTab] = useState(1);
   return (
       <>
         <div
@@ -27,7 +30,13 @@ const MobileNav = ({ openMobileNav, onChangeOpenMobileNav }) => {
             </div>
           </header>
           <div className="mobileNav__links">
-            <NavBody />
+            <div className={'lnb__tabs'}>
+              <button className={tab === 1 ? 'active' : ''} onClick={() => setTab(1)}>
+                <CgMenuGridR />
+              </button>
+              <button className={tab === 2 ? 'active' : ''} onClick={() => setTab(2)}>강좌</button>
+            </div>
+            {tab === 1 ? <NavBody /> : <NavBodyEdu />}
           </div>
         </nav>
       </>

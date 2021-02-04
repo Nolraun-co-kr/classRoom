@@ -8,7 +8,7 @@ const Preview = () => {
         안내) 미리보기에서는 20초 까지만 볼 수 있습니다
       </div>
       <div className={'videoLayout'}>
-        <VideoPlayer />
+        <VideoPlayer limitTime={20} />
       </div>
     </div>
   );

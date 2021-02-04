@@ -72,6 +72,11 @@
     padding: 0;
     @include theme('border-color', 'MobileNavBg');
   }
+  .lnb__block-title {
+    padding:0 20px;
+    line-height: 45px;
+    display: block;
+  }
   .lnb__block-name {
     padding:0 20px;
     height: 45px;

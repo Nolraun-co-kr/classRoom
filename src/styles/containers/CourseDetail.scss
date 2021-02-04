@@ -89,6 +89,7 @@
   .action {
     display: flex;
     margin-top: 15px;
+    position: relative;
     button {
       height: 50px;
       border-radius: 3px;
@@ -112,8 +113,7 @@
       padding: 10px;
       width: 300px;
       top: calc(100% + 10px);
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0%;
       h3 {
         line-height: 45px;
         text-align: center;

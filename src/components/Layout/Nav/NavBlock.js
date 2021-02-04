@@ -7,7 +7,7 @@ const NavBlock = ({ lnb }) => {
     <div className={'lnb__block'}>
       {/* eslint-disable-next-line multiline-ternary */}
       {lnb.title ? (
-          <Link to={lnb.path}>
+          <Link className={'lnb__block-title'} to={lnb.path}>
             {lnb.title}
           </Link>
       ) : (

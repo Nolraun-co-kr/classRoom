@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import VideoPlayer from './VideoPlayer';
 
-const Index = ({ vdata, setVdata }) => {
+const Index = ({ vdata, setVdata, limitTime }) => {
   const [showBottomTrack, setShowBottomTrack] = useState(true);
   const [showRightTrack, setShowRightTrack] = useState(true);
   const [trackInfo, setTrackInfo] = useState([]);
@@ -29,17 +29,19 @@ const Index = ({ vdata, setVdata }) => {
   ]);
 
   const handleChangeTimer = useCallback((currentTime) => {
-    const section = vdata.section.map(sec => {
-      return ({
-        ...sec,
-        active: sec.startTime <= currentTime && currentTime < sec.endTime
+    if (vdata) {
+      const section = vdata.section.map(sec => {
+        return ({
+          ...sec,
+          active: sec.startTime <= currentTime && currentTime < sec.endTime
+        });
       });
-    });
 
-    setVdata({
-      ...vdata,
-      section
-    });
+      setVdata({
+        ...vdata,
+        section
+      });
+    }
   }, [vdata]);
 
   useEffect(() => {
@@ -108,7 +110,8 @@ const Index = ({ vdata, setVdata }) => {
     onToggleShowRightTrack: handleToggleShowRightTrack,
     trackInfo: trackInfo,
     handleChangeTheme: handleChangeTheme,
-    handleChangeTimer
+    handleChangeTimer,
+    limitTime
   };
 
   return (

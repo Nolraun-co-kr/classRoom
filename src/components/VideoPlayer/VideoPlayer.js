@@ -100,6 +100,12 @@ export default class VideoPlayer extends React.Component {
 
       this.props.handleChangeTimer(currentTime);
 
+      if (this.props.limitTime < currentTime) {
+        alert(`미리보기는 ${this.props.limitTime}까지 제공됩니다.`);
+        this.player.pause();
+        this.player.load();
+      }
+
       this.setState({
         currentTime
       });
