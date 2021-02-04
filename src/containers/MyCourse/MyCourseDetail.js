@@ -46,7 +46,7 @@ const MyCourseDetail = ({ theme }) => {
           <div className="_modal__row">
             <label htmlFor="">신청내용</label>
             <div className="input">
-              <input type="text" placeholder={'신청내용'}/>
+              <textarea name="" id=""></textarea>
             </div>
           </div>
 

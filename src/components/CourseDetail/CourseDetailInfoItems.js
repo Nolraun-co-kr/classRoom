@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { GrClose } from 'react-icons/gr';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const CourseDetailInfoItems = ({ theme, setOpenModal }) => {
   const [popover, setPopover] = useState(false);
@@ -45,15 +47,24 @@ const CourseDetailInfoItems = ({ theme, setOpenModal }) => {
        </button>
        {popover && (
          <div className={'share__popover'}>
-           <h3>SNS에 교육과정을 공유해주세요.</h3>
+           <div className={'share__popoverHeader'}>
+             <h3>SNS에 교육과정을 공유해주세요.</h3>
+             <button onClick={() => setOpenModal(false)}>
+               <GrClose />
+             </button>
+           </div>
+
            <div className={'share__items'}>
              <button>f</button>
              <button>t</button>
              <button>g</button>
            </div>
            <div className={'copy'}>
+
              <input type="text" value='https://kacademy.kist.co.kr' readOnly/>
-             <button>Copy URL</button>
+             <CopyToClipboard text={'https://kacademy.kist.co.kr'}>
+               <button>Copy URL</button>
+             </CopyToClipboard>
            </div>
          </div>
        )}

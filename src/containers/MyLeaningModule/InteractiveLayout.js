@@ -7,11 +7,11 @@ import useWindowDimensions from '../../hooks/useWindowDemensions';
 import EditorWrap from '../../components/CodeEditor/EditorWrap';
 
 const InteractiveLayout = () => {
+  const [videoTab, setVideoTab] = useState(1);
+  const [chatTab, setChatTab] = useState(1);
   const { width } = useWindowDimensions();
   const [practiceTab, setPracticeTab] = useState(1);
-  const handleClickShowPdf = () => {
-    window.open('http://www.africau.edu/images/default/sample.pdf');
-  };
+
   return (
     <>
       {/* eslint-disable-next-line multiline-ternary */}
@@ -20,8 +20,8 @@ const InteractiveLayout = () => {
         <div className={'interactiveLayout'}>
           <div className={'block block--video'}>
             <div className="block__tabs">
-              <button className={'video active'}><span>동영상</span></button>
-              <button className={'book'} onClick={handleClickShowPdf}><span>교안</span></button>
+              <button className={`video ${videoTab === 1 ? 'active' : ''}`} onClick={() => setVideoTab(1)}><span>동영상</span></button>
+              <button className={`book ${videoTab === 2 ? 'active' : ''}`} onClick={() => setVideoTab(2)}><span>교안</span></button>
             </div>
             <div className={'videoLayout'}>
               <VideoPlayer/>
@@ -30,8 +30,9 @@ const InteractiveLayout = () => {
 
           <div className={'block'}>
             <div className="block__tabs">
-              <button className={'comment active'}><span>댓글과 질문</span></button>
-              <button className={'book'} onClick={handleClickShowPdf}><span>교안</span></button>
+
+              <button className={`comment ${chatTab === 1 ? 'active' : ''}`} onClick={() => setChatTab(1)}><span>댓글과 질문</span></button>
+              <button className={`book ${chatTab === 2 ? 'active' : ''}`} onClick={() => setChatTab(2)}><span>교안</span></button>
             </div>
             <Chat headerHidden={true}/>
           </div>
@@ -61,20 +62,35 @@ const InteractiveLayout = () => {
               <SplitterLayout vertical>
                 <div className={'block block--video'}>
                   <div className="block__tabs">
-                    <button className={'video active'}><span>동영상</span></button>
-                    <button className={'book'} onClick={handleClickShowPdf}><span>교안</span></button>
+              <button className={`video ${videoTab === 1 ? 'active' : ''}`} onClick={() => setVideoTab(1)}><span>동영상</span></button>
+              <button className={`book ${videoTab === 2 ? 'active' : ''}`} onClick={() => setVideoTab(2)}><span>교안</span></button>
                   </div>
-                  <div className={'videoLayout'}>
-                    <VideoPlayer/>
-                  </div>
+                  {/* eslint-disable-next-line multiline-ternary */}
+                  {videoTab === 1 ? (
+                    <div className={'videoLayout'}>
+                      <VideoPlayer/>
+                    </div>
+                  ) : (
+                    <div className={'pdfLayout'}>
+                      <iframe src="http://www.africau.edu/images/default/sample.pdf" frameBorder="0"></iframe>
+                    </div>
+                  )}
+
                 </div>
 
                 <div className={'block'}>
                   <div className="block__tabs">
-                    <button className={'comment active'}><span>댓글과 질문</span></button>
-                    <button className={'book'} onClick={handleClickShowPdf}><span>교안</span></button>
+              <button className={`comment ${chatTab === 1 ? 'active' : ''}`} onClick={() => setChatTab(1)}><span>댓글과 질문</span></button>
+              <button className={`book ${chatTab === 2 ? 'active' : ''}`} onClick={() => setChatTab(2)}><span>교안</span></button>
                   </div>
-                  <Chat headerHidden={true}/>
+                  {/* eslint-disable-next-line multiline-ternary */}
+                  {chatTab === 1 ? (
+                    <Chat headerHidden={true}/>
+                  ) : (
+                    <div className={'pdfLayout'}>
+                      <iframe src="http://www.africau.edu/images/default/sample.pdf" frameBorder="0"></iframe>
+                    </div>
+                  )}
                 </div>
               </SplitterLayout>
 

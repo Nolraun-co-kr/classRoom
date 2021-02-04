@@ -9,7 +9,7 @@ const PanelLayout = () => {
   const [toggle, setToggle] = useState(true);
   return (
     <div className={'panelLayout'}>
-      <div className="panelLayout__content">
+      <div className="panelLayout__content panelLayout__content--module2">
 
         <div
           className={`dim ${toggle ? 'active' : ''}`}
@@ -23,7 +23,7 @@ const PanelLayout = () => {
         </button>
 
         <div className={'Video'}>
-          <div className="Video__header">
+          <div className="Video__header Video__header--border">
             <strong>동영상</strong>
             {/* <div className="actions"> */}
             {/*  <button className={'action1'} /> */}

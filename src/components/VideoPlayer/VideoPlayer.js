@@ -4,6 +4,7 @@ import videojs from 'video.js';
 import 'video.js/dist/video-js.min.css';
 import TrackRow from './TrackRow';
 import 'videojs-landscape-fullscreen';
+require('videojs-offset');
 
 require('@silvermine/videojs-quality-selector')(videojs);
 
@@ -80,6 +81,14 @@ export default class VideoPlayer extends React.Component {
       });
     });
 
+    if (this.props.limitTime) {
+      this.player.offset({
+        start: 0,
+        end: this.props.limitTime,
+        restart_beginning: false
+      });
+    }
+
     this.player.landscapeFullscreen({
       fullscreen: {
         enterOnRotate: true,
@@ -99,12 +108,6 @@ export default class VideoPlayer extends React.Component {
       const currentTime = _this.player.currentTime();
 
       this.props.handleChangeTimer(currentTime);
-
-      if (this.props.limitTime < currentTime) {
-        alert(`미리보기는 ${this.props.limitTime}까지 제공됩니다.`);
-        this.player.pause();
-        this.player.load();
-      }
 
       this.setState({
         currentTime

@@ -110,17 +110,26 @@
       position: absolute;
       @include theme('background', 'background');
       box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
-      padding: 10px;
+      padding: 0 10px 10px;
       width: 300px;
       top: calc(100% + 10px);
       left: 0%;
-      h3 {
-        line-height: 45px;
-        text-align: center;
+
+      .share__popoverHeader {
+        display: flex;
+        align-items: center;
         border-bottom: 1px solid #eee;
-        @include theme('border-color', 'border');
-        @include theme('color', 'default-color');
+        height: 45px;
+        h3 {
+          text-align: center;
+          @include theme('border-color', 'border');
+          @include theme('color', 'default-color');
+        }
+        button {
+          margin-left: auto;
+        }
       }
+
       .share__items {
         display: flex;
         align-items: center;

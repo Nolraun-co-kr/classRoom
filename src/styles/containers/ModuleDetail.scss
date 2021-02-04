@@ -144,14 +144,13 @@
 }
 
 .panelLayout {
-
-
-
-
   .panelLayout__content {
     width: 100%;
     max-width: 820px;
     margin:0 auto;
+    &.panelLayout__content--module2 {
+      padding-top: 15px;
+    }
   }
 
   .dim {
@@ -181,6 +180,10 @@
   @include theme('background', 'background');
   @include theme('border-color', 'border');
 
+  &.Video__header--border {
+    border-top: 1px solid #ddd;
+    @include theme('border-color', 'border');
+  }
   strong {
     font-size: 1rem;
     background: url('#{$image-path}/activity2-icon.png') no-repeat left 8px;
@@ -218,6 +221,16 @@
     width: 100%;
     max-width: 820px;
     margin: auto;
+  }
+
+  .pdfLayout {
+    width: 100%;
+    margin: auto;
+    flex: 1;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .chat{
@@ -468,7 +481,6 @@
   }
 
 
-
   .detailLayout3__left,
   .detailLayout3__right {
     flex: 1;
@@ -649,5 +661,33 @@
         }
       }
     }
+  }
+}
+
+._wedget-header {
+  border: none !important;
+  border-bottom: 1px solid #eee !important;
+  @include theme('border-color', 'border');
+  background:#fff !important;
+  div {
+    margin: 0 !important;
+  }
+}
+
+
+
+.jqx-window,
+.detailLayout3__pc {
+  flex: 1;
+  display: flex;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.detailLayout3__mobile {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
   }
 }
