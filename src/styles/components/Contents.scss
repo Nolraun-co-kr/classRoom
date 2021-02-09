@@ -25,13 +25,14 @@
     h2 {
       font-size:1.125rem;
       font-weight: 700;
-
+      flex: 1;
       @include theme('color', 'nav-block-name');
     }
 
     ._progress {
-      flex: 1;
       max-width: 300px;
+      width: 100%;
+      flex: none;
       margin-left: auto;
       @media screen and (max-width: 768px) {
         max-width: 150px;

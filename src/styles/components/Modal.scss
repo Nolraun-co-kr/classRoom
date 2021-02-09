@@ -35,6 +35,16 @@
   padding:0 10px;
   h2 {
     font-weight: 600;
+    flex: 1;
+  }
+  button {
+    flex: none;
+    width: 16px;
+    height: 16px;
+
+    svg {
+      vertical-align: super;
+    }
   }
 }
 
@@ -55,6 +65,9 @@
     width: 80px;
     flex: none;
     @include theme('color', 'default-color');
+  }
+  input[type="file"] {
+    width: 100%;
   }
 
   .select {
