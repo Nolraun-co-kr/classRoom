@@ -142,6 +142,15 @@ export default class VideoPlayer extends React.Component {
       }
     });
 
+    this.player.on('fullscreenchange', () => {
+      if (this.player.isFullscreen()) {
+        _this.props.onToggleShowRightTrack(false);
+        document.querySelector('.vjs-control-bar').classList.add('visible');
+      } else {
+        document.querySelector('.vjs-control-bar').classList.remove('visible');
+      }
+    });
+
     this.player.on('loadedmetadata', (e) => {
       const playBtn = document.querySelector('.play-control');
       const duration = document.querySelector('.detailLayout3__progress .duration');

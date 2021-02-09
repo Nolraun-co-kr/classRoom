@@ -16,8 +16,8 @@ const Index = ({ vdata, setVdata, limitTime }) => {
     showBottomTrack
   ]);
 
-  const handleToggleShowRightTrack = useCallback(() => {
-    setShowRightTrack(!showRightTrack);
+  const handleToggleShowRightTrack = useCallback((value) => {
+    setShowRightTrack(value || !showRightTrack);
   }, [
     showRightTrack
   ]);

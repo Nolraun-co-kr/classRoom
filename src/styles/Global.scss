@@ -207,6 +207,10 @@ select {
   border: none;
 }
 
+select::-ms-expand {
+  display: none;
+}
+
 
 
 

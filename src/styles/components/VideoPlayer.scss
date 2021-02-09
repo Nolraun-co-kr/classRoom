@@ -39,7 +39,7 @@
   font-size: 10px;
   padding-bottom: 60px;
   border: 1px solid #f8f8f8;
-  @include theme('border-color', border);
+  @include theme('border-color', 'header-text');
   .vjs-control-bar * {
     font-size: 10px !important;
     color:#000;
@@ -47,6 +47,10 @@
     &.vjs-menu-item-text {
       color:#fff;
     }
+  }
+
+  .vjs-volume-control {
+    z-index: 100;
   }
 
   .vjs-menu-item.vjs-selected {
@@ -91,6 +95,9 @@
     height: 60px !important;
     display:flex !important;
 
+    &.visible {
+      position: absolute !important;
+    }
   }
 
 

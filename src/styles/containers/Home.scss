@@ -270,9 +270,13 @@
       .theme-dark & {
         background: rgba(0,0,0,.8);
       }
-      align-items: center;
-      justify-content: center;
+      align-items: flex-end;
+      justify-content: flex-end;
       color:#ff0000;
+      padding: 10px;
+      span {
+        font-size: 14px;
+      }
 
     }
     a {

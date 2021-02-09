@@ -6,20 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Activity/DetailInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Activity/DetailInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MyCourse/MyCourseDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyCourse/MyCourseDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MyLeaningActivity/MyLeaningActivityDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyLeaningActivity/MyLeaningActivityDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MyLeaningModule/InteractiveLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/InteractiveLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MyLeaningModule/StackedLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/StackedLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/chat.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Chat.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/codeEditor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/CodeEditor.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/listwrapper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Listwrapper.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Modal.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/videoPagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/VideoPagination.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/videoPlayer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/VideoPlayer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/containers/ModuleDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/ModuleDetail.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/Contents.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Contents.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/VideoPlayer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/VideoPlayer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/VideoWrapper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/VideoWrapper.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/containers/ActivityDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/ActivityDetail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/containers/Home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/Home.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +87,7 @@
       <workItem from="1612416966708" duration="19594000" />
       <workItem from="1612443663736" duration="9649000" />
       <workItem from="1612509546855" duration="15000" />
-      <workItem from="1612900297475" duration="2301000" />
+      <workItem from="1612900297475" duration="3646000" />
     </task>
     <servers />
   </component>

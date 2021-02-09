@@ -32,7 +32,7 @@
     ._progress {
       flex: 1;
       max-width: 300px;
-
+      margin-left: auto;
       @media screen and (max-width: 768px) {
         max-width: 150px;
       }
