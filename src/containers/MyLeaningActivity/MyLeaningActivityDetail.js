@@ -35,8 +35,8 @@ const MyLeaningActivityDetail = ({ theme }) => {
         </div>
       </div>
       <div className="_tabs">
-        <button onClick={() => setTab(1)} className={tab === 1 && 'active'}>미리보기</button>
-        <button onClick={() => setTab(2)} className={tab === 2 && 'active'}>상세한 정보</button>
+        <button onClick={() => setTab(1)} className={tab === 1 ? 'active' : ''}>미리보기</button>
+        <button onClick={() => setTab(2)} className={tab === 2 ? 'active' : ''}>상세한 정보</button>
       </div>
 
       <div className={'ActivityDetail__view'}>

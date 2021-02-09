@@ -25,11 +25,11 @@ const DetailInfo = ({ theme }) => {
         <div className={'Activity__metaInfo'}>
           <div className="_form-row">
             <h4>수준</h4>
-            <input type="text" value={'고등(대학 1학년)'}/>
+            <input type="text" value={'고등(대학 1학년)'} readOnly={true}/>
           </div>
           <div className="_form-row">
             <h4>데이터종류</h4>
-            <input type="text" value={'mp4 파일'}/>
+            <input type="text" value={'mp4 파일'} readOnly={true}/>
           </div>
         </div>
       </div>

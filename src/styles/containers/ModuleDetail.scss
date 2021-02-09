@@ -540,15 +540,18 @@
 
     @media screen and (max-width: 768px) {
       position: fixed;
-      display: flex;
       top: auto;
       bottom: 0;
       z-index: 2000;
-      height: 60px;
-      padding: 10px;
       width: 100%;
       overflow: auto;
       overflow-y: hidden;
+
+      & > div {
+        padding: 10px;
+        height: 60px;
+        display: flex;
+      }
     }
 
     .block {
@@ -658,6 +661,9 @@
           background: url('#{$image-path}/inter-icon#{$i}.png') no-repeat center;
           &.active{
             background: #eff3f9 url('#{$image-path}/inter-icon#{$i}.png') no-repeat center;
+            &.hidden-tab {
+              background: url('#{$image-path}/inter-icon#{$i}.png') no-repeat center;
+            }
             .theme-dark & {
               background: #1d1f22 url('#{$image-path}/inter-icon#{$i}.png') no-repeat center;
             }

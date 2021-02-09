@@ -34,6 +34,7 @@ const StackedLayout = () => {
 
   const handleClickVideoTab = (active) => {
     setShowVideo(true);
+    document.querySelector('.detailLayout3__tab .tab1').classList.remove('hidden-tab');
     if (active) {
       width > 769 && videoRef.current.open();
       setMobileTab('video');
@@ -42,6 +43,7 @@ const StackedLayout = () => {
 
   const handleClickFileTab = (active) => {
     setShowFile(true);
+    document.querySelector('.detailLayout3__tab .tab2').classList.remove('hidden-tab');
     if (active) {
       width > 769 && fileRef.current.open();
       setMobileTab('file');
@@ -50,6 +52,7 @@ const StackedLayout = () => {
 
   const handleClickQuizTab = (active) => {
     setShowQuiz(true);
+    document.querySelector('.detailLayout3__tab .tab3').classList.remove('hidden-tab');
     if (active) {
       width > 769 && quizRef.current.open();
       setMobileTab('quiz');
@@ -58,6 +61,7 @@ const StackedLayout = () => {
 
   const handleClickCommentTab = (active) => {
     setShowComment(true);
+    document.querySelector('.detailLayout3__tab .tab4').classList.remove('hidden-tab');
     if (active) {
       width > 769 && commentsRef.current.open();
       setMobileTab('chat');
@@ -66,6 +70,7 @@ const StackedLayout = () => {
 
   const handleClickDocumentTab = (active) => {
     setShowDocument(true);
+    document.querySelector('.detailLayout3__tab .tab5').classList.remove('hidden-tab');
     if (active) {
       width > 769 && documentsRef.current.open();
       setMobileTab('document');
@@ -74,6 +79,7 @@ const StackedLayout = () => {
 
   const handleClickPracticeTab = (active) => {
     setShowPractice(true);
+    document.querySelector('.detailLayout3__tab .tab6').classList.remove('hidden-tab');
     if (active) {
       width > 769 && practiceRef.current.open();
       setMobileTab('editor');
@@ -103,26 +109,32 @@ const StackedLayout = () => {
   useEffect(() => {
     document.querySelector('.video--action1').addEventListener('click', () => {
       setShowVideo(false);
+      document.querySelector('.detailLayout3__tab .tab1').classList.add('hidden-tab');
       videoRef.current.close();
     });
     document.querySelector('.file--action1').addEventListener('click', () => {
       setShowFile(false);
+      document.querySelector('.detailLayout3__tab .tab2').classList.add('hidden-tab');
       fileRef.current.close();
     });
     document.querySelector('.quiz--action1').addEventListener('click', () => {
       setShowQuiz(false);
+      document.querySelector('.detailLayout3__tab .tab3').classList.add('hidden-tab');
       quizRef.current.close();
     });
     document.querySelector('.comment--action1').addEventListener('click', () => {
       setShowComment(false);
+      document.querySelector('.detailLayout3__tab .tab4').classList.add('hidden-tab');
       commentsRef.current.close();
     });
     document.querySelector('.document--action1').addEventListener('click', () => {
       setShowDocument(false);
+      document.querySelector('.detailLayout3__tab .tab5').classList.add('hidden-tab');
       documentsRef.current.close();
     });
     document.querySelector('.practice--action1').addEventListener('click', () => {
       setShowPractice(false);
+      document.querySelector('.detailLayout3__tab .tab6').classList.add('hidden-tab');
       practiceRef.current.close();
     });
     vdata.section.forEach(section => {
@@ -207,9 +219,9 @@ const StackedLayout = () => {
 
       <div className="detailLayout3__inner">
         <div className={'detailLayout3__tab'}>
-          {vdata.section.map(section => {
+          {vdata.section.map((section, index) => {
             return section.active && (
-              <>
+              <div key={index}>
                 <div className={`block ${section.window.video.active ? 'active' : ''}`}>
                   <button className={`tab1 ${section.window.video.active ? 'active' : ''}`} onClick={() => handleClickVideoTab(section.window.video.active)}>
                     <i className={section.window.video.active ? '' : 'hidden'}>{section.window.video.count}</i>
@@ -251,7 +263,7 @@ const StackedLayout = () => {
                     <span>실습창</span>
                   </button>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

@@ -23,7 +23,7 @@
   max-width: 450px;
   border-radius: 10px;
   overflow: hidden;
-  @include theme('background', 'background')
+  @include theme('background', 'background');
 }
 
 ._modal__header {
@@ -40,6 +40,7 @@
 
 ._modal__body {
   padding: 20px;
+  @include theme('background', 'background');
 }
 
 ._modal__row {

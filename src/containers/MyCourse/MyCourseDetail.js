@@ -20,9 +20,9 @@ const MyCourseDetail = ({ theme }) => {
 
       <div className={'courseDetail__body'}>
         <div className="_tabs">
-          <button onClick={() => setTab(1)} className={tab === 1 && 'active'}>상세정보</button>
-          <button onClick={() => setTab(2)} className={tab === 2 && 'active'}>강의목차</button>
-          <button onClick={() => setTab(3)} className={tab === 3 && 'active'}>커뮤니케이션</button>
+          <button onClick={() => setTab(1)} className={tab === 1 ? 'active' : ''}>상세정보</button>
+          <button onClick={() => setTab(2)} className={tab === 2 ? 'active' : ''}>강의목차</button>
+          <button onClick={() => setTab(3)} className={tab === 3 ? 'active' : ''}>커뮤니케이션</button>
         </div>
 
         <div className="courseDetail__views">
