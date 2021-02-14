@@ -176,6 +176,55 @@ const StackedLayout = () => {
         }
       }
     });
+
+    const progress = document.querySelector('.detailLayout3__progress .inner_progress');
+    progress.addEventListener('click', (e) => {
+      vdata.section.forEach(section => {
+        if (section.active) {
+          if (section.window.video.active) {
+            videoRef.current.open();
+            setShowVideo(true);
+          } else {
+            videoRef.current.close();
+          }
+
+          if (section.window.file.active) {
+            fileRef.current.open();
+            setShowFile(true);
+          } else {
+            fileRef.current.close();
+          }
+
+          if (section.window.quiz.active) {
+            quizRef.current.open();
+            setShowQuiz(true);
+          } else {
+            quizRef.current.close();
+          }
+
+          if (section.window.comments.active) {
+            commentsRef.current.open();
+            setShowComment(true);
+          } else {
+            commentsRef.current.close();
+          }
+
+          if (section.window.documents.active) {
+            documentsRef.current.open();
+            setShowDocument(true);
+          } else {
+            documentsRef.current.close();
+          }
+
+          if (section.window.practice.active) {
+            practiceRef.current.open();
+            setShowPractice(true);
+          } else {
+            practiceRef.current.close();
+          }
+        }
+      });
+    });
   }, [vdata]);
 
   useEffect(() => {
@@ -216,7 +265,6 @@ const StackedLayout = () => {
           <span className={'duration'}>0:00</span>
         </div>
       </div>
-
       <div className="detailLayout3__inner">
         <div className={'detailLayout3__tab'}>
           {vdata.section.map((section, index) => {

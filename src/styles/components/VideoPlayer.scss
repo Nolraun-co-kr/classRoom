@@ -154,6 +154,14 @@
     order: 10;
     background: url('#{$image-path}/video-button-hd-black.png') no-repeat center !important;
     background-size: auto 14px !important;
+
+    .vjs-selected {
+      background:#eee;
+      color:#fff;
+    }
+    .vjs-menu {
+      z-index: 3000;
+    }
   }
   .vjs-button-icon-subtitles {
     order: 11;

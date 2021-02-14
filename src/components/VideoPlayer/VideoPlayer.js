@@ -30,17 +30,12 @@ export default class VideoPlayer extends React.Component {
   }
 
   setCurrentTime (time) {
+    console.log(time);
     this.state.player.currentTime(time);
   }
 
   componentDidMount () {
     const _this = this;
-
-    document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('trackText')) {
-        this.setCurrentTime(parseFloat(e.target.dataset.start, 10));
-      }
-    });
 
     this.player = videojs(this.videoNode, this.props, function onPlayerReady () {
       // quality
@@ -85,6 +80,13 @@ export default class VideoPlayer extends React.Component {
       rightTrackButton.on('touchend', function (e) {
         _this.props.onToggleShowRightTrack();
       });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (this.props.vdata && e.target.classList.contains('trackText')) {
+        console.log(e.target.dataset.start);
+        this.setCurrentTime(parseFloat(e.target.dataset.start, 10));
+      }
     });
 
     if (this.props.limitTime) {
@@ -216,6 +218,7 @@ export default class VideoPlayer extends React.Component {
                     end={track.end}
                     text={track.text}
                     currentTime={this.state.currentTime}
+                    setCurrentTime={this.setCurrentTime}
                   />
               );
             })}

@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/containers/ModuleDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/ModuleDetail.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/TrackRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/TrackRow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/MyLeaningActivity/MyLeaningActivityDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyLeaningActivity/MyLeaningActivityDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/MyLeaningModule/StackedLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MyLeaningModule/StackedLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/VideoPlayer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/VideoPlayer.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +86,7 @@
       <workItem from="1612443663736" duration="9649000" />
       <workItem from="1612509546855" duration="15000" />
       <workItem from="1612900297475" duration="5502000" />
-      <workItem from="1613327215550" duration="303000" />
+      <workItem from="1613327215550" duration="4206000" />
     </task>
     <servers />
   </component>

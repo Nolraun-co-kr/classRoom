@@ -71,18 +71,19 @@ const Index = ({ vdata, setVdata, limitTime }) => {
     muted: false,
     sources: [
       {
-        src: '//vjs.zencdn.net/v/oceans.mp4',
+        src: '//vjs.zencdn.net/v/oceans.mp4?720',
         type: 'video/mp4',
-        label: '720P'
+        label: '720P',
+        selected: false
       },
       {
-        src: '//vjs.zencdn.net/v/oceans.mp4',
+        src: '//vjs.zencdn.net/v/oceans.mp4?480',
         type: 'video/mp4',
         label: '480P',
         selected: true
       },
       {
-        src: '//vjs.zencdn.net/v/oceans.mp4',
+        src: '//vjs.zencdn.net/v/oceans.mp4?360',
         type: 'video/mp4',
         label: '360P'
       }
@@ -111,7 +112,8 @@ const Index = ({ vdata, setVdata, limitTime }) => {
     trackInfo: trackInfo,
     handleChangeTheme: handleChangeTheme,
     handleChangeTimer,
-    limitTime
+    limitTime,
+    vdata
   };
 
   return (

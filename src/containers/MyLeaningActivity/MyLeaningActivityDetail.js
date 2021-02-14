@@ -65,7 +65,7 @@ const MyLeaningActivityDetail = ({ theme }) => {
 
           <div className={'_modal__actions'}>
             <button className={'submit'}>생성하기</button>
-            <button>취소하기</button>
+            <button onClick={() => setOpenModal(false)}>취소하기</button>
           </div>
         </Modal>
       )}
