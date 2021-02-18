@@ -1,7 +1,9 @@
 // variable
 
 // http://nolraun.co.kr/assets/images
-$image-path: 'http://nolraun.co.kr/assets/images';
+
+//$image-path: 'http://nolraun.co.kr/assets/images';
+$image-path: 'http://localhost:8080/assets/images';
 
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
@@ -18,6 +20,7 @@ $image-path: 'http://nolraun.co.kr/assets/images';
 @import 'containers/CourseDetail';
 @import 'containers/ActivityDetail';
 @import 'containers/ModuleDetail';
+@import 'containers/Dashboard';
 
 // components
 @import 'components/Footer';

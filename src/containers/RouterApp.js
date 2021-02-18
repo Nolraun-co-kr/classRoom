@@ -9,6 +9,9 @@ import { MyLeaningModule, InteractiveLayout, PanelLayout, StackedLayout } from '
 
 import ScrollToTop from '../components/ScrollToTop';
 import { ContentWrapper, VideoWrapper } from '../components/Wrapper';
+import DashboardType1 from './dashboard/type1';
+import DashboardType2 from './dashboard/type2';
+import DashboardType3 from './dashboard/type3';
 
 const RouterApp = () => {
   const [gradient] = useState(false);
@@ -44,6 +47,49 @@ const RouterApp = () => {
         <ScrollToTop />
 
         <Switch>
+          {/* dashboard */}
+          <Route exact path="/dashboard/1" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+              gradient={gradient}
+            >
+              <DashboardType1 />
+            </ContentWrapper>
+          )}/>
+
+          <Route exact path="/dashboard/2" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+              gradient={gradient}
+            >
+              <DashboardType2 />
+            </ContentWrapper>
+          )}/>
+
+          <Route exact path="/dashboard/3" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+              gradient={gradient}
+            >
+              <DashboardType3 />
+            </ContentWrapper>
+          )}/>
+
           <Route exact path="/mycourseware" component={() => (
             <ContentWrapper
               openMobileNav={openMobileNav}
