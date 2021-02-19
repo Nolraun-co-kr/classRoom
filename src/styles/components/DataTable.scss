@@ -1,0 +1,40 @@
+._dataTable {
+  tr {
+    th, td {
+
+      vertical-align: middle;
+      text-align: center;
+    }
+    th:first-child {
+      border-right: 5px solid #f5f5f5;
+    }
+  }
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  thead {
+    th {
+      background:#999999;
+      color: #fff;
+      height: 40px;
+      font-size: 1rem;
+    }
+  }
+  tfoot ,
+  tbody {
+    th, td {
+      background:#fff;
+      height: 35px;
+      font-weight: 400;
+      text-align: center;
+      border: 2px solid #f5f5f5;
+      font-size: 14px;
+    }
+  }
+  tfoot {
+    th, td {
+      font-weight: 600;
+    }
+  }
+}

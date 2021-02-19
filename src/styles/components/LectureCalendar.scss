@@ -1,0 +1,75 @@
+.lectureCalendar {
+  padding:25px;
+  background:#fff;
+  .react-calendar__navigation__prev2-button {
+    display: none;
+  }
+  .react-calendar__navigation__next2-button {
+    display: none;
+  }
+
+  .react-calendar__navigation {
+    margin: 0;
+  }
+  .react-calendar {
+    border: none;
+  }
+  .react-calendar__viewContainer {
+    border-top: 1px solid #ddd;
+  }
+
+  abbr {
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+    border: 1px solid transparent;
+    margin:0 auto;
+  }
+  .react-calendar__tile--active {
+    background:#2e8bc5 !important;
+    color:#fff !important;
+  }
+  .react-calendar__tile--now {
+    background: none !important;
+
+    abbr {
+      color:#499acc;
+      border-radius: 50%;
+      display: block;
+      border: 1px solid #499acc;
+    }
+
+    &:hover {
+      background:#fff;
+    }
+  }
+
+  .react-calendar__tile:disabled {
+    background: none !important;
+    abbr {
+      color:#c7c7c7 !important;
+    }
+  }
+  .react-calendar__navigation button {
+    background: none !important;
+    font-size: 20px;
+    &.react-calendar__navigation__next-button {
+      text-indent: -999px;
+      overflow: hidden;
+      background: url('#{$image-path}/calendar-next.png') no-repeat center !important;
+    }
+    &.react-calendar__navigation__prev-button {
+      text-indent: -999px;
+      overflow: hidden;
+      background: url('#{$image-path}/calendar-prev.png') no-repeat center !important;
+    }
+    &[disabled] {
+      opacity: .3;
+    }
+  }
+  .react-calendar__navigation__label__labelText {
+    font-size: 1.5rem;
+  }
+
+
+}

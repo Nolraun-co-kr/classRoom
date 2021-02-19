@@ -9,14 +9,14 @@
 
 
   .links {
-    height: calc(516px - 288px);
+    height: calc(558px - 288px);
     background:#999999;
     display: flex;
     padding: 40px 50px;
     align-items: center;
     justify-content: center;
     @media screen and (max-width: 1020px) {
-      height: calc(516px - 246px);
+      height: calc(519px - 246px);
       padding: 25px;
     }
     @media screen and (max-width: 768px) {

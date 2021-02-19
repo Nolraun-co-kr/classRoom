@@ -9,10 +9,15 @@ import { MyLeaningModule, InteractiveLayout, PanelLayout, StackedLayout } from '
 
 import ScrollToTop from '../components/ScrollToTop';
 import { ContentWrapper, VideoWrapper } from '../components/Wrapper';
+
 import DashboardType1 from './dashboard/type1';
 import DashboardType2 from './dashboard/type2';
 import DashboardType3 from './dashboard/type3';
+
 import Login from './Login';
+
+import NoticeList from './Notice/list';
+import LecturePlan from './LecturePlan';
 
 const RouterApp = () => {
   const [gradient] = useState(false);
@@ -48,8 +53,38 @@ const RouterApp = () => {
         <ScrollToTop />
 
         <Switch>
-
+          {/* 로그인 */}
           <Route exact path="/login" component={Login} />
+
+          {/* 강의계획서 */}
+          <Route exact path="/lecturePlan" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+              gradient={gradient}
+            >
+              <LecturePlan />
+            </ContentWrapper>
+          )} />
+
+          {/* 공지사항 */}
+          <Route exact path="/notice" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+              gradient={gradient}
+            >
+              <NoticeList />
+            </ContentWrapper>
+          )} />
 
           {/* dashboard */}
           <Route exact path="/dashboard/1" component={() => (

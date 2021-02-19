@@ -22,6 +22,8 @@ $image-path: 'http://localhost:8080/assets/images';
 @import 'containers/ModuleDetail';
 @import 'containers/Dashboard';
 @import 'containers/Login';
+@import 'containers/Notice';
+@import 'containers/LecturePlan';
 
 // components
 @import 'components/Footer';
@@ -41,5 +43,8 @@ $image-path: 'http://localhost:8080/assets/images';
 @import 'components/CodeEditor';
 @import 'components/VideoPlayer';
 @import 'components/Modal';
+@import 'components/Page';
+@import 'components/DataTable';
+@import 'components/LectureCalendar';
 
 
