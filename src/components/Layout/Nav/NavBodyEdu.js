@@ -3,85 +3,110 @@ import NavBlock from './NavBlock';
 
 const lnbData = [
   {
-    title: '홈',
-    path: '/'
-  },
-  {
-    name: '강좌메뉴',
+    name: '주요메뉴',
     depth: [
       {
         path: '/',
-        className: 'lnb-1',
-        title: '강의계획서'
+        className: 'lnb-lecture-1',
+        title: '홈'
       },
       {
         path: '/',
-        className: 'lnb-2',
+        className: 'lnb-lecture-2',
         title: '공지사항'
       },
       {
         path: '/',
-        className: 'lnb-3',
-        title: '강의자료실'
+        className: 'lnb-lecture-3',
+        title: '강의계획서'
       },
       {
         path: '/',
-        className: 'lnb-4',
-        title: '열린게시판'
+        className: 'lnb-lecture-4',
+        title: '출결/학습현황'
       },
       {
         path: '/',
-        className: 'lnb-4',
-        title: '문의게시판'
-      },
-      {
-        path: '/',
-        className: 'lnb-4',
-        title: '강의 및 평가'
-      },
-      {
-        path: '/',
-        className: 'lnb-4',
-        title: '시험 및 설문'
-      },
-      {
-        path: '/',
-        className: 'lnb-4',
-        title: 'Live 화상강의'
-      },
-      {
-        path: '/',
-        className: 'lnb-4',
-        title: '가상컴퓨터실'
-      },
-      {
-        path: '/',
-        className: 'lnb-4',
-        title: '토론'
+        className: 'lnb-lecture-5',
+        title: '성적'
       }
     ]
   },
   {
-    title: '성적',
-    path: '/'
+    name: '출결/학습',
+    depth: [
+      {
+        path: '/',
+        className: 'lnb-lecture-6',
+        title: '동영상'
+      },
+      {
+        path: '/',
+        className: 'lnb-lecture-7',
+        title: '실시간수업'
+      },
+      {
+        path: '/',
+        className: 'lnb-lecture-8',
+        title: '교안자료'
+      },
+      {
+        path: '/',
+        className: 'lnb-lecture-9',
+        title: '기타자료'
+      },
+      {
+        path: '/',
+        className: 'lnb-lecture-10',
+        title: '댓글과질문'
+      }
+    ]
   },
   {
-    title: '기채점 및 평가하기',
-    path: '/'
-  },
-  {
-    title: '빅데이터 및 통계',
-    path: '/'
-  },
-  {
-    title: '강의설정',
-    path: '/'
+    name: '풀이/평가',
+    depth: [
+      {
+        path: '/',
+        className: 'lnb-lecture-11',
+        title: '실습'
+      },
+      {
+        path: '/',
+        className: 'lnb-lecture-12',
+        title: '퀴즈'
+      },
+      {
+        path: '/',
+        className: 'lnb-lecture-13',
+        title: '과제 및 평가'
+      },
+      {
+        path: '/',
+        className: 'lnb-lecture-14',
+        title: '토론'
+      },
+      {
+        path: '/',
+        className: 'lnb-lecture-15',
+        title: '설문'
+      },
+      {
+        path: '/',
+        className: 'lnb-lecture-4',
+        title: '시험'
+      }
+    ]
   }
 ];
 
 const NavBodyEdu = () => {
   return (
     <div>
+      <div className="lectureSelector">
+        <select name="" id="" className={''}>
+          <option value="">문화관광론</option>
+        </select>
+      </div>
       {
         lnbData.map((lnb, index) => (
           <NavBlock lnb={lnb} key={index} index={index}/>

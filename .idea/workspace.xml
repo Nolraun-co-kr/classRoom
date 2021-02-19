@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/LecturePlan/Calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Notice/NoticeItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/LecturePlan/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Notice/detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Notice/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/DataTable.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/LectureCalendar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/components/Page.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/containers/LecturePlan.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/containers/Notice.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/RouterApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/RouterApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/containers/Login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/Login.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Lnb/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Lnb/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/MobileNav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/MobileNav/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Nav/NavBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Nav/NavBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Nav/NavBodyEdu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Nav/NavBodyEdu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/Lnb.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Lnb.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
