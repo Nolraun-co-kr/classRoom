@@ -12,6 +12,7 @@ import { ContentWrapper, VideoWrapper } from '../components/Wrapper';
 import DashboardType1 from './dashboard/type1';
 import DashboardType2 from './dashboard/type2';
 import DashboardType3 from './dashboard/type3';
+import Login from './Login';
 
 const RouterApp = () => {
   const [gradient] = useState(false);
@@ -47,6 +48,9 @@ const RouterApp = () => {
         <ScrollToTop />
 
         <Switch>
+
+          <Route exact path="/login" component={Login} />
+
           {/* dashboard */}
           <Route exact path="/dashboard/1" component={() => (
             <ContentWrapper
