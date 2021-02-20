@@ -74,7 +74,7 @@ const LectureDetailState = ({ onClose }) => {
           </table>
         </div>
         <div className={'lectureDetailState__action'}>
-          <p>선택된 사용자에게</p>
+          <p className={'help-text'}>선택된 사용자에게</p>
           <div className="select">
             <select name="" id="">
               <option value="">선택</option>

@@ -153,6 +153,17 @@
     margin-top: 20px;
   }
 
+  .help-text {
+    font-size: 14px;
+    color:#999;
+    line-height: 1.25em;
+    padding-left: 1.125em;
+    background: url('#{$image-path}/icon-help.png') no-repeat left  5px !important;
+    & ~ .help-text {
+      margin-top: 8px;
+    }
+  }
+
   .schedule__tabs {
     margin: 0 -20px;
   }
@@ -292,21 +303,13 @@
       }
     }
   }
+
   .insertForm__content {
     flex: 1;
     .help-text-block {
       margin-top: 10px;
     }
-    .help-text {
-      font-size: 14px;
-      color:#999;
-      line-height: 1.25em;
-      padding-left: 1.125em;
-      background: url('#{$image-path}/icon-help.png') no-repeat left  5px !important;
-      & ~ .help-text {
-        margin-top: 8px;
-      }
-    }
+
     .file-btn {
       input {
         display: none;
