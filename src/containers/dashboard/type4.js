@@ -6,6 +6,7 @@ import ToggleSchedule from '../../components/Dashboard/ToggleSchedule';
 import ScheduleInsert from '../../components/Dashboard/ScheduleInsert';
 import DashboardModal from '../../components/Dashboard/DashboardModal';
 import Editor from '../../components/Editor';
+import LectureDetailState from '../../components/Dashboard/LectureDetailState';
 
 const lectureNoticeData = [
   {
@@ -366,7 +367,9 @@ const Dashboard = () => {
   const [showMaster, setShowMaster] = useState(false);
   const [showUploadModal, setShowUploadModal] = useState(false);
   const [showVideoUploader, setShowVideoUploader] = useState(false);
+  const [showLectureDetailState, setShowLectureDetailState] = useState(true);
   const [toggleOption, setToggleOption] = useState(false);
+
   const [scheduleData] = useState([
     {
       id: 1
@@ -385,6 +388,10 @@ const Dashboard = () => {
   const handleClickToggleMaster = useCallback(() => {
     setShowMaster(!showMaster);
   }, [showMaster]);
+
+  const handleClickToggleLectureDetailState = useCallback(() => {
+    setShowLectureDetailState(!showLectureDetailState);
+  }, [showLectureDetailState]);
 
   const handleClickToggleUploadModal = useCallback(() => {
     setShowUploadModal(!showUploadModal);
@@ -448,11 +455,23 @@ const Dashboard = () => {
           <div className={'allSchedule'}>
             {
               scheduleData.map((schedule, index) => {
-                return <ToggleSchedule key={schedule.id} index={index} id={schedule.id} />;
+                return <ToggleSchedule
+                  key={schedule.id}
+                  index={index}
+                  id={schedule.id}
+                  handleClickToggleLectureDetailState={handleClickToggleLectureDetailState}
+                />;
               })
             }
           </div>
         </div>
+        {
+          showLectureDetailState && (
+            <LectureDetailState
+              onClose={handleClickToggleLectureDetailState}
+            />
+          )
+        }
       </div>
 
       <div className="dashboard__block">
@@ -540,7 +559,8 @@ const Dashboard = () => {
                             <input type="checkbox" id={'ak1'} />
                             <span />
                             <p>사용함</p>
-                            <div className={'timeform'}>
+                          </label>
+                          <div className={'timeform'}>
                               <div className="flex">
                                 <h4>종료 일시</h4>
                                 <div className="select">
@@ -570,7 +590,6 @@ const Dashboard = () => {
                                 </div>
                               </div>
                             </div>
-                          </label>
                         </div>
                         <div className="flex">
                           <label className={'custom-checkbox'} htmlFor={'ak2'}>

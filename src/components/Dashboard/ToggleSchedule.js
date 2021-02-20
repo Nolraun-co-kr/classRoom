@@ -269,13 +269,11 @@ const ToggleSchedule = ({
   index,
   id,
   moveSchedule,
-  propScheduleData
+  handleClickToggleLectureDetailState
 }) => {
-  const schedule = propScheduleData || scheduleData;
-
   const [open, setOpen] = useState(false);
   return (
-    <div className={`schedule ${open ? '' : 'schedule--close'}`}>
+      <div className={`schedule ${open ? '' : 'schedule--close'}`}>
       <div className="schedule__header">
           <h3>문화관광론</h3>
           <div>
@@ -342,7 +340,7 @@ const ToggleSchedule = ({
           </div>
         </div>
         {
-          schedule.map(data => {
+          scheduleData.map(data => {
             let achieve = '_warning';
             if (data.achievement > 99) {
               achieve = '_complete';
@@ -353,129 +351,55 @@ const ToggleSchedule = ({
             return (
               <div className="schedule__col" key={data.id}>
                 <div className={'cell col__title'}>
-                  <div className={`schedule__type ${data.quick ? 'is-quick' : ''} ${data.achievement ? achieve : ''}`}>
+                  <div
+                    className={`schedule__type ${data.achievement ? achieve : ''}`}
+                    onClick={handleClickToggleLectureDetailState}
+                  >
+                    <span>{data.title}</span>
+                    <div>
+                      <img src={`/assets/images/schedule-${data.type}.png`} alt=""/>
+                      <p>{data.week}주차</p>
+                    </div>
                     {
-                      data.quick
-                        // eslint-disable-next-line multiline-ternary
-                        ? (
-                        <>
-                          <div>
-                            <img src={`/assets/images/schedule-${data.type}.png`} alt=""/>
-                            <p>{data.week}주차</p>
-                          </div>
-                        </>
-                          ) : (
-                        <>
-                          <span>{data.title}</span>
-                          <div>
-                            <img src={`/assets/images/schedule-${data.type}.png`} alt=""/>
-                            <p>{data.week}주차</p>
-                          </div>
-                          {
-                            data.achievement && (
-                              <div className={'achievement'}>
-                                <div className={'achievement__bg'} style={{ height: `${data.achievement}%` }} />
-                                <p>{data.achievement}%</p>
-                              </div>
-                            )
-                          }
-                        </>
-                          )
+                      data.achievement && (
+                        <div className={'achievement'}>
+                          <div className={'achievement__bg'} style={{ height: `${data.achievement}%` }} />
+                          <p>{data.achievement}%</p>
+                        </div>
+                      )
                     }
-
                   </div>
                 </div>
                 <div className={'cell'}>
-                  {data.data1
-                    // eslint-disable-next-line multiline-ternary
-                    ? (
-                      <span className={'state text-center'}>{data.data1}</span>
-                      ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
-                      )}
+                  <span className={'state text-center'}>{data.data1}</span>
                 </div>
                 <div className={'cell'}>
-                  {data.data2
-                    // eslint-disable-next-line multiline-ternary
-                    ? (
-                      <span className={'state text-center'}>{data.data2}</span>
-                      ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
-                      )}
+                  <span className={'state text-center'}>{data.data2}</span>
                 </div>
                 <div className={'cell'}>
-                  {data.data3
-                    // eslint-disable-next-line multiline-ternary
-                    ? (
-                      <span className={'state text-center'}>{data.data3}</span>
-                      ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
-                      )}
+                  <span className={'state text-center'}>{data.data3}</span>
                 </div>
                 <div className={'cell'}>
-                  {data.data4
-                    // eslint-disable-next-line multiline-ternary
-                    ? (
-                      <span className={'state text-center'}>{data.data4}</span>
-                      ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
-                      )}
+                  <span className={'state text-center'}>{data.data4}</span>
                 </div>
                 <div className={'cell'}>
-                  {data.data5
-                    // eslint-disable-next-line multiline-ternary
-                    ? (
-                      <span className={'state text-center'}>{data.data5}</span>
-                      ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
-                      )}
+                  <span className={'state text-center'}>{data.data5}</span>
                 </div>
                 <div className={'cell'}>
-                  {data.data6
-                    // eslint-disable-next-line multiline-ternary
-                    ? (
-                      <span className={'state text-center'}>{data.data6}</span>
-                      ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
-                      )}
+                  <span className={'state text-center'}>{data.data6}</span>
                 </div>
                 <div className={'cell'}>
-                  {data.data7
-                    // eslint-disable-next-line multiline-ternary
-                    ? (
-                      <span className={'state text-center'}>{data.data7}</span>
-                      ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
-                      )}
+                  <span className={'state text-center'}>{data.data7}</span>
                 </div>
                 <div className={'cell'}>
-                  {data.data8
-                    // eslint-disable-next-line multiline-ternary
-                    ? (
-                      <span className={'state text-center'}>{data.data8}</span>
-                      ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
-                      )}
+                  <span className={'state text-center'}>{data.data8}</span>
                 </div>
                 <div className={'cell'}>
-                  {data.data9
-                    // eslint-disable-next-line multiline-ternary
-                    ? (
-                      <span className={'state text-center'}>{data.data9}</span>
-                      ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
-                      )}
+                  <span className={'state text-center'}>{data.data9}</span>
                 </div>
                 <div className={'cell'}>
-                  {data.data10
-                    // eslint-disable-next-line multiline-ternary
-                    ? (
-                      <span className={'state text-center'}>{data.data10}</span>
-                      ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
-                      )}
+                  <span className={'state text-center'}>{data.data10}</span>
                 </div>
-
               </div>
             );
           })

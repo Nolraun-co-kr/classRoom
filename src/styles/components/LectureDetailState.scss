@@ -1,0 +1,47 @@
+.LectureDetailState {
+  padding: 0;
+  background:transparent;
+  .lectureDetailState__action {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+
+  }
+  .LectureDetailState__title {
+    background:#fff;
+    padding: 0 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    h2 {
+      font-size: 16px;
+      line-height: 60px;
+      font-weight: 600;
+      padding-left: 1.75em;
+      background: url('#{$image-path}/emozi.png') no-repeat left center !important;
+    }
+  }
+
+  ._dataTable {
+    th, td {
+      border-right: 5px solid #f5f5f5;
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    tbody {
+      td {
+        border-bottom: 0;
+        border-top: 3px solid #f5f5f5;
+        text-align: center;
+      }
+      .custom-checkbox {
+        justify-content: center;
+        cursor: pointer;
+        span {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

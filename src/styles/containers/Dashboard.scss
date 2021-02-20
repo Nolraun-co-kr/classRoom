@@ -480,6 +480,7 @@
         background: #fff;
         .schedule__type {
           width: 50px;
+          cursor: pointer;
           height: 50px;
           border: 1px solid #999;
           border-radius: 3px;
@@ -548,6 +549,7 @@
 
           &.is-quick {
             padding-top: 3px;
+            cursor: default;
           }
           &._complete {
             border: 1px solid #6fa34d;
