@@ -5,6 +5,7 @@ import NoticeItem from '../../components/Dashboard/NoticeItem';
 import ToggleSchedule from '../../components/Dashboard/ToggleSchedule';
 import ScheduleInsert from '../../components/Dashboard/ScheduleInsert';
 import DashboardModal from '../../components/Dashboard/DashboardModal';
+import Editor from '../../components/Editor';
 
 const lectureNoticeData = [
   {
@@ -642,7 +643,7 @@ const Dashboard = () => {
                         <div className="row">
                           <h3 className={'insertForm__name required'}>설명</h3>
                           <div className={'insertForm__content'}>
-                            editor...
+                            <Editor />
                           </div>
                         </div>
 

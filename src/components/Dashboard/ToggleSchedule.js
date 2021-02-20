@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/all';
-import Switch from 'react-switch';
 
 const scheduleData = [
   {
