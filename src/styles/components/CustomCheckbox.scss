@@ -17,6 +17,15 @@
       background-size: 100% 100%;
       border: none;
     }
+
+    // radio 일 경우
+    &[type='radio'] + span {
+      border-radius: 50%;
+    }
+    &[type='radio']:checked + span {
+      background: none !important;
+      border: 5px solid #2e8bc5;
+    }
   }
 
   p {

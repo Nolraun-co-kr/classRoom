@@ -266,7 +266,8 @@ const scheduleData = [
 ];
 
 const ScheduleInsert = ({
-  propScheduleData
+  propScheduleData,
+  handleClickToggleUploadModal
 }) => {
   const schedule = propScheduleData || scheduleData;
 
@@ -400,7 +401,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data1}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -409,7 +410,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data2}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -418,7 +419,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data3}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -427,7 +428,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data4}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -436,7 +437,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data5}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -445,7 +446,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data6}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -454,7 +455,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data7}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -463,7 +464,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data8}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -472,7 +473,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data9}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -481,7 +482,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data10}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
                       )}
                 </div>
 
