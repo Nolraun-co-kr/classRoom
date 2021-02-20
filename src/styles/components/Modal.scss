@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: space-between;
   background:#eee;
-  padding:0 10px;
+  padding:0 20px;
   h2 {
     font-weight: 600;
     flex: 1;
@@ -51,6 +51,10 @@
 ._modal__body {
   padding: 20px;
   @include theme('background', 'background');
+  &._modal__body--bg-none {
+    background: #eee;
+    padding:0 20px 20px;
+  }
 }
 
 ._modal__row {
@@ -122,5 +126,77 @@
     & ~ button {
       margin-left: 10px;
     }
+  }
+}
+
+._modal__foot {
+  background:#ddd;
+  padding: 20px;
+  ._modal__actions {
+    justify-content: flex-end;
+    margin: 0;
+  }
+  button {
+    width: 75px;
+    flex: none;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+._modal__block {
+  padding: 0 20px;
+  background:#fff;
+  border-radius: 5px;
+  & ~ ._modal__block {
+    margin-top: 20px;
+  }
+
+  &._modal__block--has-header {
+    padding: 0 20px;
+  }
+  ._modal__block-body {
+    padding: 20px 0;
+
+    .custom-checkbox {
+      & ~ .custom-checkbox {
+        margin-top: 15px;
+      }
+    }
+  }
+  ._modal__block-header {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    border-bottom: 1px solid #ddd;
+    h2 {
+      font-size: 1.125rem;
+      color:#000;
+    }
+  }
+  .flex {
+    display: flex;
+  }
+
+  .input {
+    margin-right: 10px;
+    flex: 1;
+    input {
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      height: 50px;
+      padding:0 15px;
+    }
+  }
+  ._btn {
+    height: 50px;
+    background:#666;
+    border-radius: 5px;
+    color:#fff;
+    font-size: 14px;
+    padding:0 24px;
+    flex: none;
+    white-space: nowrap;
   }
 }

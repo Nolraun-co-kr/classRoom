@@ -13,6 +13,7 @@ import { ContentWrapper, VideoWrapper } from '../components/Wrapper';
 import DashboardType1 from './dashboard/type1';
 import DashboardType2 from './dashboard/type2';
 import DashboardType3 from './dashboard/type3';
+import DashboardType4 from './dashboard/type4';
 
 import Login from './Login';
 
@@ -126,6 +127,20 @@ const RouterApp = () => {
               gradient={gradient}
             >
               <DashboardType3 />
+            </ContentWrapper>
+          )}/>
+
+          <Route exact path="/dashboard/4" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+              gradient={gradient}
+            >
+              <DashboardType4 />
             </ContentWrapper>
           )}/>
 

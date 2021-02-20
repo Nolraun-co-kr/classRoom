@@ -1,0 +1,27 @@
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+
+  span {
+    width: 18px;
+    height: 18px;
+    flex: none;
+    border: 1px solid #ddd;
+    margin-right: 5px;
+  }
+
+  input {
+    display: none;
+    &:checked + span {
+      background: url('#{$image-path}/checkbox-img.png') no-repeat center !important;
+      background-size: 100% 100%;
+      border: none;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    color:#000;
+  }
+
+}

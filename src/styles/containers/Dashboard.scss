@@ -238,7 +238,8 @@
   .schedule__term {
     display: flex;
     align-items: center;
-    height: 55px;
+    margin-top: 15px;
+    line-height: 24px;
     h3 {
       background: url('#{$image-path}/i-calendar.png') no-repeat left center;
       padding-left: 2em;
@@ -302,6 +303,8 @@
     overflow: hidden;
 
     &.schedule--close {
+      border: 1px solid #ddd !important;
+      box-shadow: none !important;
       .cell:not(.col__title) {
         display: none !important;
       }
@@ -312,7 +315,10 @@
   }
 
   .allSchedule {
+    margin-top: 20px;
     .schedule {
+      border: 1px solid #7a30bf;
+      box-shadow: 3px 3px 5px rgba(0,0,0,.2);
       &:hover {
         .schedule__header,
         .col__title {
@@ -350,6 +356,50 @@
     align-items: center;
     height: 40px;
     padding: 0 12px;
+    .switch-box {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      p {
+        color:#2e8bc5;
+        font-size: 14px;
+      }
+      .switch {
+        margin-left: 10px;
+        input {
+          display: none;
+          &:checked + span {
+            background:#2e8bc5;
+            i {
+              left: 17px;
+            }
+          }
+        }
+        span {
+          display: block;
+          height: 15px;
+          width: 30px;
+          background:#999;
+          border-radius: 2em;
+          position: relative;
+        }
+        i {
+          width: 11px;
+          height: 11px;
+          position: absolute;
+          left: 2px;
+          top: 2px;
+          background:#fff;
+          border-radius: 50%;
+          transition: all .3s;
+        }
+      }
+
+      & ~ .toggle {
+        margin-left: 20px;
+      }
+    }
     .toggle {
       color:#666;
       margin-left: auto;
@@ -395,6 +445,7 @@
       &:first-child {
         .cell {
           padding-left: 12px;
+          white-space: nowrap;
         }
       }
       &:last-child {
@@ -424,6 +475,19 @@
           line-height: 34px;
           display: block;
           min-width: 50px;
+          strong {
+            font-size: 1em;
+            color:#000;
+          }
+        }
+        .insert-btn {
+          font-size: 12px;
+          background:#fff;
+          border: 1px solid #ddd;
+          line-height: 20px;
+          padding:0 10px;
+          border-radius: 2em;
+          margin:0 auto;
         }
       }
       .col__title {
@@ -501,6 +565,10 @@
             text-align: center;
             border-radius: 2em;
           }
+
+          &.is-quick {
+            padding-top: 3px;
+          }
           &._complete {
             border: 1px solid #6fa34d;
             span {
@@ -508,6 +576,10 @@
             }
             .achievement__bg {
               background: rgba(101,166,58,.8);
+            }
+
+            &.is-quick {
+              background: rgba(101,166,58,.2);
             }
           }
           &._obey {
@@ -518,6 +590,9 @@
             .achievement__bg {
               background: rgba(255,139,44,.8);
             }
+            &.is-quick {
+              background: rgba(255,139,44,.2);
+            }
           }
           &._warning {
             border: 1px solid #eb1f1f;
@@ -526,6 +601,9 @@
             }
             .achievement__bg {
               background: rgba(255,89,89,.8);
+            }
+            &.is-quick {
+              background: rgba(255,89,89,.2);
             }
           }
         }
@@ -544,6 +622,32 @@
       }
 
 
+    }
+  }
+}
+
+.dashboard__block {
+  & ~ .dashboard__block {
+    margin-top: 1.5em;
+  }
+  .dashboard__block-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 40px;
+    }
+
+    button {
+      height: 40px;
+      border-radius: 5px;
+      padding:0 15px;
+      color:#fff;
+      background:#666666;
+      font-size: 14px;
     }
   }
 }

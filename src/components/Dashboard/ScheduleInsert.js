@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/all';
-import Switch from 'react-switch';
 
 const scheduleData = [
   {
@@ -266,10 +265,7 @@ const scheduleData = [
   }
 ];
 
-const ToggleSchedule = ({
-  index,
-  id,
-  moveSchedule,
+const ScheduleInsert = ({
   propScheduleData
 }) => {
   const schedule = propScheduleData || scheduleData;
@@ -278,32 +274,37 @@ const ToggleSchedule = ({
   return (
     <div className={`schedule ${open ? '' : 'schedule--close'}`}>
       <div className="schedule__header">
-          <h3>문화관광론</h3>
-          <div>
-            <span>2분반</span>
-            <span>3학점</span>
-          </div>
-          <p>하미영 교수</p>
-
-          {moveSchedule && (
-            <button className={'dnd'} />
-          )}
-
-          <button className={'toggle'} onClick={() => setOpen(!open)}>
-            {!open
-              // eslint-disable-next-line multiline-ternary
-              ? (
-                <>
-                  열기 <IoIosArrowDown />
-                </>
-                ) : (
-                <>
-                  닫기 <IoIosArrowUp />
-                </>
-                )}
-
-          </button>
+        <h3>문화관광론</h3>
+        <div>
+          <span>2분반</span>
+          <span>3학점</span>
         </div>
+        <p>하미영 교수</p>
+
+        <label className="switch-box">
+          <p>다시 분할하기</p>
+          <label htmlFor="" className={'switch'}>
+            <input type="checkbox"/>
+            <span>
+              <i />
+            </span>
+          </label>
+        </label>
+        <button className={'toggle'} onClick={() => setOpen(!open)}>
+          {!open
+            // eslint-disable-next-line multiline-ternary
+            ? (
+              <>
+                열기 <IoIosArrowDown />
+              </>
+              ) : (
+              <>
+                닫기 <IoIosArrowUp />
+              </>
+              )}
+
+        </button>
+      </div>
       <div className="schedule__content">
         <div className="schedule__col">
           <div className={'cell col__title'}>
@@ -341,6 +342,13 @@ const ToggleSchedule = ({
           <div className={'cell'}>
             <span className={'state'}>시험</span>
           </div>
+          <div className={'cell'}>
+            <span className={'state'}>
+              <strong>
+                온라인 학습시간
+              </strong>
+            </span>
+          </div>
         </div>
         {
           schedule.map(data => {
@@ -359,28 +367,28 @@ const ToggleSchedule = ({
                       data.quick
                         // eslint-disable-next-line multiline-ternary
                         ? (
-                        <>
-                          <div>
-                            <img src={`/assets/images/schedule-${data.type}.png`} alt=""/>
-                            <p>{data.week}주차</p>
-                          </div>
-                        </>
+                          <>
+                            <div>
+                              <img src={`/assets/images/schedule-${data.type}.png`} alt=""/>
+                              <p>{data.week}주차</p>
+                            </div>
+                          </>
                           ) : (
-                        <>
-                          <span>{data.title}</span>
-                          <div>
-                            <img src={`/assets/images/schedule-${data.type}.png`} alt=""/>
-                            <p>{data.week}주차</p>
-                          </div>
-                          {
-                            data.achievement && (
-                              <div className={'achievement'}>
-                                <div className={'achievement__bg'} style={{ height: `${data.achievement}%` }} />
-                                <p>{data.achievement}%</p>
-                              </div>
-                            )
-                          }
-                        </>
+                          <>
+                            <span>{data.title}</span>
+                            <div>
+                              <img src={`/assets/images/schedule-${data.type}.png`} alt=""/>
+                              <p>{data.week}주차</p>
+                            </div>
+                            {
+                              data.achievement && (
+                                <div className={'achievement'}>
+                                  <div className={'achievement__bg'} style={{ height: `${data.achievement}%` }} />
+                                  <p>{data.achievement}%</p>
+                                </div>
+                              )
+                            }
+                          </>
                           )
                     }
 
@@ -477,6 +485,10 @@ const ToggleSchedule = ({
                       )}
                 </div>
 
+                <div className={'cell'}>
+                  <span className={'state text-center'}><strong>{data.time}분</strong></span>
+                </div>
+
               </div>
             );
           })
@@ -486,4 +498,4 @@ const ToggleSchedule = ({
   );
 };
 
-export default ToggleSchedule;
+export default ScheduleInsert;
