@@ -9,6 +9,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .schedule__tabs {
+    margin: 0;
+    background:#fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    & + ._modal__block {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
 }
 
 ._modal__description {
@@ -164,9 +176,7 @@
     }
   }
 
-  .schedule__tabs {
-    margin: 0 -20px;
-  }
+
 
   &._modal__block--has-header {
     padding: 0 20px;
@@ -191,6 +201,11 @@
     h2 {
       font-size: 1.125rem;
       color:#000;
+
+      &.i-quiz {
+        background: url('#{$image-path}/title-icon-quiz.png') no-repeat left center;
+        padding-left: 1.75em;
+      }
     }
 
     .custom-checkbox {
