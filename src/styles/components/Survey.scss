@@ -159,12 +159,37 @@
     .survey__body-content {
       background: #999;
       padding: 30px;
+      display: flex;
     }
 
+    .survey__content-block-list {
+      padding: 30px 0;
+    }
+    .survey__content-block {
+      h2 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      & ~ .survey__content-block {
+        margin-top: 40px;
+      }
+    }
+
+    .survey__body-answer {
+      background:#fff;
+      border-radius: 5px;
+      overflow: hidden;
+      flex: 1;
+      width: 320px;
+      flex: none;
+      margin-left: 10px;
+    }
     .survey__body-inner {
       display: flex;
       border-radius: 5px;
       overflow: hidden;
+      flex: 1;
     }
     .survey__content {
       flex: 1;
@@ -384,6 +409,64 @@
     svg {
       vertical-align: middle;
       margin-top: -5px;
+    }
+  }
+}
+
+.survey__type1 {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  .survey__type1-description {
+    color:#666;
+    font-size: 1rem;
+    line-height: 1.25em;
+  }
+  .survey__type1-selector {
+    margin-top: 15px;
+    .flex {
+      height: auto;
+    }
+  }
+}
+
+
+.survey {
+  .survey__body-answer {
+    padding: 20px;
+  }
+  ._dataTable {
+    th, td{
+      border-color:#fff;
+      border-right: 3px solid #fff !important;
+      font-size: 14px;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    thead {
+      th {
+        background:#dddddd;
+        color:#666;
+      }
+    }
+    tbody {
+      td {
+        background:#eee;
+      }
+      tr:nth-child(even) {
+        td {
+          background:#f7f7f7 !important;
+        }
+      }
+    }
+
+    .custom-checkbox {
+      span {
+        margin:0 auto;
+        background:#ffff;
+      }
     }
   }
 }

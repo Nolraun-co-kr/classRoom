@@ -298,7 +298,6 @@ const DashaboardSurveyModal = ({
                     </div>
                   </div>
                 </div>
-
                 <div className={'survey__state'}>
                   <div className={'left'}>
                     <button className={'btn all'}><CgMenuGridR/>전체보기</button>
@@ -335,9 +334,251 @@ const DashaboardSurveyModal = ({
                     </button>
                   </div>
                 </div>
-
                 <div className={'survey__body'}>
+                  <div className="survey__body-content">
+                    <div className="survey__body-inner">
+                      <div className="survey__nav">
+                        <div className={'survey__nav-state-img'}>
+                          <CgMenuGridR/>
+                        </div>
+                        <div className={'survey__nav-list'}>
+                          {
+                            sectionState?.map((section, index) => (
+                              <div className={'survey__nav-item'} key={section.id}>
+                                <button>
+                                  <span>{section.id}</span>장
+                                </button>
+                              </div>
+                            ))
+                          }
+                          <div className="survey__nav-item">
+                            <button className={'more'} onClick={handleClickAddSection}>
+                              <span>+</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="survey__content">
+                        <div className={'survey__content-block-list'}>
+                          <div className='survey__content-block'>
+                            <h2>1. 강의 내용을 이해하기 쉬웠다.</h2>
+                            <div className={'survey__type1'}>
+                              <p className={'survey__type1-description'}>
+                                강의 이해도에 대한 주관적인 의견을 1~5점 중 선택해주세요.
+                              </p>
+                              <div className={'survey__type1-selector'}>
+                                <div className="flex">
+                                  <label htmlFor="svy1" className={'custom-checkbox'}>
+                                    <input type="radio" name={'svy1'}/>
+                                    <span />
+                                    <p>1</p>
+                                  </label>
 
+                                  <label htmlFor="svy2" className={'custom-checkbox'}>
+                                    <input type="radio" name={'svy2'}/>
+                                    <span />
+                                    <p>2</p>
+                                  </label>
+
+                                  <label htmlFor="svy3" className={'custom-checkbox'}>
+                                    <input type="radio" name={'svy3'}/>
+                                    <span />
+                                    <p>3</p>
+                                  </label>
+
+                                  <label htmlFor="svy4" className={'custom-checkbox'}>
+                                    <input type="radio" name={'svy4'}/>
+                                    <span />
+                                    <p>4</p>
+                                  </label>
+
+                                  <label htmlFor="svy5" className={'custom-checkbox'}>
+                                    <input type="radio" name={'svy5'}/>
+                                    <span />
+                                    <p>5</p>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className='survey__content-block'>
+                          <h2>2. 강의에 대해 제시된 항목별로 선택해주세요.</h2>
+                          <div className={'survey__type2'}>
+                            <div className={'_dataTable'}>
+                              <table>
+                                <colgroup>
+                                  <col/>
+                                  <col/>
+                                  <col/>
+                                  <col/>
+                                  <col/>
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                  <th></th>
+                                  <th>매우 불만족</th>
+                                  <th>다소 불만족</th>
+                                  <th>어느정도 만족</th>
+                                  <th>대단히 만족</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                  <td>수업 진도</td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>수업 내용</td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>과제 난이도</td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>퀴즈 난이도</td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label htmlFor="svy1" className={'custom-checkbox'}>
+                                      <input type="radio" name={'svy1'}/>
+                                      <span />
+                                    </label>
+                                  </td>
+                                </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className={'survey__body-answer'}>
+                      <div className={'_dataTable'}>
+                        <table>
+                          <colgroup>
+                            <col width={50}/>
+                            <col/>
+                          </colgroup>
+                          <thead>
+                          <tr>
+                            <th>번호</th>
+                            <th>답변</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>
+                            </td>
+                          </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -351,7 +592,6 @@ const DashaboardSurveyModal = ({
       }
       {
         tab === 4 && (
-
           <>
             <div className="_modal__block">
               <div className="_modal__block-header">
