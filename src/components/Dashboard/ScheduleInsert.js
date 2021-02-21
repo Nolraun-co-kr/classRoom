@@ -1,275 +1,17 @@
 import React, { useState } from 'react';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/all';
 
-const scheduleData = [
-  {
-    id: 1,
-    week: 1,
-    achievement: 100,
-    title: 'offline',
-    type: 'offline',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '5/5',
-    data4: '5/5',
-    data5: '5/5',
-    data6: '5/5',
-    data7: '5/5',
-    data8: '5/5',
-    data9: '5/5',
-    data10: '5/5'
-  },
-  {
-    id: 2,
-    week: 2,
-    achievement: 50,
-    title: 'online',
-    type: 'online',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '-',
-    data4: '-',
-    data5: '-',
-    data6: '-',
-    data7: '-',
-    data8: '-',
-    data9: '-',
-    data10: '-'
-  },
-  {
-    id: 3,
-    week: 3,
-    achievement: 90,
-    title: 'offline',
-    type: 'offline',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '5/5',
-    data4: '5/5',
-    data5: '5/5',
-    data6: '5/5',
-    data7: '5/5',
-    data8: '5/5',
-    data9: '5/5',
-    data10: '5/5'
-  },
-  {
-    id: 4,
-    week: 4,
-    achievement: 51,
-    title: 'flip',
-    type: 'online',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '-',
-    data4: '-',
-    data5: '-',
-    data6: '-',
-    data7: '-',
-    data8: '-',
-    data9: '-',
-    data10: '-'
-  },
-  {
-    id: 5,
-    week: 5,
-    achievement: 49,
-    title: 'offline',
-    type: 'offline',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '5/5',
-    data4: '5/5',
-    data5: '5/5',
-    data6: '5/5',
-    data7: '5/5',
-    data8: '5/5',
-    data9: '5/5',
-    data10: '5/5'
-  },
-  {
-    id: 6,
-    week: 6,
-    achievement: 99,
-    title: 'offline',
-    type: 'offline',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '-',
-    data4: '-',
-    data5: '-',
-    data6: '-',
-    data7: '-',
-    data8: '-',
-    data9: '-',
-    data10: '-'
-  },
-  {
-    id: 7,
-    week: 7,
-    title: 'online',
-    type: 'online',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '5/5',
-    data4: '5/5',
-    data5: '5/5',
-    data6: '5/5',
-    data7: '5/5',
-    data8: '5/5',
-    data9: '5/5',
-    data10: '5/5'
-  },
-  {
-    id: 8,
-    week: 8,
-    title: 'test',
-    type: 'test',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '-',
-    data4: '-',
-    data5: '-',
-    data6: '-',
-    data7: '-',
-    data8: '-',
-    data9: '-',
-    data10: '-'
-  }, {
-    id: 9,
-    week: 9,
-    title: 'offline',
-    type: 'offline',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '5/5',
-    data4: '5/5',
-    data5: '5/5',
-    data6: '5/5',
-    data7: '5/5',
-    data8: '5/5',
-    data9: '5/5',
-    data10: '5/5'
-  },
-  {
-    id: 10,
-    week: 10,
-    title: 'online',
-    type: 'online',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '-',
-    data4: '-',
-    data5: '-',
-    data6: '-',
-    data7: '-',
-    data8: '-',
-    data9: '-',
-    data10: '-'
-  },
-  {
-    id: 11,
-    week: 11,
-    title: 'offline',
-    type: 'offline',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '5/5',
-    data4: '5/5',
-    data5: '5/5',
-    data6: '5/5',
-    data7: '5/5',
-    data8: '5/5',
-    data9: '5/5',
-    data10: '5/5'
-  },
-  {
-    id: 12,
-    week: 12,
-    title: 'flip',
-    type: 'online',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '-',
-    data4: '-',
-    data5: '-',
-    data6: '-',
-    data7: '-',
-    data8: '-',
-    data9: '-',
-    data10: '-'
-  },
-  {
-    id: 13,
-    week: 13,
-    title: 'offline',
-    type: 'offline',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '5/5',
-    data4: '5/5',
-    data5: '5/5',
-    data6: '5/5',
-    data7: '5/5',
-    data8: '5/5',
-    data9: '5/5',
-    data10: '5/5'
-  },
-  {
-    id: 14,
-    week: 14,
-    title: 'offline',
-    type: 'offline',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '-',
-    data4: '-',
-    data5: '-',
-    data6: '-',
-    data7: '-',
-    data8: '-',
-    data9: '-',
-    data10: '-'
-  },
-  {
-    id: 15,
-    week: 15,
-    title: 'online',
-    type: 'online',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '5/5',
-    data4: '5/5',
-    data5: '5/5',
-    data6: '5/5',
-    data7: '5/5',
-    data8: '5/5',
-    data9: '5/5',
-    data10: '5/5'
-  },
-  {
-    id: 16,
-    week: 16,
-    title: 'test',
-    type: 'test',
-    data1: '5/5',
-    data2: '5/5',
-    data3: '-',
-    data4: '-',
-    data5: '-',
-    data6: '-',
-    data7: '-',
-    data8: '-',
-    data9: '-',
-    data10: '-'
-  }
-];
-
 const ScheduleInsert = ({
   propScheduleData,
-  handleClickToggleUploadModal
+  handleClickToggleUploadModal,
+  handleClickToggleQuizModal,
+  handleClickToggleDebateModal,
+  handleClickToggleExamModal,
+  handleClickToggleSurveyModal,
+  handleClickToggleHomeworkModal,
+  handleClickToggleDocModal
 }) => {
-  const schedule = propScheduleData || scheduleData;
+  const schedule = propScheduleData;
 
   const [open, setOpen] = useState(false);
   return (
@@ -344,6 +86,9 @@ const ScheduleInsert = ({
             <span className={'state'}>시험</span>
           </div>
           <div className={'cell'}>
+            <span className={'state'}>설문</span>
+          </div>
+          <div className={'cell'}>
             <span className={'state'}>
               <strong>
                 온라인 학습시간
@@ -410,16 +155,17 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data2}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={() => alert('실시간수업')}>입력</button>
                       )}
                 </div>
+
                 <div className={'cell'}>
                   {data.data3
                     // eslint-disable-next-line multiline-ternary
                     ? (
                       <span className={'state text-center'}>{data.data3}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleDocModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -428,7 +174,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data4}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={() => alert('자료')}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -437,7 +183,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data5}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={() => alert('댓글과 질문')}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -446,7 +192,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data6}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={() => alert('실습')}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -455,7 +201,8 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data7}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
+
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleQuizModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -464,7 +211,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data8}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleHomeworkModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -473,7 +220,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data9}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleDebateModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -482,7 +229,17 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data10}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleUploadModal}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleExamModal}>입력</button>
+                      )}
+                </div>
+
+                <div className={'cell'}>
+                  {data.data10
+                    // eslint-disable-next-line multiline-ternary
+                    ? (
+                      <span className={'state text-center'}>{data.data11}</span>
+                      ) : (
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleSurveyModal}>입력</button>
                       )}
                 </div>
 

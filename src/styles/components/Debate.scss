@@ -1,0 +1,164 @@
+.debateForm {
+  padding: 20px;
+  background:#fff;
+
+  .debateForm__title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+
+    &.required:after {
+      content: '*';
+      color:#2e8bc5;
+    }
+  }
+}
+.debate {
+
+
+
+  .detail-btnbox {
+    display: flex;
+    align-items: center;
+    margin:0 -5px;
+    margin-top: 20px;
+    ._btn {
+      margin:0 5px;
+    }
+
+    .ml-auto {
+      margin-left: auto;
+    }
+  }
+
+  .debate__author {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    line-height: 1em;
+    strong {
+      font-size: 14px;
+    }
+    span {
+      color:#999;
+      font-size: 14px;
+      margin-left: 10px;
+      padding-left: 10px;
+      border-left: 1px solid #eee;
+    }
+  }
+}
+.debate__description {
+  p {
+    color:#666666;
+    line-height: 1.5em;
+    min-height: 300px;
+  }
+}
+
+
+.debate__title {
+  font-size: 1rem;
+  font-weight: 600;
+  span {
+    color:#2e8bc5;;
+  }
+}
+
+.debate__sub-title {
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.debate__notice {
+  padding: 20px;
+  padding-left: 70px;
+  background: #f6f8fb url('#{$image-path}/debate-icon.png') no-repeat 20px center !important;
+  border-radius: 5px;
+  margin-top: 15px;
+  p {
+    color:#7a91ad;
+     font-size: 14px;
+   }
+}
+
+
+.debate__notice-info {
+  display: flex;
+  font-size: 1rem;
+  & ~ .debate__notice-info {
+    margin-top: 5px;
+  }
+  strong {
+    color:#000;
+    margin-right: 5px;
+    font-weight: 400;
+  }
+  .green {
+    color:#6ea24d;
+  }
+}
+
+._btn {
+  &.trans {
+    background: #666 url('#{$image-path}/i-answer-review.png') no-repeat 15px center !important;;
+    padding-left: 40px;
+    margin-right: auto;
+    margin-left: 0 !important;
+  }
+}
+._modal__block--debate {
+  padding: 20px 0 0 ;
+  border-top: 1px solid #ddd;
+  background: none;
+
+  .btnbox {
+    margin-bottom: 10px;
+    ._btn {
+      margin-left: auto;
+
+
+    }
+  }
+
+
+  ._dataTable {
+
+    th, td {
+      border-color:#fff;
+      border-right: 3px solid #EEEEEE !important;
+      border-color:#eee !important;
+      font-size: 14px;
+
+      &:last-child {
+        border-right: 0 !important;
+      }
+    }
+    thead {
+      th {
+        font-weight: 400;
+      }
+    }
+    tbody {
+      td {
+        text-align: center;
+        background: #ddd;
+        padding: 0 10px;
+        height: 80px;
+
+        button {
+          text-align: left;
+          display: block;
+        }
+      }
+
+      tr:nth-child(even) {
+        td {
+          background: #f7f7f7 !important;
+        }
+      }
+    }
+  }
+}

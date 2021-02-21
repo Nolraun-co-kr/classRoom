@@ -81,7 +81,7 @@ const propScheduleData = [
     achievement: 100,
     title: 'offline',
     type: 'offline',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -91,6 +91,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 35
   },
   {
@@ -100,7 +101,7 @@ const propScheduleData = [
     achievement: 50,
     title: 'online',
     type: 'online',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -110,6 +111,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 35
   },
   {
@@ -119,7 +121,7 @@ const propScheduleData = [
     achievement: 90,
     title: 'offline',
     type: 'offline',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -129,6 +131,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 35
   },
   {
@@ -138,7 +141,7 @@ const propScheduleData = [
     achievement: 51,
     title: 'flip',
     type: 'online',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -148,6 +151,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 35
   },
   {
@@ -157,7 +161,7 @@ const propScheduleData = [
     achievement: 49,
     title: 'offline',
     type: 'offline',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -167,6 +171,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 35
   },
   {
@@ -176,7 +181,7 @@ const propScheduleData = [
     achievement: 99,
     title: 'offline',
     type: 'offline',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -186,6 +191,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 0
   },
   {
@@ -194,7 +200,7 @@ const propScheduleData = [
     week: 7,
     title: 'online',
     type: 'online',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -204,6 +210,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 0
   },
   {
@@ -212,7 +219,7 @@ const propScheduleData = [
     week: 8,
     title: 'test',
     type: 'test',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -222,6 +229,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 0
   }, {
     id: 9,
@@ -229,7 +237,7 @@ const propScheduleData = [
     week: 9,
     title: 'offline',
     type: 'offline',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -239,6 +247,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 0
   },
   {
@@ -247,7 +256,7 @@ const propScheduleData = [
     week: 10,
     title: 'online',
     type: 'online',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -257,6 +266,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 0
   },
   {
@@ -265,7 +275,7 @@ const propScheduleData = [
     week: 11,
     title: 'offline',
     type: 'offline',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -275,6 +285,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 0
   },
   {
@@ -283,7 +294,7 @@ const propScheduleData = [
     week: 12,
     title: 'flip',
     type: 'online',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -293,6 +304,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 0
   },
   {
@@ -301,7 +313,7 @@ const propScheduleData = [
     week: 13,
     title: 'offline',
     type: 'offline',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -311,6 +323,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 0
   },
   {
@@ -319,7 +332,7 @@ const propScheduleData = [
     week: 14,
     title: 'offline',
     type: 'offline',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -329,6 +342,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 0
   },
   {
@@ -337,7 +351,7 @@ const propScheduleData = [
     week: 15,
     title: 'online',
     type: 'online',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -347,6 +361,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 0
   },
   {
@@ -355,7 +370,7 @@ const propScheduleData = [
     week: 16,
     title: 'test',
     type: 'test',
-    data1: '5/5',
+    data1: null,
     data2: null,
     data3: null,
     data4: null,
@@ -365,6 +380,7 @@ const propScheduleData = [
     data8: null,
     data9: null,
     data10: null,
+    data11: null,
     time: 0
   }
 ];
@@ -372,15 +388,22 @@ const propScheduleData = [
 const Dashboard = () => {
   const [showMaster, setShowMaster] = useState(false);
   const [showUploadModal, setShowUploadModal] = useState(false);
-  const [showVideoUploader, setShowVideoUploader] = useState(false);
-  const [showLectureDetailState, setShowLectureDetailState] = useState(false);
-  const [showQuizModal, setShowQuizModal] = useState(false);
-  const [showDocModal, setShowDocModal] = useState(false);
-  const [showExamModal, setShowExamModal] = useState(false);
-  const [showHomeworkModal, setShowHomeworkModal] = useState(false);
-  const [showSurveyModal, setShowSurveyModal] = useState(false);
-  const [showDebateModal, setShowDebateModal] = useState(true);
   const [toggleOption, setToggleOption] = useState(false);
+  const [showLectureDetailState, setShowLectureDetailState] = useState(false);
+  // 동영상
+  const [showVideoUploader, setShowVideoUploader] = useState(false);
+  // 퀴즈
+  const [showQuizModal, setShowQuizModal] = useState(false);
+  // 교안
+  const [showDocModal, setShowDocModal] = useState(false);
+  // 시험
+  const [showExamModal, setShowExamModal] = useState(false);
+  // 과제
+  const [showHomeworkModal, setShowHomeworkModal] = useState(false);
+  // 설문
+  const [showSurveyModal, setShowSurveyModal] = useState(false);
+  // 토론
+  const [showDebateModal, setShowDebateModal] = useState(false);
 
   const [scheduleData] = useState([
     {
@@ -460,7 +483,19 @@ const Dashboard = () => {
           <div className={'allSchedule'}>
             {
               scheduleData.map((schedule, index) => {
-                return <ScheduleInsert key={schedule.id} index={index} id={schedule.id} handleClickToggleUploadModal={handleClickToggleUploadModal} propScheduleData={propScheduleData} />;
+                return <ScheduleInsert
+                  key={schedule.id}
+                  index={index}
+                  d={schedule.id}
+                  handleClickToggleUploadModal={handleClickToggleUploadModal}
+                  handleClickToggleQuizModal={handleClickToggleQuizModal}
+                  handleClickToggleDebateModal={handleClickToggleDebateModal}
+                  handleClickToggleExamModal={handleClickToggleExamModal}
+                  handleClickToggleSurveyModal={handleClickToggleSurveyModal}
+                  handleClickToggleHomeworkModal={handleClickToggleHomeworkModal}
+                  handleClickToggleDocModal={handleClickToggleDocModal}
+                  propScheduleData={propScheduleData}
+                />;
               })
             }
           </div>
