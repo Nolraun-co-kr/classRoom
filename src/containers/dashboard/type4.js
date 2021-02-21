@@ -10,6 +10,7 @@ import LectureDetailState from '../../components/Dashboard/LectureDetailState';
 import DashaboardQuizModal from '../../components/Dashboard/DashaboardQuizModal';
 import DashboardDocModal from '../../components/Dashboard/DashboardDocModal';
 import DashaboardHomeworkModal from '../../components/Dashboard/DashaboardHomeworkModal';
+import DashaboardSurveyModal from '../../components/Dashboard/DashboardSurveyModal';
 
 const lectureNoticeData = [
   {
@@ -373,7 +374,8 @@ const Dashboard = () => {
   const [showLectureDetailState, setShowLectureDetailState] = useState(false);
   const [showQuizModal, setShowQuizModal] = useState(false);
   const [showDocModal, setShowDocModal] = useState(false);
-  const [showHomeworkModal, setShowHomeworkModal] = useState(true);
+  const [showHomeworkModal, setShowHomeworkModal] = useState(false);
+  const [showSurveyModal, setShowSurveyModal] = useState(true);
   const [toggleOption, setToggleOption] = useState(false);
 
   const [scheduleData] = useState([
@@ -394,6 +396,10 @@ const Dashboard = () => {
   const handleClickToggleQuizModal = useCallback(() => {
     setShowQuizModal(!showQuizModal);
   }, [showQuizModal]);
+
+  const handleClickToggleSurveyModal = useCallback(() => {
+    setShowSurveyModal(!showSurveyModal);
+  }, [showSurveyModal]);
 
   const handleClickToggleHomeworkModal = useCallback(() => {
     setShowHomeworkModal(!showHomeworkModal);
@@ -529,6 +535,23 @@ const Dashboard = () => {
             /* eslint-disable-next-line react/no-children-prop */
             children={(
               <DashaboardQuizModal
+                handleClickToggleOption={handleClickToggleOption}
+                toggleOption={toggleOption}
+              />
+            )}
+          />
+        )
+      }
+
+      {
+        showSurveyModal && (
+          <DashboardModal
+            title={'설문입력'}
+            maxWidth={'1440'}
+            onClickClose={handleClickToggleSurveyModal}
+            /* eslint-disable-next-line react/no-children-prop */
+            children={(
+              <DashaboardSurveyModal
                 handleClickToggleOption={handleClickToggleOption}
                 toggleOption={toggleOption}
               />

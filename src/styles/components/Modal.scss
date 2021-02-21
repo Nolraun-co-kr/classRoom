@@ -224,6 +224,10 @@
         background: url('#{$image-path}/title-icon-quiz.png') no-repeat left center;
         padding-left: 1.75em;
       }
+      &.i-survey {
+        background: url('#{$image-path}/i-survey.png') no-repeat left center;
+        padding-left: 1.75em;
+      }
       &.i-homework {
         background: url('#{$image-path}/title-icon-homework.png') no-repeat left center;
         padding-left: 1.75em;
@@ -347,6 +351,10 @@
     &._btn--uploader {
       padding-left: 40px;
       background: #666 url('#{$image-path}/icon-down.png') no-repeat 14px center !important;
+    }
+    &._btn--img {
+      padding-left: 40px;
+      background: #666 url('#{$image-path}/icon-upload-img.png') no-repeat 14px center !important;
     }
   }
 }
