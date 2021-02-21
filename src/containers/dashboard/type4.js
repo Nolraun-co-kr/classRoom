@@ -8,6 +8,7 @@ import DashboardModal from '../../components/Dashboard/DashboardModal';
 import Editor from '../../components/Editor';
 import LectureDetailState from '../../components/Dashboard/LectureDetailState';
 import DashaboardQuizModal from '../../components/Dashboard/DashaboardQuizModal';
+import DashboardDocModal from '../../components/Dashboard/DashboardDocModal';
 
 const lectureNoticeData = [
   {
@@ -369,7 +370,8 @@ const Dashboard = () => {
   const [showUploadModal, setShowUploadModal] = useState(false);
   const [showVideoUploader, setShowVideoUploader] = useState(false);
   const [showLectureDetailState, setShowLectureDetailState] = useState(false);
-  const [showQuizModal, setShowQuizModal] = useState(true);
+  const [showQuizModal, setShowQuizModal] = useState(false);
+  const [showDocModal, setShowDocModal] = useState(true);
   const [toggleOption, setToggleOption] = useState(false);
 
   const [scheduleData] = useState([
@@ -390,6 +392,10 @@ const Dashboard = () => {
   const handleClickToggleQuizModal = useCallback(() => {
     setShowQuizModal(!showQuizModal);
   }, [showQuizModal]);
+
+  const handleClickToggleDocModal = useCallback(() => {
+    setShowDocModal(!showDocModal);
+  }, [showDocModal]);
 
   const handleClickToggleMaster = useCallback(() => {
     setShowMaster(!showMaster);
@@ -524,6 +530,24 @@ const Dashboard = () => {
           />
         )
       }
+
+      {
+        showDocModal && (
+          <DashboardModal
+            title={'교안자료'}
+            maxWidth={'1440'}
+            onClickClose={handleClickToggleDocModal}
+            /* eslint-disable-next-line react/no-children-prop */
+            children={(
+              <DashboardDocModal
+                handleClickToggleOption={handleClickToggleOption}
+                toggleOption={toggleOption}
+              />
+            )}
+          />
+        )
+      }
+
       {
         showUploadModal && (
           <DashboardModal
