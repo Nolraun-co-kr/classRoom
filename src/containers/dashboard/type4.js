@@ -11,6 +11,7 @@ import DashaboardQuizModal from '../../components/Dashboard/DashaboardQuizModal'
 import DashboardDocModal from '../../components/Dashboard/DashboardDocModal';
 import DashaboardHomeworkModal from '../../components/Dashboard/DashaboardHomeworkModal';
 import DashaboardSurveyModal from '../../components/Dashboard/DashboardSurveyModal';
+import DashboardExamModal from '../../components/Dashboard/DashboardExamModal';
 
 const lectureNoticeData = [
   {
@@ -374,8 +375,9 @@ const Dashboard = () => {
   const [showLectureDetailState, setShowLectureDetailState] = useState(false);
   const [showQuizModal, setShowQuizModal] = useState(false);
   const [showDocModal, setShowDocModal] = useState(false);
+  const [showExamModal, setShowExamModal] = useState(true);
   const [showHomeworkModal, setShowHomeworkModal] = useState(false);
-  const [showSurveyModal, setShowSurveyModal] = useState(true);
+  const [showSurveyModal, setShowSurveyModal] = useState(false);
   const [toggleOption, setToggleOption] = useState(false);
 
   const [scheduleData] = useState([
@@ -396,6 +398,10 @@ const Dashboard = () => {
   const handleClickToggleQuizModal = useCallback(() => {
     setShowQuizModal(!showQuizModal);
   }, [showQuizModal]);
+
+  const handleClickToggleExamModal = useCallback(() => {
+    setShowExamModal(!showExamModal);
+  }, [showExamModal]);
 
   const handleClickToggleSurveyModal = useCallback(() => {
     setShowSurveyModal(!showSurveyModal);
@@ -569,6 +575,23 @@ const Dashboard = () => {
             /* eslint-disable-next-line react/no-children-prop */
             children={(
               <DashaboardHomeworkModal
+                handleClickToggleOption={handleClickToggleOption}
+                toggleOption={toggleOption}
+              />
+            )}
+          />
+        )
+      }
+
+      {
+        showExamModal && (
+          <DashboardModal
+            title={'시험 입력'}
+            maxWidth={'1440'}
+            onClickClose={handleClickToggleExamModal}
+            /* eslint-disable-next-line react/no-children-prop */
+            children={(
+              <DashboardExamModal
                 handleClickToggleOption={handleClickToggleOption}
                 toggleOption={toggleOption}
               />

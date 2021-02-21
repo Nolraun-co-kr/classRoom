@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import update from 'immutability-helper';
 import NoticeItem from '../../components/Dashboard/NoticeItem';
 import DragSchedule from '../../components/Dashboard/DragSchedule';
 
+import update from 'immutability-helper';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 

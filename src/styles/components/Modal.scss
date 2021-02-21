@@ -232,6 +232,10 @@
         background: url('#{$image-path}/title-icon-homework.png') no-repeat left center;
         padding-left: 1.75em;
       }
+      &.i-exam {
+        background: url('#{$image-path}/i-exam.png') no-repeat left center;
+        padding-left: 1.75em;
+      }
     }
 
     .custom-checkbox {
@@ -354,6 +358,7 @@
     }
     &._btn--img {
       padding-left: 40px;
+      margin-top: 0;
       background: #666 url('#{$image-path}/icon-upload-img.png') no-repeat 14px center !important;
     }
   }

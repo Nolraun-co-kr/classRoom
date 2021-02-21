@@ -90,11 +90,11 @@
       .btn {
         border-color:#2e8bc5;
         color:#2e8bc5;
+        margin-right: 10px;
 
         &.active {
           background:#2e8bc5;
           color:#fff;
-          margin-right: 10px;
         }
       }
     }
@@ -409,6 +409,9 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   overflow: hidden;
+  &.draggable {
+
+  }
 
   & ~ .survey__content-item {
     margin-top: 10px;
@@ -432,14 +435,41 @@
     }
   }
 }
+.survey__content-item-foot {
+  height: 55px;
+  padding:0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  span {
+    background:#6fa34d;
+    color:#fff;
+    border-radius: 3px;
+    line-height: 20px;
+    width: 40px;
+    text-align: center;
+    font-size: 14px;
+  }
+  p {
+    color:#666;
+    font-size: 14px;
+    padding-left: 1em;
+  }
+}
 .survey__content-item-header {
   height: 60px;
   background:#f6f8fb;
-  padding: 0 15px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 
+  h2 {
+    margin-right: auto;
+    font-size: 1rem;
+    font-weight: 600;
+  }
   button {
     width: 30px;
     height: 30px;
