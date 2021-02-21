@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardExamModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Dashboard/DragQuiz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Dashboard/QuizTypeSelector.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Dashboard/SurveyItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardDebateModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/dashboard/type3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/dashboard/type3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/SurveyItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/SurveyItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/dashboard/type4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/dashboard/type4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Modal.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Survey.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Survey.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

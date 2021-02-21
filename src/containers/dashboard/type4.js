@@ -12,6 +12,7 @@ import DashboardDocModal from '../../components/Dashboard/DashboardDocModal';
 import DashaboardHomeworkModal from '../../components/Dashboard/DashaboardHomeworkModal';
 import DashaboardSurveyModal from '../../components/Dashboard/DashboardSurveyModal';
 import DashboardExamModal from '../../components/Dashboard/DashboardExamModal';
+import DashboardDebateModal from '../../components/Dashboard/DashboardDebateModal';
 
 const lectureNoticeData = [
   {
@@ -375,9 +376,10 @@ const Dashboard = () => {
   const [showLectureDetailState, setShowLectureDetailState] = useState(false);
   const [showQuizModal, setShowQuizModal] = useState(false);
   const [showDocModal, setShowDocModal] = useState(false);
-  const [showExamModal, setShowExamModal] = useState(true);
+  const [showExamModal, setShowExamModal] = useState(false);
   const [showHomeworkModal, setShowHomeworkModal] = useState(false);
   const [showSurveyModal, setShowSurveyModal] = useState(false);
+  const [showDebateModal, setShowDebateModal] = useState(true);
   const [toggleOption, setToggleOption] = useState(false);
 
   const [scheduleData] = useState([
@@ -398,6 +400,10 @@ const Dashboard = () => {
   const handleClickToggleQuizModal = useCallback(() => {
     setShowQuizModal(!showQuizModal);
   }, [showQuizModal]);
+
+  const handleClickToggleDebateModal = useCallback(() => {
+    setShowDebateModal(!showDebateModal);
+  }, [showDebateModal]);
 
   const handleClickToggleExamModal = useCallback(() => {
     setShowExamModal(!showExamModal);
@@ -609,6 +615,23 @@ const Dashboard = () => {
             /* eslint-disable-next-line react/no-children-prop */
             children={(
               <DashboardDocModal
+                handleClickToggleOption={handleClickToggleOption}
+                toggleOption={toggleOption}
+              />
+            )}
+          />
+        )
+      }
+
+      {
+        showDebateModal && (
+          <DashboardModal
+            title={'토론자료'}
+            maxWidth={'1440'}
+            onClickClose={handleClickToggleDebateModal}
+            /* eslint-disable-next-line react/no-children-prop */
+            children={(
+              <DashboardDebateModal
                 handleClickToggleOption={handleClickToggleOption}
                 toggleOption={toggleOption}
               />

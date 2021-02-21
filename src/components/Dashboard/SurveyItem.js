@@ -21,6 +21,7 @@ const SurveyItem = ({
         </button>
       </div>
       {item.show
+        // eslint-disable-next-line multiline-ternary
         ? (
           <div className="survey__content-item-body">
             <div className="_modal__block">
