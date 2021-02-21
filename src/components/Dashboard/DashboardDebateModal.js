@@ -3,7 +3,10 @@ import { IoMenuOutline } from 'react-icons/all';
 import DashboardModal from './DashboardModal';
 import Editor from '../Editor';
 
-const DashboardDebateModal = () => {
+const DashboardDebateModal = ({
+  handleClickToggleOption,
+  toggleOption
+}) => {
   const [tab, setTab] = useState(1);
   const [showForm, setShowForm] = useState(false);
   const [detail, setDetail] = useState(false);
@@ -30,9 +33,106 @@ const DashboardDebateModal = () => {
                 <h2 className={'i-debate'}>토론</h2>
               </div>
               <div className={'_modal__block-body'}>
-              토론...
+
+                <div className="row">
+                  <h3 className={'insertForm__name required'}> 제목</h3>
+                  <div className={'insertForm__content'}>
+                    <div className="input full"><input type="text"/></div>
+                  </div>
+                </div>
+
+                <div className="row">
+                  <h3 className={'insertForm__name required'}> 첨부파일</h3>
+                  <div className={'insertForm__content'}>
+                    <div className="flex">
+                      <div className="input"><input type="text"/></div>
+                      <label htmlFor="file" className={'file-btn'}>
+                        <input type="file" id={'file'}/>
+                        <span className={'_btn small'}>파일 선택</span>
+                      </label>
+                      <button className={'_btn small _btn--uploader'} onClick={() => {}}>파일 업로더</button>
+
+                    </div>
+                    <div className={'help-text-block'}>
+                      <p className={'help-text'}>허용된 확장자: pptx, words</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className={'_modal__block-body'}>
+                <button className={'_btn small'} onClick={handleClickToggleOption}>
+                  고급옵션 {toggleOption ? '닫기 -' : '열기 +'}
+                </button>
               </div>
             </div>
+            {
+              toggleOption && (
+                <div className="_modal__block">
+                  <div className="_modal__block-header">
+                    <h2>고급옵션</h2>
+                  </div>
+                  <div className={'_modal__block-body'}>
+                    <div className="row">
+                      <h3 className={'insertForm__name required'}>설명</h3>
+                      <div className={'insertForm__content'}>
+                        <Editor />
+                      </div>
+                    </div>
+
+                  </div>
+                  <div className={'_modal__block-body'}>
+                    <div className="row">
+                      <h3 className={'insertForm__name'}>출석인정기간</h3>
+                      <div className={'insertForm__content'}>
+                        <div className={'window-cofing'}>
+                          <div className="flex">
+                            <h4>다운로드 허용</h4>
+                            <div className="select">
+                              <select name="" id="">
+                                <option value="">아니오</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div className="flex">
+                            <h4>동영상 너비(픽셀)</h4>
+                            <div className="input short"><input type="number"/></div>
+                          </div>
+                          <div className="flex">
+                            <h4>동영상 높이(픽셀)</h4>
+                            <div className="input short"><input type="number"/></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={'_modal__block-body'}>
+                    <div className="row">
+                      <h3 className={'insertForm__name'}>보기</h3>
+                      <div className={'insertForm__content'}>
+                        <div className="select long">
+                          <select name="" id="">
+                            <option value="">숨기기</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={'_modal__block-body'}>
+                    <div className="row">
+                      <h3 className={'insertForm__name'}>접근제한</h3>
+                      <div className={'insertForm__content'}>
+                        <div className="flex">
+                          <p>접근 제한이 설정되어 있지 않습니다.</p>
+                        </div>
+                        <button className={'_btn small bg-none'}>접근 제한 추가하기 +</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )
+            }
           </>
         )
       }

@@ -44,6 +44,9 @@ const DashboardExamModal = ({
   const [allShowSurvey, setAllShowSurvey] = useState(true);
   const [addQuizState, setAddQuizState] = useState(false);
 
+  const [firstQuizAnswer, setFirstQuizAnswer] = useState(null);
+  const [sixQuizAnswer, setSixQuizAnswer] = useState(null);
+
   const handleClickAddSection = useCallback(() => {
     setSectionState(prevState => ([
       ...sectionState,
@@ -391,32 +394,32 @@ const DashboardExamModal = ({
                                   </p>
                                   <div className={'survey__type1-selector'}>
                                     <div className="flex">
-                                      <label htmlFor="svy1" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svy1'}/>
+                                      <label htmlFor="svy1" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(1)}>
+                                        <input type="radio" name={'svy1'} checked={firstQuizAnswer === 1}/>
                                         <span />
                                         <p>1</p>
                                       </label>
 
-                                      <label htmlFor="svy2" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svy2'}/>
+                                      <label htmlFor="svy2" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(2)}>
+                                        <input type="radio" name={'svy2'} checked={firstQuizAnswer === 2}/>
                                         <span />
                                         <p>2</p>
                                       </label>
 
-                                      <label htmlFor="svy3" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svy3'}/>
+                                      <label htmlFor="svy3" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(3)}>
+                                        <input type="radio" name={'svy3'} checked={firstQuizAnswer === 3}/>
                                         <span />
                                         <p>3</p>
                                       </label>
 
-                                      <label htmlFor="svy4" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svy4'}/>
+                                      <label htmlFor="svy4" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(4)}>
+                                        <input type="radio" name={'svy4'} checked={firstQuizAnswer === 4}/>
                                         <span />
                                         <p>4</p>
                                       </label>
 
-                                      <label htmlFor="svy5" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svy5'}/>
+                                      <label htmlFor="svy5" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(5)}>
+                                        <input type="radio" name={'svy5'} checked={firstQuizAnswer === 5}/>
                                         <span />
                                         <p>5</p>
                                       </label>
@@ -582,28 +585,28 @@ const DashboardExamModal = ({
                                   <td>1</td>
                                   <td>
                                     <div className="flex">
-                                      <label htmlFor="svys1" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svys'} id={'svys1'}/>
+                                      <label htmlFor="svys1" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(1)}>
+                                        <input type="radio" name={'svys'} id={'svys1'} checked={firstQuizAnswer === 1}/>
                                         <span>1</span>
                                       </label>
 
-                                      <label htmlFor="svys2" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svys'} id={'svys2'}/>
+                                      <label htmlFor="svys2" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(2)}>
+                                        <input type="radio" name={'svys'} id={'svys2'} checked={firstQuizAnswer === 2}/>
                                         <span>2</span>
                                       </label>
 
-                                      <label htmlFor="svys3" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svys'} id={'svys3'}/>
+                                      <label htmlFor="svys3" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(3)}>
+                                        <input type="radio" name={'svys'} id={'svys3'} checked={firstQuizAnswer === 3}/>
                                         <span>3</span>
                                       </label>
 
-                                      <label htmlFor="svys4" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svys'} id={'svys4'}/>
+                                      <label htmlFor="svys4" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(4)}>
+                                        <input type="radio" name={'svys'} id={'svys4'} checked={firstQuizAnswer === 4}/>
                                         <span>4</span>
                                       </label>
 
-                                      <label htmlFor="svys5" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svys'} id={'svys5'}/>
+                                      <label htmlFor="svys5" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(5)}>
+                                        <input type="radio" name={'svys'} id={'svys5'} checked={firstQuizAnswer === 5}/>
                                         <span>5</span>
                                       </label>
                                     </div>
@@ -624,6 +627,39 @@ const DashboardExamModal = ({
                                   <td>4</td>
                                   <td>
                                     없습니다.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>5</td>
+                                  <td>
+
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>6</td>
+                                  <td>
+                                    <div className="flex">
+                                      <label htmlFor="svys61" className={'custom-checkbox'} onClick={() => setSixQuizAnswer(1)}>
+                                        <input type="radio" id={'svys61'} checked={sixQuizAnswer === 1}/>
+                                        <span>1</span>
+                                      </label>
+
+                                      <label htmlFor="svys62" className={'custom-checkbox'} onClick={() => setSixQuizAnswer(2)}>
+                                        <input type="radio" id={'svys62'} checked={sixQuizAnswer === 2}/>
+                                        <span>2</span>
+                                      </label>
+
+                                      <label htmlFor="svys63" className={'custom-checkbox'} onClick={() => setSixQuizAnswer(3)}>
+                                        <input type="radio" id={'svys63'} checked={sixQuizAnswer === 3}/>
+                                        <span>3</span>
+                                      </label>
+
+                                      <label htmlFor="svys64" className={'custom-checkbox'} onClick={() => setSixQuizAnswer(4)}>
+                                        <input type="radio" id={'svys64'} checked={sixQuizAnswer === 4}/>
+                                        <span>4</span>
+                                      </label>
+
+                                    </div>
                                   </td>
                                 </tr>
                                 </tbody>
@@ -662,26 +698,26 @@ const DashboardExamModal = ({
                                 <div className={'survey__type1'}>
                                   <div className={'survey__type1-selector'}>
                                     <div className="block">
-                                      <label htmlFor="svy1" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svy1'}/>
+                                      <label htmlFor="svy1" className={'custom-checkbox'} onClick={() => setSixQuizAnswer(1)}>
+                                        <input type="radio" name={'svy1'} checked={sixQuizAnswer === 1}/>
                                         <span />
                                         <p>①  강의 난이도</p>
                                       </label>
 
-                                      <label htmlFor="svy2" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svy2'}/>
+                                      <label htmlFor="svy2" className={'custom-checkbox'} onClick={() => setSixQuizAnswer(2)}>
+                                        <input type="radio" name={'svy2'} checked={sixQuizAnswer === 2}/>
                                         <span />
                                         <p>②  교수님 성향</p>
                                       </label>
 
-                                      <label htmlFor="svy3" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svy3'}/>
+                                      <label htmlFor="svy3" className={'custom-checkbox'} onClick={() => setSixQuizAnswer(3)}>
+                                        <input type="radio" name={'svy3'} checked={sixQuizAnswer === 3}/>
                                         <span />
                                         <p>③  학점 취득의 용이함</p>
                                       </label>
 
-                                      <label htmlFor="svy4" className={'custom-checkbox'}>
-                                        <input type="radio" name={'svy4'}/>
+                                      <label htmlFor="svy4" className={'custom-checkbox'} onClick={() => setSixQuizAnswer(4)}>
+                                        <input type="radio" name={'svy4'} checked={sixQuizAnswer === 4}/>
                                         <span />
                                         <p>④  취업 연계</p>
                                       </label>
@@ -712,72 +748,107 @@ const DashboardExamModal = ({
                             </div>
                           </div>
                         </div>
-                        <div className={'survey__body-answer'}>
-                          <div className={'_dataTable'}>
-                            <table>
-                              <colgroup>
-                                <col width={50}/>
-                                <col/>
-                              </colgroup>
-                              <thead>
-                              <tr>
-                                <th>번호</th>
-                                <th>답변</th>
-                              </tr>
-                              </thead>
-                              <tbody>
-                              <tr>
-                                <td>1</td>
-                                <td>
-                                  <div className="flex">
-                                    <label htmlFor="svys1" className={'custom-checkbox'}>
-                                      <input type="radio" name={'svys'} id={'svys1'}/>
-                                      <span>1</span>
-                                    </label>
+                        { showAnswer && (
+                          <div className={'survey__body-answer'}>
+                            <div className={'_dataTable'}>
+                              <table>
+                                <colgroup>
+                                  <col width={50}/>
+                                  <col/>
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                  <th>번호</th>
+                                  <th>답변</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <div className="flex">
+                                      <label htmlFor="svys1" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(1)}>
+                                        <input type="radio" name={'svys'} id={'svys1'} checked={firstQuizAnswer === 1}/>
+                                        <span>1</span>
+                                      </label>
 
-                                    <label htmlFor="svys2" className={'custom-checkbox'}>
-                                      <input type="radio" name={'svys'} id={'svys2'}/>
-                                      <span>2</span>
-                                    </label>
+                                      <label htmlFor="svys2" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(2)}>
+                                        <input type="radio" name={'svys'} id={'svys2'} checked={firstQuizAnswer === 2}/>
+                                        <span>2</span>
+                                      </label>
 
-                                    <label htmlFor="svys3" className={'custom-checkbox'}>
-                                      <input type="radio" name={'svys'} id={'svys3'}/>
-                                      <span>3</span>
-                                    </label>
+                                      <label htmlFor="svys3" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(3)}>
+                                        <input type="radio" name={'svys'} id={'svys3'} checked={firstQuizAnswer === 3}/>
+                                        <span>3</span>
+                                      </label>
 
-                                    <label htmlFor="svys4" className={'custom-checkbox'}>
-                                      <input type="radio" name={'svys'} id={'svys4'}/>
-                                      <span>4</span>
-                                    </label>
+                                      <label htmlFor="svys4" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(4)}>
+                                        <input type="radio" name={'svys'} id={'svys4'} checked={firstQuizAnswer === 4}/>
+                                        <span>4</span>
+                                      </label>
 
-                                    <label htmlFor="svys5" className={'custom-checkbox'}>
-                                      <input type="radio" name={'svys'} id={'svys5'}/>
-                                      <span>5</span>
-                                    </label>
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>2</td>
-                                <td>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>3</td>
-                                <td>
-                                  예
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>4</td>
-                                <td>
-                                  없습니다.
-                                </td>
-                              </tr>
-                              </tbody>
-                            </table>
+                                      <label htmlFor="svys5" className={'custom-checkbox'} onClick={() => setFirstQuizAnswer(5)}>
+                                        <input type="radio" name={'svys'} id={'svys5'} checked={firstQuizAnswer === 5}/>
+                                        <span>5</span>
+                                      </label>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>3</td>
+                                  <td>
+                                    예
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>4</td>
+                                  <td>
+                                    없습니다.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>5</td>
+                                  <td>
+
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>6</td>
+                                  <td>
+                                    <div className="flex">
+                                      <label htmlFor="svys61" className={'custom-checkbox'} onClick={() => setSixQuizAnswer(1)}>
+                                        <input type="radio" id={'svys61'} checked={sixQuizAnswer === 1}/>
+                                        <span>1</span>
+                                      </label>
+
+                                      <label htmlFor="svys62" className={'custom-checkbox'} onClick={() => setSixQuizAnswer(2)}>
+                                        <input type="radio" id={'svys62'} checked={sixQuizAnswer === 2}/>
+                                        <span>2</span>
+                                      </label>
+
+                                      <label htmlFor="svys63" className={'custom-checkbox'} onClick={() => setSixQuizAnswer(3)}>
+                                        <input type="radio" id={'svys63'} checked={sixQuizAnswer === 3}/>
+                                        <span>3</span>
+                                      </label>
+
+                                      <label htmlFor="svys64" className={'custom-checkbox'} onClick={() => setSixQuizAnswer(4)}>
+                                        <input type="radio" id={'svys64'} checked={sixQuizAnswer === 4}/>
+                                        <span>4</span>
+                                      </label>
+
+                                    </div>
+                                  </td>
+                                </tr>
+                                </tbody>
+                              </table>
+                            </div>
                           </div>
-                        </div>
+                        )}
                       </div>
                     </div>
                     )}

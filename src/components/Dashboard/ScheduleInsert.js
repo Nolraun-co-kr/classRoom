@@ -9,7 +9,11 @@ const ScheduleInsert = ({
   handleClickToggleExamModal,
   handleClickToggleSurveyModal,
   handleClickToggleHomeworkModal,
-  handleClickToggleDocModal
+  handleClickToggleDocModal,
+  handleClickToggleClassModal,
+  handleClickToggleFileModal,
+  handleClickToggleCommentModal,
+  handleClickToggleTrainingModal
 }) => {
   const schedule = propScheduleData;
 
@@ -155,7 +159,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data2}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={() => alert('실시간수업')}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleClassModal}>입력</button>
                       )}
                 </div>
 
@@ -174,7 +178,7 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data4}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={() => alert('자료')}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleFileModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>
@@ -183,16 +187,17 @@ const ScheduleInsert = ({
                     ? (
                       <span className={'state text-center'}>{data.data5}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={() => alert('댓글과 질문')}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleCommentModal}>입력</button>
                       )}
                 </div>
+
                 <div className={'cell'}>
                   {data.data6
                     // eslint-disable-next-line multiline-ternary
                     ? (
                       <span className={'state text-center'}>{data.data6}</span>
                       ) : (
-                      <button className={'insert-btn'} type={'button'} onClick={() => alert('실습')}>입력</button>
+                      <button className={'insert-btn'} type={'button'} onClick={handleClickToggleTrainingModal}>입력</button>
                       )}
                 </div>
                 <div className={'cell'}>

@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import Editor from '../Editor';
 
-const DashboardDocModal = ({
+const DashboardCommentModal = ({
   handleClickToggleOption,
   toggleOption
 }) => {
@@ -27,7 +27,7 @@ const DashboardDocModal = ({
           <>
             <div className="_modal__block">
               <div className="_modal__block-header">
-                <h2 className={'i-doc'}>교안자료</h2>
+                <h2 className={'i-doc'}>댓글과 질문</h2>
               </div>
               <div className={'_modal__block-body'}>
 
@@ -136,4 +136,4 @@ const DashboardDocModal = ({
   );
 };
 
-export default DashboardDocModal;
+export default DashboardCommentModal;

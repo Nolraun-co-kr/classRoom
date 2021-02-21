@@ -426,3 +426,16 @@
     }
   }
 }
+
+.insertForm--inner {
+  .custom-checkbox {
+    margin-top: 0 !important;
+  }
+  ._modal__block-body {
+    padding:20px 0 !important;
+  }
+
+  .insertForm__name {
+    width: 155px !important;
+  }
+}
