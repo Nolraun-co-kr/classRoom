@@ -1,7 +1,128 @@
 .lectureState {
 
+  ._dataTable {
+    th, td {
+      border-right:3px solid #f6f8fb !important;
+      &:last-child {
+        border-right: 0 !important;
+      }
+    }
+
+    tbody {
+      td {
+        min-height: 65px;
+      }
+    }
+  }
+
+  .attendance-column {
+    background:#eeeeee;
+    color:#909090;
+
+    &.warning {
+      background:#f0e4e4;
+    }
+  }
+
+  .state-column {
+    &.complete {
+      background:#eaf8e5;
+    }
+  }
+
+  .show-detail {
+    height: 30px;
+    width: 75px;
+    border: 1px solid #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    border-radius: 5px;
+    color:#666;
+    svg {
+      margin-right: 5px;
+    }
+  }
+
+  .crt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#909090;
+    font-size: 14px;
+    svg {
+      margin-right: 5px;
+    }
+  }
+  .state-false {
+    color:#f00;
+  }
+  .state-true {
+    color:#4abd17;
+    svg {
+      font-size: 16px;
+    }
+  }
+
 }
 
 .lectureState__body {
 
+  .state {
+    background:#fff;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;;
+  }
+  .left{
+    margin-right: auto;
+    margin-left: -10px;
+    .row {
+      margin: 0;
+      & ~ .row {
+        margin-top: 10px;
+      }
+    }
+    .col {
+      padding:0 15px;
+      line-height: 1em;
+      white-space: nowrap;
+      & ~ .col {
+        border-left: 1px solid #ddd;
+      }
+    }
+    strong {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-right: 5px;
+    }
+    span {
+      font-size: 1.125rem;
+      font-weight: 600;
+      &.blue {
+        color:#519ecf
+      }
+      &.orange {
+        color:#ea8916;
+      }
+      &.red {
+        color:#e2431e;
+      }
+      &.gray {
+        color:#555555
+      }
+    }
+  }
+  ._btn {
+    height: 52px;
+    line-height: 50px;
+    padding:0 24px;
+    font-size: 18px;
+    color:#2e8bc5;;
+    border: 1px solid #2e8bc5;;
+    border-radius: 5px;
+  }
 }
