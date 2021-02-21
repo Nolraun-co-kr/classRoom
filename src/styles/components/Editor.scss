@@ -5,5 +5,21 @@
     }
 
   }
+
+  .tx-toolbar {
+    height: auto !important;
+  }
+  .tx-toolbar-boundary  {
+    height: auto;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  .tx-toolbar .tx-list {
+    height: auto;
+  }
 }
+
 

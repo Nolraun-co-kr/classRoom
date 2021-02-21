@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { useEffect } from 'react';
 
-const Editor = () => {
+const Editor = ({bodyHeight}) => {
   useEffect(() => {
     const config = {
       txHost: '', /* 런타임 시 리소스들을 로딩할 때 필요한 부분으로, 경로가 변경되면 이 부분 수정이 필요. ex) http://xxx.xxx.com */
@@ -11,8 +11,8 @@ const Editor = () => {
       initializedId: '', /* 대부분의 경우에 빈문자열 */
       wrapper: 'tx_trex_container', /* 에디터를 둘러싸고 있는 레이어 이름(에디터 컨테이너) */
       form: 'tx_editor_form' + '', /* 등록하기 위한 Form 이름 */
-      txIconPath: 'images/icon/editor/', /* 에디터에 사용되는 이미지 디렉터리, 필요에 따라 수정한다. */
-      txDecoPath: 'images/deco/contents/', /* 본문에 사용되는 이미지 디렉터리, 서비스에서 사용할 때는 완성된 컨텐츠로 배포되기 위해 절대경로로 수정한다. */
+      txIconPath: '/assets/daumeditor-7.5.9/images/icon/editor/', /* 에디터에 사용되는 이미지 디렉터리, 필요에 따라 수정한다. */
+      txDecoPath: '/assets/daumeditor-7.5.9/images/deco/contents/', /* 본문에 사용되는 이미지 디렉터리, 서비스에서 사용할 때는 완성된 컨텐츠로 배포되기 위해 절대경로로 수정한다. */
       canvas: {
         exitEditor: {
           /*
@@ -275,9 +275,9 @@ const Editor = () => {
                     </div>
                     <div className="tx-menu-footer">
                       <img className="tx-menu-confirm"
-                           src="./images/icon/editor/btn_confirm.gif?rv=1.0.1" alt=""/>
+                           src=".//assets/daumeditor-7.5.9/images/icon/editor/btn_confirm.gif?rv=1.0.1" alt=""/>
                       <img className="tx-menu-cancel" hspace="3"
-                           src="./images/icon/editor/btn_cancel.gif?rv=1.0.1" alt=""/>
+                           src=".//assets/daumeditor-7.5.9/images/icon/editor/btn_cancel.gif?rv=1.0.1" alt=""/>
                     </div>
                   </div>
                 </li>
@@ -450,12 +450,12 @@ const Editor = () => {
 
           <div id="tx_canvas" className="tx-canvas">
             <div id="tx_loading" className="tx-loading">
-              <div><img src="images/icon/editor/loading2.png" width="113" height="21" align="absmiddle"/></div>
+              <div><img src="/assets/daumeditor-7.5.9/images/icon/editor/loading2.png" width="113" height="21" align="absmiddle"/></div>
             </div>
             <div id="tx_canvas_wysiwyg_holder" className="tx-holder" style={{
               display:"block"
             }}>
-              <iframe id="tx_canvas_wysiwyg" name="tx_canvas_wysiwyg" allowtransparency="true" frameBorder="0"></iframe>
+              <iframe id="tx_canvas_wysiwyg" name="tx_canvas_wysiwyg" allowtransparency="true" frameBorder="0" style={{height: `${bodyHeight ? bodyHeight : '300'}px`}}></iframe>
             </div>
             <div className="tx-source-deco">
               <div id="tx_canvas_source_holder" className="tx-holder">
@@ -468,15 +468,8 @@ const Editor = () => {
           </div>
           <div id="tx_resizer" className="tx-resize-bar">
             <div className="tx-resize-bar-bg"></div>
-            <img id="tx_resize_holder" src="images/icon/editor/skin/01/btn_drag01.gif" width="58" height="12"
+            <img id="tx_resize_holder" src="/assets/daumeditor-7.5.9/images/icon/editor/skin/01/btn_drag01.gif" width="58" height="12"
                  unselectable="on" alt=""/>
-          </div>
-          <div className="tx-side-bi" id="tx_side_bi">
-            <div style={{
-              textAlign: 'right'
-            }}>
-              <img hspace="4" height="14" width="78" align="absmiddle" src="images/icon/editor/editor_bi.png"/>
-            </div>
           </div>
 
           <div id="tx_attach_div" className="tx-attach-div">
@@ -484,7 +477,7 @@ const Editor = () => {
             <div id="tx_attach_box" className="tx-attach-box">
               <div className="tx-attach-box-inner">
                 <div id="tx_attach_preview" className="tx-attach-preview"><p></p><img
-                  src="images/icon/editor/pn_preview.gif" width="147" height="108" unselectable="on"/></div>
+                  src="/assets/daumeditor-7.5.9/images/icon/editor/pn_preview.gif" width="147" height="108" unselectable="on"/></div>
                 <div className="tx-attach-main">
                   <div id="tx_upload_progress" className="tx-upload-progress">
                     <div>0%</div>

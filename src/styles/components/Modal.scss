@@ -206,6 +206,30 @@
     & ~ .flex {
       margin-top: 10px;
     }
+    &.align-top {
+      height: auto;
+      align-items: flex-start;
+
+      .editor {
+        flex: 1;
+      }
+    }
+
+    .quiz-true,
+    .quiz-false {
+      width: 120px;
+      flex: none;
+      padding-left: 1.25em;
+    }
+    .quiz-true {
+      color:#2e8bc5;
+      background: url('#{$image-path}/quiz-true.png') no-repeat left center !important;
+    }
+    .quiz-false {
+      color:#ff2626;
+      background: url('#{$image-path}/quiz-false.png') no-repeat left center !important;
+    }
+
   }
 
   .window-cofing {
@@ -295,7 +319,8 @@
   .insertForm__name {
     width: 155px;
     flex: none;
-    line-height: 40px;
+    line-height: 20px;
+    padding: 10px 0;
     &.required {
       &:after {
         content: '*';

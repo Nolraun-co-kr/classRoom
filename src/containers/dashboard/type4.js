@@ -7,6 +7,7 @@ import ScheduleInsert from '../../components/Dashboard/ScheduleInsert';
 import DashboardModal from '../../components/Dashboard/DashboardModal';
 import Editor from '../../components/Editor';
 import LectureDetailState from '../../components/Dashboard/LectureDetailState';
+import DashaboardQuizModal from '../../components/Dashboard/DashaboardQuizModal';
 
 const lectureNoticeData = [
   {
@@ -367,7 +368,8 @@ const Dashboard = () => {
   const [showMaster, setShowMaster] = useState(false);
   const [showUploadModal, setShowUploadModal] = useState(false);
   const [showVideoUploader, setShowVideoUploader] = useState(false);
-  const [showLectureDetailState, setShowLectureDetailState] = useState(true);
+  const [showLectureDetailState, setShowLectureDetailState] = useState(false);
+  const [showQuizModal, setShowQuizModal] = useState(true);
   const [toggleOption, setToggleOption] = useState(false);
 
   const [scheduleData] = useState([
@@ -384,6 +386,10 @@ const Dashboard = () => {
       id: 4
     }
   ]);
+
+  const handleClickToggleQuizModal = useCallback(() => {
+    setShowQuizModal(!showQuizModal);
+  }, [showQuizModal]);
 
   const handleClickToggleMaster = useCallback(() => {
     setShowMaster(!showMaster);
@@ -465,13 +471,6 @@ const Dashboard = () => {
             }
           </div>
         </div>
-        {
-          showLectureDetailState && (
-            <LectureDetailState
-              onClose={handleClickToggleLectureDetailState}
-            />
-          )
-        }
       </div>
 
       <div className="dashboard__block">
@@ -501,6 +500,30 @@ const Dashboard = () => {
       </div>
       </div>
     </div>
+      {
+        showLectureDetailState && (
+          <LectureDetailState
+            onClose={handleClickToggleLectureDetailState}
+          />
+        )
+      }
+
+      {
+        showQuizModal && (
+          <DashboardModal
+            title={'퀴즈입력'}
+            maxWidth={'1440'}
+            onClickClose={handleClickToggleQuizModal}
+            /* eslint-disable-next-line react/no-children-prop */
+            children={(
+              <DashaboardQuizModal
+                handleClickToggleOption={handleClickToggleOption}
+                toggleOption={toggleOption}
+              />
+            )}
+          />
+        )
+      }
       {
         showUploadModal && (
           <DashboardModal

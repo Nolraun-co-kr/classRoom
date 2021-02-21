@@ -19,6 +19,7 @@ import Login from './Login';
 
 import NoticeList from './Notice/list';
 import LecturePlan from './LecturePlan';
+import LectureState from './LectureState';
 
 const RouterApp = () => {
   const [gradient] = useState(false);
@@ -69,6 +70,21 @@ const RouterApp = () => {
               gradient={gradient}
             >
               <LecturePlan />
+            </ContentWrapper>
+          )} />
+
+          {/* 출력/학습현황 */}
+          <Route exact path="/lectureState" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+              gradient={gradient}
+            >
+              <LectureState />
             </ContentWrapper>
           )} />
 
