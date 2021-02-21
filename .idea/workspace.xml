@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardDocModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dashboard/DashaboardHomeworkModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/components/Homework.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashboardDocModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardDocModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/dashboard/type4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/dashboard/type4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/CustomCheckbox.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/CustomCheckbox.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/Modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/Quiz.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Quiz.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

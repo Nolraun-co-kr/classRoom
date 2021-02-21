@@ -183,6 +183,24 @@
   }
   ._modal__block-body {
     padding: 20px 0;
+
+    ._modal__block-body {
+      &:first-child {
+        padding: 0;
+        padding-bottom: 20px;
+      }
+      &:last-child {
+        padding: 0;
+        padding-top: 20px;
+      }
+
+      .insertForm__name {
+        width: auto;
+        white-space: nowrap;
+        padding-right: 25px;
+      }
+    }
+
     & ~ ._modal__block-body {
       border-top: 1px solid #ddd;
     }
@@ -206,6 +224,10 @@
         background: url('#{$image-path}/title-icon-quiz.png') no-repeat left center;
         padding-left: 1.75em;
       }
+      &.i-homework {
+        background: url('#{$image-path}/title-icon-homework.png') no-repeat left center;
+        padding-left: 1.75em;
+      }
     }
 
     .custom-checkbox {
@@ -227,6 +249,13 @@
 
       .editor {
         flex: 1;
+      }
+    }
+
+    .custom-checkbox {
+      margin-top: 0 !important;
+      & ~ .custom-checkbox {
+        margin-left: 20px;
       }
     }
 

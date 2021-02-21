@@ -9,6 +9,7 @@ import Editor from '../../components/Editor';
 import LectureDetailState from '../../components/Dashboard/LectureDetailState';
 import DashaboardQuizModal from '../../components/Dashboard/DashaboardQuizModal';
 import DashboardDocModal from '../../components/Dashboard/DashboardDocModal';
+import DashaboardHomeworkModal from '../../components/Dashboard/DashaboardHomeworkModal';
 
 const lectureNoticeData = [
   {
@@ -371,7 +372,8 @@ const Dashboard = () => {
   const [showVideoUploader, setShowVideoUploader] = useState(false);
   const [showLectureDetailState, setShowLectureDetailState] = useState(false);
   const [showQuizModal, setShowQuizModal] = useState(false);
-  const [showDocModal, setShowDocModal] = useState(true);
+  const [showDocModal, setShowDocModal] = useState(false);
+  const [showHomeworkModal, setShowHomeworkModal] = useState(true);
   const [toggleOption, setToggleOption] = useState(false);
 
   const [scheduleData] = useState([
@@ -392,6 +394,10 @@ const Dashboard = () => {
   const handleClickToggleQuizModal = useCallback(() => {
     setShowQuizModal(!showQuizModal);
   }, [showQuizModal]);
+
+  const handleClickToggleHomeworkModal = useCallback(() => {
+    setShowHomeworkModal(!showHomeworkModal);
+  }, [showHomeworkModal]);
 
   const handleClickToggleDocModal = useCallback(() => {
     setShowDocModal(!showDocModal);
@@ -523,6 +529,23 @@ const Dashboard = () => {
             /* eslint-disable-next-line react/no-children-prop */
             children={(
               <DashaboardQuizModal
+                handleClickToggleOption={handleClickToggleOption}
+                toggleOption={toggleOption}
+              />
+            )}
+          />
+        )
+      }
+
+      {
+        showHomeworkModal && (
+          <DashboardModal
+            title={'과제 입력'}
+            maxWidth={'1440'}
+            onClickClose={handleClickToggleHomeworkModal}
+            /* eslint-disable-next-line react/no-children-prop */
+            children={(
+              <DashaboardHomeworkModal
                 handleClickToggleOption={handleClickToggleOption}
                 toggleOption={toggleOption}
               />

@@ -121,7 +121,6 @@ const DashboardDocModal = ({
           <div>평가</div>
         )
       }
-
     </div>
   );
 };

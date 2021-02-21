@@ -3,6 +3,9 @@
 .quiz {
   padding-top: 20px;
 }
+.quiz-help {
+  padding-bottom: 20px;
+}
 .quiz-title {
   font-size: 1rem;
   font-weight: 600;
@@ -50,6 +53,10 @@
   justify-content: center;
   margin-top: 15px;
 
+  &.end {
+    justify-content: flex-end;
+    margin-right: -5px;
+  }
   .btn {
     margin:0 5px;
     min-width: 160px;
@@ -57,11 +64,16 @@
     font-size: 1rem;
     text-align: center;
     border-radius: 5px;
+    border: 1px solid #2e8bc5;;
+    padding:0 15px;
+    background:#fff;
+    color:#2e8bc5;
+    &.submit {
+      background:#2e8bc5;
+      color:#fff;
+    }
   }
-  .submit {
-    background:#2e8bc5;
-    color:#fff;
-  }
+
 }
 
 .quiz-answer {
