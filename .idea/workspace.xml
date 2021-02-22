@@ -6,20 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.bdf67825.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.bdf67825.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/8.9b5b01d4.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/8.9b5b01d4.chunk.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/8.9b5b01d4.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.e6f65818.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.e6f65818.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashaboardQuizModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashaboardQuizModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/MobileNav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/MobileNav/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Nav/NavBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Nav/NavBody.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Nav/NavBodyEdu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Nav/NavBodyEdu.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +88,8 @@
       <workItem from="1613593062409" duration="16852000" />
       <workItem from="1613624277691" duration="132000" />
       <workItem from="1613697678473" duration="6096000" />
+      <workItem from="1613964445034" duration="27000" />
+      <workItem from="1613965483961" duration="756000" />
     </task>
     <servers />
   </component>
