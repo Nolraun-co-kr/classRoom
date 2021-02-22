@@ -72,7 +72,7 @@ const DashaboardQuizModal = ({
                 <div className="row">
                   <h3 className={'insertForm__name required'}>설명</h3>
                   <div className={'insertForm__content'}>
-                    <Editor />
+                    <Editor editorId={'editor1'} />
                   </div>
                 </div>
 
@@ -184,11 +184,11 @@ const DashaboardQuizModal = ({
                                 </button>
                                 <div className="flex">
                                   <h3>보기 {index}</h3>
-                                  <Editor bodyHeight={100} />
+                                  <Editor editorId={'editorv'} bodyHeight={100} />
                                 </div>
                                 <div className="flex">
                                   <h3>피드백</h3>
-                                  <Editor bodyHeight={100} />
+                                  <Editor editorId={'editorf'} bodyHeight={100} />
                                 </div>
                               </div>
                             </div>
@@ -208,11 +208,11 @@ const DashaboardQuizModal = ({
                   <div className={'insertForm__content'}>
                     <div className="flex align-top">
                       <div className={'quiz-true'}>정답인 경우</div>
-                      <Editor bodyHeight={100} />
+                      <Editor editorId={'correctEditor'} bodyHeight={100} />
                     </div>
                     <div className="flex align-top">
                       <div className={'quiz-false'}>오답인 경우</div>
-                      <Editor bodyHeight={100} />
+                      <Editor editorId={'inCorrectEditor'} bodyHeight={100} />
                     </div>
                   </div>
                 </div>

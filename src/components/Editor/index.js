@@ -1,16 +1,16 @@
 /* eslint-disable */
 import React, { useEffect } from 'react';
 
-const Editor = ({bodyHeight}) => {
+const Editor = ({bodyHeight, editorId = 'tx_editor_form'}) => {
   useEffect(() => {
     const config = {
       txHost: '', /* 런타임 시 리소스들을 로딩할 때 필요한 부분으로, 경로가 변경되면 이 부분 수정이 필요. ex) http://xxx.xxx.com */
       txPath: '', /* 런타임 시 리소스들을 로딩할 때 필요한 부분으로, 경로가 변경되면 이 부분 수정이 필요. ex) /xxx/xxx/ */
       txService: 'sample', /* 수정필요없음. */
       txProject: 'sample', /* 수정필요없음. 프로젝트가 여러개일 경우만 수정한다. */
-      initializedId: '', /* 대부분의 경우에 빈문자열 */
-      wrapper: 'tx_trex_container', /* 에디터를 둘러싸고 있는 레이어 이름(에디터 컨테이너) */
-      form: 'tx_editor_form' + '', /* 등록하기 위한 Form 이름 */
+      initializedId: ``, /* 대부분의 경우에 빈문자열 */
+      wrapper: `${editorId}-wrapper`, /* 에디터를 둘러싸고 있는 레이어 이름(에디터 컨테이너) */
+      form: `${editorId}`, /* 등록하기 위한 Form 이름 */
       txIconPath: '/assets/daumeditor-7.5.9/images/icon/editor/', /* 에디터에 사용되는 이미지 디렉터리, 필요에 따라 수정한다. */
       txDecoPath: '/assets/daumeditor-7.5.9/images/deco/contents/', /* 본문에 사용되는 이미지 디렉터리, 서비스에서 사용할 때는 완성된 컨텐츠로 배포되기 위해 절대경로로 수정한다. */
       canvas: {
@@ -48,23 +48,28 @@ const Editor = ({bodyHeight}) => {
       },
       toolbar: {
         paste: {
-          // eslint-disable-next-line no-undef
           defaultMode: Trex.Paste.MODE_HTML
         }
       }
     };
 
-    // eslint-disable-next-line no-undef
     EditorJSLoader.ready(function (Editor) {
-      // eslint-disable-next-line no-unused-vars
-      const editor = new Editor(config);
+      Trex.module('switch', function(editor, toolbar, sidebar, canvas, config) {
+        console.log(config)
+        canvas.observeJob(Trex.Ev.__CANVAS_PANEL_CLICK, function(ev) {
+          Editor.switchEditor(config.initializedId);
+        });
+        toolbar.observeJob(Trex.Ev.__TOOL_CLICK, function(ev) {
+          Editor.switchEditor(config.initializedId);
+        });
+      });
+      new Editor(config);
     });
   }, []);
   return (
     <div className="editor">
-      <form name="tx_editor_form" id="tx_editor_form" action="http://posttestserver.com/post.php" method="post"
-            acceptCharset="utf-8">
-        <div id="tx_trex_container" className="tx-editor-container">
+      <form name={`${editorId}`} id={`${editorId}`} action="http://posttestserver.com/post.php" method="post" acceptCharset="utf-8">
+        <div id={`${editorId}-wrapper`} className="tx-editor-container">
           <div id="tx_sidebar" className="tx-sidebar">
             <div className="tx-sidebar-boundary">
               <ul className="tx-bar tx-bar-left tx-nav-attach">
@@ -408,7 +413,7 @@ const Editor = ({bodyHeight}) => {
                 <li className="tx-list">
                   <div id="tx_tablebackcolor" unselectable="on" className="tx-btn-lrbg tx-tablebackcolor"
                        style={{
-                         backgroundColor: '#9aa5ea;'
+                         backgroundColor: '#9aa5ea'
                        }}>
                     <a href="#//" className="tx-icon2" title="테이블 배경색">테이블 배경색</a>
                   </div>

@@ -71,7 +71,7 @@ const NavBody = () => {
     <div>
       {
         lnbData.map((lnb, index) => (
-          <NavBlock lnb={lnb} key={index} index={index}/>
+          <NavBlock lnb={lnb} key={lnb.name} index={index}/>
         ))
       }
     </div>

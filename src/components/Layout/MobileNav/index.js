@@ -13,7 +13,6 @@ const MobileNav = ({ openMobileNav, onChangeOpenMobileNav }) => {
           className={`dim ${openMobileNav ? 'active' : ''}`}
           onClick={() => onChangeOpenMobileNav(false)}
         ></div>
-
         <nav className={`mobileNav ${openMobileNav ? 'active' : ''}`}>
           <header className="mobileNav__header">
             <div className="wrap">
