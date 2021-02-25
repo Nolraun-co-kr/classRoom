@@ -1,11 +1,13 @@
 import React, { useCallback, useState } from 'react';
 import Editor from '../Editor';
+import { BsArrowDown, HiCheck } from 'react-icons/all';
 
 const DashboardTrainingModal = ({
   handleClickToggleOption,
   toggleOption
 }) => {
   const [tab, setTab] = useState(1);
+  const [evaluationOption, setEvaluationOption] = useState(false);
 
   const handleClickChangeTab = useCallback((value) => {
     setTab(value);
@@ -129,7 +131,211 @@ const DashboardTrainingModal = ({
       }
       {
         tab === 3 && (
-          <div>평가</div>
+          <>
+            <div className="_modal__block">
+              <div className="_modal__block-header">
+                <h2 className={'i-doc'}>퀴즈</h2>
+              </div>
+              <div className={'quiz'}>
+                <div className={'quiz-title'}>
+                  <span>
+                    <BsArrowDown />
+                  </span> 파이썬 실습
+                </div>
+              </div>
+            </div>
+
+            <div className="_modal__block">
+              <div className="learning-state">
+                <p>
+                  <strong>학습 대상자 수</strong>: 9
+                </p>
+                <p>
+                  <strong>학습 완료 수</strong>: 7
+                </p>
+                <p>
+                  <strong>마감까지 남은 기한</strong>: <span className={'green'}>8시간</span>
+                </p>
+              </div>
+              <div className="learning-state-search">
+                <div className="select">
+                  <select>
+                    <option value="">이름</option>
+                  </select>
+                </div>
+                <div className="input">
+                  <input type="text"/>
+                </div>
+                <button>검색</button>
+              </div>
+            </div>
+            <div className={'_modal__block _modal__block--evaluation'}>
+              <div className={'_modal__block-body'}>
+                <button className={'_btn small'} onClick={() => setEvaluationOption(!evaluationOption)}>
+                  평가 옵션 {evaluationOption ? '닫기 -' : '열기 +'}
+                </button>
+
+                {
+                  evaluationOption && (
+                    <div className={'evaluation-options'}>
+                      <div className={'evaluation-item'}>
+                        <strong>채점 옵션</strong>
+                        <label className={'custom-checkbox'} htmlFor={'ako1'}>
+                          <input type="checkbox" id={'ako1'} />
+                          <span className={'mr-0'} />
+                        </label>
+                      </div>
+                      <div className={'evaluation-item'}>
+                        <strong>제출한 과제물 전체 다운로드</strong>
+                        <button className={'btn-underline'}>다운로드</button>
+                      </div>
+                      <div className={'evaluation-item'}>
+                        <strong>공통 피드백 작성</strong>
+                        <button className={'btn-underline'}>작성하기</button>
+                      </div>
+                      <div className={'evaluation-item'}>
+                        <strong>작성된 사용자의</strong>
+                        <div className={'evaluation-item-form'}>
+                          <div className="select">
+                            <select name="" id="">
+                              <option value="">과제 다운로드</option>
+                            </select>
+                          </div>
+                          <button>실행</button>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                }
+
+              </div>
+            </div>
+            <br/>
+            <div className="_modal__block bg-none">
+              <div className="_modal__block-header border-none">
+                <h2 className={'i-doc2'}>제출 상태</h2>
+                <div className="select">
+                  <select name="" id="">
+                    <option value="">전체</option>
+                  </select>
+                </div>
+              </div>
+              <div className={'_dataTable _dataTable--border'}>
+                <table>
+                  <colgroup>
+                    <col width={'70px'}/>
+                    <col width={'70px'}/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                  </colgroup>
+                  <thead>
+                  <tr>
+                    <th>
+                      선택
+                      <br/>
+                      <label className={'custom-checkbox'} htmlFor={'ak1'}>
+                        <input type="checkbox" id={'ak1'} />
+                        <span className={'mr-0'} />
+                      </label>
+                    </th>
+                    <th>번호</th>
+                    <th>구분</th>
+                    <th>이름</th>
+                    <th>학번</th>
+                    <th>제출상태</th>
+                    <th>
+                      빠른 채점
+                      <span>|</span>
+                      <button>변경사항 저장</button>
+                    </th>
+                    <th>채점하기</th>
+                    <th>피드백</th>
+                    <th>피드백 파일</th>
+                    <th>채점 수정일시</th>
+                    <th>최종 점수</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>
+                      <label className={'custom-checkbox'} htmlFor={'ak1'}>
+                        <input type="checkbox" id={'ak1'} />
+                        <span className={'mr-0'} />
+                      </label>
+                    </td>
+                    <td>1</td>
+                    <td>수강생</td>
+                    <td>김현수</td>
+                    <td>20201246</td>
+                    <td>
+                      <span className={'complete'}>채출</span>
+                    </td>
+                    <td>
+                      <div className={'scorebox'}>
+                        <div className="input">
+                          <input type="text"/>
+                        </div>
+                        <span>/ 100</span>
+                        <button className={'btn'}><HiCheck />저장</button>
+                      </div>
+                    </td>
+                    <td>
+                      <button className={'btn btn--blue'}>채점</button>
+                    </td>
+                    <td><button className={'btn-underline'}>보기</button></td>
+                    <td>
+                      <button className={'btn-underline'}>보기</button>
+                    </td>
+                    <td className={'date'}>2021-02-01 13:12</td>
+                    <td>
+                      90
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label className={'custom-checkbox'} htmlFor={'ak1'}>
+                        <input type="checkbox" id={'ak1'} />
+                        <span className={'mr-0'} />
+                      </label>
+                    </td>
+                    <td>1</td>
+                    <td>수강생</td>
+                    <td>김현수</td>
+                    <td>20201246</td>
+                    <td>
+                      <span className={'complete'}>채출</span>
+                    </td>
+                    <td>
+                      <div className={'scorebox'}>
+                        <div className="input">
+                          <input type="text"/>
+                        </div>
+                        <span>/ 100</span>
+                        <button className={'btn'}><HiCheck />저장</button>
+                      </div>
+                    </td>
+                    <td>
+                      <button className={'btn btn--blue'}>채점</button>
+                    </td>
+                    <td><button className={'btn-underline'}>보기</button></td>
+                    <td>
+                      <button className={'btn-underline'}>보기</button>
+                    </td>
+                    <td className={'date'}>2021-02-01 13:12</td>
+                    <td>
+                      90
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </>
         )
       }
     </div>

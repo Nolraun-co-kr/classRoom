@@ -1,12 +1,13 @@
 import React, { useCallback, useState } from 'react';
 import Editor from '../Editor';
 import { GrClose } from 'react-icons/gr';
+import EvaluationChart from './EvaluationChart';
 
 const DashaboardQuizModal = ({
   handleClickToggleOption,
   toggleOption
 }) => {
-  const [tab, setTab] = useState(1);
+  const [tab, setTab] = useState(3);
   const [option, setOption] = useState([
     {
       id: 1
@@ -295,7 +296,6 @@ const DashaboardQuizModal = ({
       }
       {
         tab === 2 && (
-
           <>
             <div className="_modal__block">
             <div className="_modal__block-header">
@@ -481,7 +481,187 @@ const DashaboardQuizModal = ({
       }
       {
         tab === 3 && (
-          <div>평가</div>
+          <>
+            <div className="_modal__block">
+              <div className="_modal__block-header">
+                <h2 className={'i-quiz'}>퀴즈</h2>
+              </div>
+              <div className={'quiz'}>
+                <div className={'quiz-title'}>
+                  <span>Q.</span> 다음 글은 조선 후기 민중봉기에 대한  설명이다. 이 시기와 사회현상에 대한 설명으로 틀린 것을 고르시오.
+                </div>
+              </div>
+            </div>
+
+            <div className="_modal__block">
+              <div className="learning-state">
+                <p>
+                  <strong>학습 대상자 수</strong>: 9
+                </p>
+                <p>
+                  <strong>학습 완료 수</strong>: 7
+                </p>
+              </div>
+              <div className="learning-state-search">
+                <div className="select">
+                  <select>
+                    <option value="">이름</option>
+                  </select>
+                </div>
+                <div className="input">
+                  <input type="text"/>
+                </div>
+                <button>검색</button>
+              </div>
+            </div>
+            <br/>
+            <div className="_modal__block bg-none">
+              <div className="_modal__block-header border-none">
+                <h2 className={'i-eval1'}>학습 상태</h2>
+                <div className="select">
+                  <select name="" id="">
+                    <option value="">전체</option>
+                  </select>
+                </div>
+
+                <button className={'_btn small _btn--uploader'}>Excel 다운로드</button>
+              </div>
+              <div className={'_dataTable _dataTable--border'}>
+                <table>
+                  <colgroup>
+                    <col width={'70px'}/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                  </colgroup>
+                  <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>구분</th>
+                    <th>이름</th>
+                    <th>학번</th>
+                    <th>학습 상태</th>
+                    <th>제출 일시</th>
+                    <th>점수</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>수강생</td>
+                    <td>김현수</td>
+                    <td>20201246</td>
+                    <td>
+                      <span className={'complete'}>완료</span>
+                    </td>
+                    <td className={'date'}>2021-01-30 12:23</td>
+                    <td><span className={'green'}>3.5</span> / 5</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>수강생</td>
+                    <td>김현수</td>
+                    <td>20201246</td>
+                    <td>
+                      <span className={'complete'}>완료</span>
+                    </td>
+                    <td className={'date'}>2021-01-30 12:23</td>
+                    <td><span className={''}>-</span> / 5</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>수강생</td>
+                    <td>김현수</td>
+                    <td>20201246</td>
+                    <td>
+                      <span className={''}>미완료</span>
+                    </td>
+                    <td className={'date'}>2021-01-30 12:23</td>
+                    <td><span className={'blue'}>5</span> / 5</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>수강생</td>
+                    <td>김현수</td>
+                    <td>20201246</td>
+                    <td>
+                      <span className={''}>미완료</span>
+                    </td>
+                    <td className={'date'}>2021-01-30 12:23</td>
+                    <td><span className={'blue'}>5</span> / 5</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <br/>
+            <div className="_modal__block bg-none">
+              <div className="_modal__block-header border-none">
+                <h2 className={'i-eval2'}>보기별 응답 비율</h2>
+
+                <button className={'_btn small _btn--uploader'}>Excel 다운로드</button>
+              </div>
+              <div className={'_dataTable _dataTable--border'}>
+                <table>
+                  <colgroup>
+                    <col width={'70px'}/>
+                    <col/>
+                    <col/>
+                    <col/>
+                  </colgroup>
+                  <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>보기</th>
+                    <th>1차(응답률/응답자 수)</th>
+                    <th>2차(응답률/응답자 수)</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td className={'text-left'}>고종은 정관헌에서 커피를 자주 즐겼다고 한다.</td>
+                    <td>
+                      <span className={'orange'}>50%</span> (5명)
+                    </td>
+                    <td>
+                      <span className={'red'}>66.6%</span> (2명)
+                    </td>
+                  </tr>
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <td colSpan={2}><strong>총계</strong></td>
+                    <td>
+                      <span className={'orange'}>100%</span> (5명)
+                    </td>
+                    <td>
+                      <span className={'red'}>100%</span> (2명)
+                    </td>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+            <br/>
+            <div className="_modal__block _modal__block--chart">
+              <div className="_modal__block-header">
+                <h2 className={'i-eval3'}>성적 분포도</h2>
+
+                <button className={'_btn small _btn--uploader'}>Excel 다운로드</button>
+              </div>
+              <div className="_modal__block-body">
+                {
+                  false && (
+                    <EvaluationChart />
+                  )
+                }
+              </div>
+            </div>
+          </>
         )
       }
 

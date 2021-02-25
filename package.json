@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reactchartjs/react-chart.js": "^1.0.0-rc.3",
     "@silvermine/videojs-quality-selector": "^1.2.4",
     "@uiw/react-codemirror": "^3.0.2",
     "@youon/videojs-pip": "^1.0.3",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.5.3",
+    "chart.js": "^2.9.4",
     "concurrently": "^5.3.0",
     "cors": "^2.8.5",
     "dayjs": "^1.10.4",

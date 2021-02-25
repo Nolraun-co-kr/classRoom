@@ -2,8 +2,8 @@
 
 // http://nolraun.co.kr/assets/images
 
-$image-path: 'http://nolraun.co.kr/assets/images';
-//$image-path: 'http://localhost:8080/assets/images';
+//$image-path: 'http://nolraun.co.kr/assets/images';
+$image-path: 'http://localhost:8080/assets/images';
 
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
@@ -25,6 +25,8 @@ $image-path: 'http://nolraun.co.kr/assets/images';
 @import 'containers/Notice';
 @import 'containers/LecturePlan';
 @import 'containers/LectureState';
+@import 'containers/Learning';
+@import 'containers/Question';
 
 // components
 @import 'components/Footer';

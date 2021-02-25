@@ -9,9 +9,13 @@
 .quiz-title {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 15px;
+  padding-bottom: 20px;
   span {
     color:#2e8bc5;
+    svg {
+      margin-top: -3px;
+      font-size: 20px;
+    }
   }
 }
 .quiz-content {
@@ -94,6 +98,7 @@
     align-items: flex-start;
     span {
       margin-top: 5px;
+
     }
 
     &.correct {

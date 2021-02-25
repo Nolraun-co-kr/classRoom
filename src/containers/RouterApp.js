@@ -20,6 +20,8 @@ import Login from './Login';
 import NoticeList from './Notice/list';
 import LecturePlan from './LecturePlan';
 import LectureState from './LectureState';
+import Learning from './learning/Learning';
+import Question from './Question/Question';
 
 const RouterApp = () => {
   const [gradient] = useState(false);
@@ -57,6 +59,36 @@ const RouterApp = () => {
         <Switch>
           {/* 로그인 */}
           <Route exact path="/login" component={Login} />
+
+          {/* 출결학습 */}
+          <Route exact path="/learning" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+              gradient={gradient}
+            >
+              <Learning />
+            </ContentWrapper>
+          )} />
+
+          {/* 댓글과 질문 */}
+          <Route exact path="/question" component={() => (
+            <ContentWrapper
+              openMobileNav={openMobileNav}
+              handleChangeOpenMobileNav={handleChangeOpenMobileNav}
+              openUserMenu={openUserMenu}
+              handleChangeOpenUserMenu={handleChangeOpenUserMenu}
+              handleChangeTheme={handleChangeTheme}
+              theme={theme}
+              gradient={gradient}
+            >
+              <Question />
+            </ContentWrapper>
+          )} />
 
           {/* 강의계획서 */}
           <Route exact path="/lecturePlan" component={() => (
