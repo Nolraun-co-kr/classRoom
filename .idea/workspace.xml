@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Dashboard/EvaluationChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Question/Question.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/learning/Learning.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/containers/Learning.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/containers/Question.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashaboardQuizModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashaboardQuizModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CodeEditor/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CodeEditor/Editor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashboardTrainingModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardTrainingModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Editor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Editor/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/RouterApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/RouterApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/CustomCheckbox.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/CustomCheckbox.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/DataTable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/DataTable.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/components/Modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Modal.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Quiz.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Quiz.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/components/VideoPlayer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/VideoPlayer.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +93,7 @@
       <workItem from="1613964445034" duration="27000" />
       <workItem from="1613965483961" duration="996000" />
       <workItem from="1614150945114" duration="941000" />
-      <workItem from="1614211152677" duration="10212000" />
+      <workItem from="1614211152677" duration="11953000" />
     </task>
     <servers />
   </component>

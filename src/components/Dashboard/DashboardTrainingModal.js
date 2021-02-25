@@ -1,6 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import Editor from '../Editor';
 import { BsArrowDown, HiCheck } from 'react-icons/all';
+import DashboardModal from './DashboardModal';
+import CodeEditor from '../CodeEditor/Editor';
 
 const DashboardTrainingModal = ({
   handleClickToggleOption,
@@ -8,6 +10,7 @@ const DashboardTrainingModal = ({
 }) => {
   const [tab, setTab] = useState(1);
   const [evaluationOption, setEvaluationOption] = useState(false);
+  const [showEvalModal, setShowEvalModal] = useState(true);
 
   const handleClickChangeTab = useCallback((value) => {
     setTab(value);
@@ -174,7 +177,6 @@ const DashboardTrainingModal = ({
                 <button className={'_btn small'} onClick={() => setEvaluationOption(!evaluationOption)}>
                   평가 옵션 {evaluationOption ? '닫기 -' : '열기 +'}
                 </button>
-
                 {
                   evaluationOption && (
                     <div className={'evaluation-options'}>
@@ -207,7 +209,6 @@ const DashboardTrainingModal = ({
                     </div>
                   )
                 }
-
               </div>
             </div>
             <br/>
@@ -335,6 +336,114 @@ const DashboardTrainingModal = ({
                 </table>
               </div>
             </div>
+            {
+
+              showEvalModal && (
+                <DashboardModal
+                  title={'채점하기'}
+                  maxWidth={'1024'}
+                  onClickClose={() => setShowEvalModal(!showEvalModal)}
+                  /* eslint-disable-next-line react/no-children-prop */
+                  children={(
+                    <>
+                      <div className={'_modal__block'}>
+                        <div className="_modal__block-body">
+                          <div className="evaluation-info">
+                            <div className="block">
+                              <h2>
+                                <HiCheck />
+                                실습명 : 파이썬 실습
+                              </h2>
+                              <p>
+                                제출기간 : <span>2021-01-01 09:00 ~ 2021-01-05 23:59</span>
+                              </p>
+                            </div>
+                            <div className="block">
+                              <div className="_flex">
+                                <span className={'col-info'}>
+                                <strong>이름 : </strong>김현수
+                              </span>
+                                <span className={'col-info'}>
+                                <strong>학번 : </strong>20201246
+                              </span>
+                                <span className={'col-info'}>
+                                <strong>제출일시 : </strong>2021-01-30 12:23
+                              </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className={'_modal__block'}>
+                        <div className="_modal__block-body">
+                          <div className="evaluation-score">
+                            점수
+                            <div className="input">
+                              <input type="text"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className={'_modal__block'}>
+                        <div className="_modal__block-header">
+                          <h2 className={'i-eval-m1'}>제출결과물</h2>
+                        </div>
+                        <div className="_modal__block-body">
+                          <div className="block block--codeEditor">
+                            <p className={'title'}>실행</p>
+
+                            <div>
+                              <div className={'editorTab'}>
+                                <button>python_02_12.iptnb</button>
+                              </div>
+                              <CodeEditor theme={'blackboard'}/>
+                            </div>
+                          </div>
+                          <div className="block block--codeEditor">
+                            <p className={'title'}>결과</p>
+                            <CodeEditor theme={'blackboard'}/>
+                          </div>
+                        </div>
+                      </div>
+                      <div className={'_modal__block'}>
+                        <div className="_modal__block-header">
+                          <h2 className={'i-eval-m2'}>피드백</h2>
+                        </div>
+                        <div className="_modal__block-body">
+                          <div className={'evaluation-feedback'}>
+                            <div className="row">
+                              <h3 className={'insertForm__name'}> 피드백 내용</h3>
+                              <div className={'insertForm__content'}>
+                                <Editor />
+                              </div>
+                            </div>
+
+                            <div className="row">
+                              <h3 className={'insertForm__name'}> 첨부파일</h3>
+                              <div className={'insertForm__content'}>
+                                <div className="flex">
+                                  <div className="input"><input type="text"/></div>
+                                  <label htmlFor="file" className={'file-btn'}>
+                                    <input type="file" id={'file'}/>
+                                    <span className={'_btn small'}>파일 선택</span>
+                                  </label>
+                                  <button className={'_btn small _btn--uploader'} onClick={() => {}}>파일 업로더</button>
+
+                                </div>
+                                <div className={'help-text-block'}>
+                                  <p className={'help-text'}>허용된 확장자: pptx, words</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </>
+                  )}
+                />
+              )
+            }
           </>
         )
       }

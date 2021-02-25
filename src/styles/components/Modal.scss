@@ -292,6 +292,14 @@
         background: url('#{$image-path}/i-eval3.png') no-repeat left center;
         padding-left: 1.75em;
       }
+      &.i-eval-m1 {
+        background: url('#{$image-path}/i-eval-m1.png') no-repeat left center;
+        padding-left: 1.75em;
+      }
+      &.i-eval-m2 {
+        background: url('#{$image-path}/i-eval-m2.png') no-repeat left center;
+        padding-left: 1.75em;
+      }
     }
 
     .custom-checkbox {
@@ -581,5 +589,112 @@
     background:#2e8bc5;
     color:#fff;
     border-radius: 5px;
+  }
+}
+
+.evaluation-feedback {
+  .row {
+    display: flex;
+  }
+  .insertForm__name {
+    width: 110px;
+    flex: none;
+  }
+  .insertForm__content {
+    flex: 1;
+  }
+}
+
+.evaluation-score {
+  display: flex;
+  align-items: center;
+
+  .input {
+    width: 100px;
+    flex: none;
+    margin-left: 10px;
+  }
+  input {
+    height: 40px !important;
+
+  }
+}
+
+.evaluation-info {
+
+  h2 {
+    color:#2e8bc5;
+    font-size: 1.125rem;
+
+    svg {
+      margin-top: -3px;
+      margin-right: 5px;
+    }
+  }
+  p {
+    margin-top: 5px;
+    color:#000;
+    span {
+      color:#6ea24d;
+    }
+  }
+
+  .block {
+    & ~ .block {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top:1px solid #ddd;
+    }
+  }
+  ._flex {
+    display: flex;
+    align-items: center;
+    margin:0 -10px;
+  }
+  .col-info {
+    padding:0 10px;
+    font-size: 1rem;
+    color:#999;
+    & ~ .col-info {
+      border-left: 1px solid #ddd;
+      line-height: 10px;
+    }
+    strong {
+      font-weight: 400;
+      color:#000;
+    }
+  }
+}
+
+.block--codeEditor {
+  & ~ .block--codeEditor {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top:1px solid #ddd;
+  }
+  .title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .CodeMirror {
+    border-radius: 0;
+  }
+  .codeEditor {
+    border: none;
+  }
+}
+
+.editorTab {
+  display: flex;
+  align-items: center;
+  background:#2c3038;
+
+  button {
+    padding:0 10px 0 32px;
+    color:#fff;
+    flex: 0;
+    font-size: 12px;
+    height: 30px;
+    background: #0C1021 url('#{$image-path}/i-editor-tab.png') no-repeat 10px center !important;
   }
 }

@@ -145,7 +145,8 @@
   }
   .vjs-button-icon-theme {
     order: 9;
-    background: url('#{$image-path}/video-button-toggle-theme.png') no-repeat center !important;
+    background:
+            url('#{$image-path}/video-button-toggle-theme.png') no-repeat center !important;
     background-size: auto 14px !important;
     margin-left: auto !important;
 
