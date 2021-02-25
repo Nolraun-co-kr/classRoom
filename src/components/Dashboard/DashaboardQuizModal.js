@@ -654,7 +654,11 @@ const DashaboardQuizModal = ({
                 <button className={'_btn small _btn--uploader'}>Excel 다운로드</button>
               </div>
               <div className="_modal__block-body">
-                <EvaluationChart />
+                {
+                  false && (
+                    <EvaluationChart />
+                  )
+                }
               </div>
             </div>
           </>
