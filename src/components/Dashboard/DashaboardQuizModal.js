@@ -7,7 +7,7 @@ const DashaboardQuizModal = ({
   handleClickToggleOption,
   toggleOption
 }) => {
-  const [tab, setTab] = useState(3);
+  const [tab, setTab] = useState(1);
   const [option, setOption] = useState([
     {
       id: 1
@@ -654,11 +654,7 @@ const DashaboardQuizModal = ({
                 <button className={'_btn small _btn--uploader'}>Excel 다운로드</button>
               </div>
               <div className="_modal__block-body">
-                {
-                  false && (
-                    <EvaluationChart />
-                  )
-                }
+                <EvaluationChart />
               </div>
             </div>
           </>

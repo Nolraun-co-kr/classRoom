@@ -1,43 +1,33 @@
 import React from 'react';
-import { Line } from '@reactchartjs/react-chart.js';
+import { Bar } from 'react-chartjs-2';
 
 const EvaluationChart = () => {
   return (
-    <Line
-      data={{
-        labels: ['1점', '2점', '3점', '4점', '5점'],
-        datasets: [
-          {
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2],
-            backgroundColor: [
-              '#6fa44c',
-              '#6fa44c',
-              '#6fa44c',
-              '#6fa44c',
-              '#6fa44c'
-            ],
-            borderWidth: 0
-          }
-        ]
-      }}
-      options={{
-        legend: {
-          display: false
-        },
-        scales: {
-          yAxes: [{
-            ticks: {
-              min: 0,
-              stepSize: 1
+    <div>
+      <Bar
+        data={{
+          labels: ['1점', '2점', '3점', '4점', '5점'],
+          datasets: [
+            {
+              label: '# of Votes',
+              backgroundColor: '#6fa44c',
+              borderColor: '#6fa44c',
+              borderWidth: 1,
+              data: [12, 19, 3, 5, 2]
             }
-          }]
-        },
-        responsive: true,
-        maintainAspectRatio: false
-      }}
-
-    />
+          ]
+        }}
+        options={{
+          legend: {
+            display: false
+          },
+          scales: {
+          },
+          responsive: true,
+          maintainAspectRatio: false
+        }}
+      />
+    </div>
   );
 };
 

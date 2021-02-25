@@ -5,33 +5,266 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styles/color.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/0.19c38406.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/0.19c38406.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/1.12d7bc74.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/1.12d7bc74.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/10.cb8a0b49.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/10.cb8a0b49.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/100.3414a8d0.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/100.3414a8d0.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/101.96111671.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/101.96111671.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/102.714a8003.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/102.714a8003.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/103.b26697a9.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/103.b26697a9.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/104.196aaa16.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/104.196aaa16.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/105.35e6c345.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/105.35e6c345.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/106.c0739286.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/106.c0739286.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/107.ae3f6007.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/107.ae3f6007.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/108.d50f7769.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/108.d50f7769.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/109.6474479a.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/109.6474479a.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/11.bbd216f5.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/11.bbd216f5.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/110.b5214a9f.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/110.b5214a9f.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/111.d47823b3.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/111.d47823b3.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/112.1a147591.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/112.1a147591.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/113.5c63daff.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/113.5c63daff.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/114.1de9df77.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/114.1de9df77.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/115.e09dde48.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/115.e09dde48.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/116.27307c3b.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/116.27307c3b.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/116.27307c3b.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/117.9f06eca3.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/117.9f06eca3.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/118.7fab94ad.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/118.7fab94ad.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/119.53d108bd.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/119.53d108bd.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/12.58f70ec6.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/12.58f70ec6.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/120.602881cd.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/120.602881cd.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/121.f899202b.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/121.f899202b.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/122.ae5fa10b.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/122.ae5fa10b.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/123.9785f751.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/123.9785f751.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/13.7fb520d2.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/13.7fb520d2.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/14.8db5cd39.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/14.8db5cd39.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/15.2f446b03.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/15.2f446b03.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/16.70f5b688.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/16.70f5b688.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/17.3f714778.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/17.3f714778.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/18.2d326b88.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/18.2d326b88.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/19.ffb01dfd.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/19.ffb01dfd.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.12ff4fad.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.12ff4fad.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/20.324e784f.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/20.324e784f.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/21.7bc16e63.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/21.7bc16e63.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/22.3a2510ce.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/22.3a2510ce.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/23.c38f0139.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/23.c38f0139.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/24.7a46d28e.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/24.7a46d28e.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/25.f927663f.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/25.f927663f.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/26.8b3c0725.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/26.8b3c0725.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/27.530d94df.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/27.530d94df.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/28.b812a943.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/28.b812a943.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/29.77ec6334.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/29.77ec6334.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/3.6b3e21ed.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/3.6b3e21ed.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/30.7467fe41.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/30.7467fe41.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/31.9c2ea482.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/31.9c2ea482.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/32.1fed6259.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/32.1fed6259.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/33.2065cbb0.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/33.2065cbb0.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/34.e12c654c.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/34.e12c654c.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/35.81c05fd7.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/35.81c05fd7.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/36.e84e478d.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/36.e84e478d.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/37.f38caebc.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/37.f38caebc.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/38.e18db753.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/38.e18db753.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/39.81ae2738.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/39.81ae2738.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/4.27ca756b.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/4.27ca756b.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/40.fa58e0eb.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/40.fa58e0eb.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/41.d463e58c.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/41.d463e58c.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/42.a818eb40.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/42.a818eb40.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/43.9a0a45da.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/43.9a0a45da.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/44.c2d4a932.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/44.c2d4a932.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/45.2d983f01.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/45.2d983f01.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/46.4897c69f.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/46.4897c69f.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/47.881c4fa7.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/47.881c4fa7.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/48.161e69b7.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/48.161e69b7.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/49.97b28716.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/49.97b28716.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/5.3eb5a86d.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/5.3eb5a86d.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/50.83033d29.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/50.83033d29.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/51.88091170.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/51.88091170.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/52.19c31f9d.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/52.19c31f9d.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/53.dfa75416.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/53.dfa75416.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/54.edbcbef6.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/54.edbcbef6.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/55.fc38bff7.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/55.fc38bff7.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/56.b6f5dabb.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/56.b6f5dabb.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/57.1ea33340.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/57.1ea33340.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/58.2015a87e.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/58.2015a87e.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/59.d5f933b4.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/59.d5f933b4.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/60.71003221.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/60.71003221.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/61.01776272.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/61.01776272.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/62.994bcf44.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/62.994bcf44.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/63.201d8778.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/63.201d8778.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/64.176ff865.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/64.176ff865.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/65.5067360d.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/65.5067360d.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/66.e2ec56ac.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/66.e2ec56ac.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/67.7b6f8f89.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/67.7b6f8f89.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/68.44093e22.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/68.44093e22.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/69.d5e6a220.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/69.d5e6a220.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/70.55ca5b8d.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/70.55ca5b8d.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/71.4444e070.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/71.4444e070.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/72.9197e34e.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/72.9197e34e.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/73.430a563e.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/73.430a563e.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/74.c9171b79.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/74.c9171b79.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/75.e1a884d2.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/75.e1a884d2.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/76.5b7d02c7.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/76.5b7d02c7.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/77.f14e764d.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/77.f14e764d.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/78.da33b251.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/78.da33b251.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/79.4236fb63.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/79.4236fb63.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/8.9dcbe710.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/8.9dcbe710.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/8.9dcbe710.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/80.1c3ecaed.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/80.1c3ecaed.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/81.400cd438.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/81.400cd438.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/82.2f250aa6.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/82.2f250aa6.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/83.7bd42c8d.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/83.7bd42c8d.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/84.72ddfa1f.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/84.72ddfa1f.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/85.1a25b51f.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/85.1a25b51f.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/86.d9005cb0.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/86.d9005cb0.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/87.9512a63e.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/87.9512a63e.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/88.08186c80.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/88.08186c80.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/89.9c34aba8.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/89.9c34aba8.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/9.d5bcd29c.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/9.d5bcd29c.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/90.468fa7e6.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/90.468fa7e6.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/91.b22abf3f.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/91.b22abf3f.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/92.d74aa339.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/92.d74aa339.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/93.aaa32579.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/93.aaa32579.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/94.cd98dc54.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/94.cd98dc54.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/95.fc028cec.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/95.fc028cec.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/96.dd60d9f9.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/96.dd60d9f9.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/97.4647585f.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/97.4647585f.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/98.2a5dc29f.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/98.2a5dc29f.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/99.9769acfa.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/99.9769acfa.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.09346cb7.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.09346cb7.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/runtime-main.5092f397.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/runtime-main.5092f397.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashaboardQuizModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashaboardQuizModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashboardModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DragQuiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DragQuiz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DragSchedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DragSchedule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/Modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/dashboard/type2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/dashboard/type2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/CustomCheckbox.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/CustomCheckbox.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/DataTable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/DataTable.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Debate.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Debate.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Homework.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Homework.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/LectureCalendar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/LectureCalendar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/LectureDetailState.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/LectureDetailState.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Modal.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Quiz.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Quiz.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/components/Survey.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/components/Survey.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/containers/Dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/Dashboard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/containers/Home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/Home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/containers/Learning.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/Learning.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/containers/LecturePlan.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/LecturePlan.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/containers/LectureState.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/LectureState.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/containers/Notice.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/Notice.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/containers/Question.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/containers/Question.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/variables/color.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/variables/color.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/EvaluationChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/EvaluationChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/RouterApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/RouterApp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +348,7 @@
       <workItem from="1613965483961" duration="996000" />
       <workItem from="1614150945114" duration="941000" />
       <workItem from="1614211152677" duration="12446000" />
-      <workItem from="1614272363644" duration="13203000" />
+      <workItem from="1614272363644" duration="15493000" />
     </task>
     <servers />
   </component>
