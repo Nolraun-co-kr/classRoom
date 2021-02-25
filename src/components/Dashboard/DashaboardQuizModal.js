@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import Editor from '../Editor';
-import { GrClose } from 'react-icons/gr';
+import { IoClose } from 'react-icons/all';
 import EvaluationChart from './EvaluationChart';
 
 const DashaboardQuizModal = ({
@@ -181,7 +181,7 @@ const DashaboardQuizModal = ({
                               </div>
                               <div className={'quiz-option-body'}>
                                 <button className={'quiz-remove'} onClick={() => handleClickRemoveOption(item.id)}>
-                                  <GrClose />
+                                  <IoClose />
                                 </button>
                                 <div className="flex">
                                   <h3>보기 {index}</h3>

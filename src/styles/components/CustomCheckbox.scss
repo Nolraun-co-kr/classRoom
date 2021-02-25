@@ -10,6 +10,10 @@
     margin-right: 5px;
     background:#fff;
 
+    .theme-dark &{
+      background:#50555c;
+    }
+
     &.mr-0 {
       margin-right: 0;
     }
@@ -36,6 +40,11 @@
   p {
     font-size: 1rem;
     color:#000;
+    @include theme('color', 'nav-block-name');
+    white-space: nowrap;
+    @media screen and (max-width: 768px) {
+      white-space: normal;
+    }
 
     em {
       font-style: normal;

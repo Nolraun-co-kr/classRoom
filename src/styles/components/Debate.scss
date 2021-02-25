@@ -61,6 +61,7 @@
 .debate__title {
   font-size: 1rem;
   font-weight: 600;
+  @include theme('color', 'nav-block-name');
   span {
     color:#2e8bc5;;
   }
@@ -70,6 +71,7 @@
   font-size: 1rem;
   margin-top: 20px;
   margin-bottom: 5px;
+  @include theme('color', 'nav-block-name');
 }
 
 .debate__notice {
@@ -78,6 +80,9 @@
   background: #f6f8fb url('#{$image-path}/debate-icon.png') no-repeat 20px center !important;
   border-radius: 5px;
   margin-top: 15px;
+  .theme-dark & {
+    background: #2c3038 url('#{$image-path}/debate-icon.png') no-repeat 20px center !important;
+  }
   p {
     color:#7a91ad;
      font-size: 14px;
@@ -88,6 +93,7 @@
 .debate__notice-info {
   display: flex;
   font-size: 1rem;
+  @include theme('color', 'nav-block-name');
   & ~ .debate__notice-info {
     margin-top: 5px;
   }
@@ -95,6 +101,7 @@
     color:#000;
     margin-right: 5px;
     font-weight: 400;
+    @include theme('color', 'nav-block-name');
   }
   .green {
     color:#6ea24d;
@@ -113,9 +120,11 @@
   padding: 20px 0 0 ;
   border-top: 1px solid #ddd;
   background: none;
+  @include theme('border-color', 'border');
 
   .btnbox {
     margin-bottom: 10px;
+    padding:0 10px;
     ._btn {
       margin-left: auto;
 
@@ -131,6 +140,9 @@
       border-right: 3px solid #EEEEEE !important;
       border-color:#eee !important;
       font-size: 14px;
+      .theme-dark & {
+        border-color:#2c3038 !important;
+      }
 
       &:last-child {
         border-right: 0 !important;
@@ -147,16 +159,23 @@
         background: #ddd;
         padding: 0 10px;
         height: 80px;
+        .theme-dark & {
+          background:#50555c !important;
+        }
 
         button {
           text-align: left;
           display: block;
+          @include theme('color', 'nav-block-name');
         }
       }
 
       tr:nth-child(even) {
         td {
           background: #f7f7f7 !important;
+          .theme-dark & {
+            background:#999 !important;
+          }
         }
       }
     }

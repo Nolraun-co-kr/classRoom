@@ -6,6 +6,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include theme('background', 'background');
+    @media screen and (max-width: 1440px) {
+      display: block;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 15px;
+    }
+
+
 
     .add-btn {
       height: 40px;
@@ -15,10 +24,21 @@
       border-radius: 5px;
       white-space: nowrap;
       font-size: 14px;
+      @include theme('border-color', 'border');
+      @include theme('color', 'default-color');
+
+      @media screen and (max-width: 1440px) {
+        width: 100%;
+      }
     }
   }
   .notice__filter-form {
     flex: 1;
+    padding-right: 20px;
+    @media screen and (max-width: 1440px) {
+      padding: 0;
+      margin-bottom: 10px;
+    }
     form {
       display: flex;
       align-items: center;
@@ -56,6 +76,9 @@
       height: 100%;
       padding:0 15px;
       font-size: 14px;
+      @include theme('background', 'background');
+      @include theme('border-color', 'border');
+      @include theme('color', 'default-color');
     }
 
     button {
@@ -65,6 +88,10 @@
       font-size: 16px;
       background:#2e8bc5;
       border-radius:5px;
+
+      @media screen and (max-width: 1440px) {
+        height: 40px;
+      }
     }
   }
 
@@ -73,6 +100,10 @@
     background:#fff;
     border-radius: 5px;
     padding: 30px;
+    @include theme('background', 'background');
+    @media screen and (max-width: 768px) {
+      padding: 15px;
+    }
   }
 
   .notice__item {
@@ -82,11 +113,16 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     position: relative;
+    @include theme('border-color', 'border');
+
+    @media screen and (max-width: 1200px) {
+      display: block !important;
+    }
+    @media screen and (max-width: 768px) {
+      padding-left: 15px;
+    }
     & ~ .notice__item {
       margin-top: 3px;
-    }
-    &:hover {
-      background:#f8f8f9;
     }
     &.check {
       &:after {
@@ -100,23 +136,36 @@
         top: 50%;
         transform: translateY(-50%);
         background:#2e8bc5;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
       }
     }
   }
+
 
   .notice__item-info {
     flex: 1;
     display: flex;
     align-items: center;
+    padding-right: 20px;
+    @media screen and (max-width: 1200px) {
+      padding: 0;
+    }
 
     .thumb {
       width: 55px;
       height: 55px;
       border-radius:50%;
       overflow: hidden;
+      flex: none;
       background:#fff;
       border: 1px solid #ddd;
       margin-right: 20px;
+      @include theme('background', 'background');
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
     .info {
       h3 {
@@ -124,6 +173,11 @@
         font-weight: 600;
         display: flex;
         align-items: center;
+        @include theme('color', 'nav-block-name');
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
         span {
           color:#2e8bc5;
           border: 1px solid #2e8bc5;
@@ -134,6 +188,11 @@
           margin-left: 10px;
           font-size:14px;
           line-height: 20px;
+          @include theme('background', 'background');
+          @media screen and (max-width: 768px) {
+            margin-top: 10px;
+            margin-left: 0;
+          }
         }
       }
       p {
@@ -141,6 +200,8 @@
         font-size: 14px;
         margin-top: 10px;
         line-height:1.25em;
+        @include theme('color', 'default-color');
+
       }
     }
   }
@@ -151,5 +212,13 @@
     border-left: 1px solid #ddd;
     font-size: 14px;
     color:#959595;
+    @include theme('border-color', 'border');
+    @media screen and (max-width: 1200px) {
+      display: block;
+      border: none;
+      text-align: right;
+      padding: 0;
+      margin-top: 10px;
+    }
   }
 }

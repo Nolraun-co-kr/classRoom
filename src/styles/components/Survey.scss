@@ -13,6 +13,7 @@
   .survey__title {
     font-size: 1.5rem;
     font-weight: 600;
+    @include theme('color', 'nav-block-name');
   }
   .survey__info {
     margin-left: auto;
@@ -28,6 +29,7 @@
       strong {
         padding-left: 2em;
         background: url('#{$image-path}/i-clock.png') no-repeat left center !important;
+        @include theme('color', 'nav-block-name');
       }
       .clock {
         display: flex;
@@ -43,6 +45,7 @@
           border-radius: 5px;
           text-align: center;
           border: 1px solid #ddd;
+          @include theme('border-color', 'border');
         }
       }
 
@@ -69,6 +72,7 @@
       padding:0 20px;
       border-radius: 5px;
       border: 1px solid #666;
+      @include theme('color', 'default-color');
       svg {
         margin-right: 5px;
       }
@@ -139,6 +143,7 @@
         padding:0 20px;
         line-height: 1em;
         font-size:1.25rem;
+        @include theme('color', 'nav-block-name');
         & ~ p {
           border-left: 1px solid #ddd;
         }
@@ -202,6 +207,7 @@
         font-size: 1rem;
         font-weight: 600;
         margin-bottom: 15px;
+        @include theme('color', 'nav-block-name');
       }
       & ~ .survey__content-block {
         margin-top: 40px;
@@ -229,6 +235,7 @@
       min-height: 530px;
       position: relative;
       padding:0 40px;
+      @include theme('background', 'background');
     }
     .survey__init {
       position: absolute;
@@ -383,12 +390,20 @@
     align-items: center;
     justify-content: center;
 
+    @include theme('color', 'default-color');
+
+    @include theme('border-color', 'border');
+
     svg {
       margin-left: 5px;
     }
     &.active {
       color:#000;
       border-color:#000;
+      .theme-dark & {
+        color:#fff;
+        border-color:#fff;
+      }
 
     }
   }
@@ -409,6 +424,7 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   overflow: hidden;
+  @include theme('border-color', 'border');
   &.draggable {
 
   }
@@ -464,11 +480,13 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @include theme('background', 'content-bg');
 
   h2 {
     margin-right: auto;
     font-size: 1rem;
     font-weight: 600;
+    @include theme('color', 'nav-block-name');
   }
   button {
     width: 30px;
@@ -493,6 +511,8 @@
     font-size: 1rem;
     line-height: 1.25em;
     margin-bottom: 15px;
+    @include theme('color', 'default-color');
+
   }
   .survey__type1-selector {
     .flex {
@@ -516,6 +536,7 @@
 .survey {
   .survey__body-answer {
     padding: 20px;
+    @include theme('background', 'background');
 
     .custom-checkbox {
       & ~ .custom-checkbox {
@@ -546,14 +567,22 @@
       border-right: 3px solid #fff !important;
       font-size: 14px;
 
+      .theme-dark & {
+        border-color:#1d1f22 !important;
+      }
+
       &:last-child {
-        border-right: 0;
+        border-right: 0 !important;
       }
     }
     thead {
       th {
         background:#dddddd;
         color:#666;
+        .theme-dark & {
+          background:#393c41;
+          color:#fff;
+        }
       }
     }
     tbody {
@@ -564,10 +593,18 @@
         &:first-child {
           text-align: left;
         }
+        .theme-dark & {
+          border-color:#2c3038;
+          background:#50555c;
+          color:#fff;
+        }
       }
       tr:nth-child(even) {
         td {
           background:#f7f7f7 !important;
+          .theme-dark & {
+            background:#999 !important;
+          }
         }
       }
     }
@@ -577,6 +614,7 @@
       span {
         margin:0 auto;
         background:#ffff;
+        @include theme('background', 'background');
       }
     }
   }

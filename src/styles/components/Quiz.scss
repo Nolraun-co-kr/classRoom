@@ -10,6 +10,7 @@
   font-size: 1rem;
   font-weight: 600;
   padding-bottom: 20px;
+  @include theme('color', 'nav-block-name');
   span {
     color:#2e8bc5;
     svg {
@@ -23,15 +24,20 @@
   border-radius: 5px;
   border: 1px solid #ddd;
   padding: 20px;
+  @include theme('background', 'content-bg');
+  @include theme('border-color', 'border');
+
   p {
     font-size: 1rem;
     color:#666666;
     line-height:1.875em;
+    @include theme('color', 'default-color');
   }
 }
 .quiz-result {
   border-top: 1px solid #ddd;
   padding: 30px 0;
+  @include theme('border-color', 'border');
   p {
     font-size: 1rem;
     color:#666666;
@@ -46,6 +52,8 @@
   line-height: 40px;
   border: 1px solid #666;
   border-radius: 5px;
+  @include theme('border-color', 'default-color');
+  @include theme('color', 'nav-block-name');
   &.incorrect {
     border-color:#f00;
   }
@@ -116,6 +124,7 @@
     line-height: 20px;
     display: inline-block;
     margin-top: 5px;
+    @include theme('border-color', 'border');
 
     &.true {
       color:#6ea24d;
@@ -141,6 +150,7 @@
   border: 1px solid #ddd;
   display: flex;
   position: relative;
+  @include theme('border-color', 'border');
   & ~ .quiz-option-item {
     margin-top: 10px;
   }
@@ -148,7 +158,8 @@
     position: absolute;
     right: 20px;
     top: 20px;
-    font-size: 20px;
+    font-size: 24px;
+    @include theme('color', 'nav-block-name');
     svg {
       vertical-align: top;
     }
@@ -160,6 +171,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include theme('background', 'border');
 
     .custom-checkbox {
       display: block;
@@ -191,5 +203,6 @@
     font-size: 1rem;
     width: 70px;
     flex: none;
+    @include theme('color', 'nav-block-name');
   }
 }

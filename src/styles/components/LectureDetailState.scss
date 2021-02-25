@@ -1,6 +1,6 @@
 .LectureDetailState {
   padding: 0;
-  background:transparent;
+  background:none !important;
   .lectureDetailState__action {
     margin-top: 20px;
     display: flex;
@@ -17,18 +17,36 @@
     padding: 0 20px;
     border-radius: 5px;
     margin-bottom: 20px;
+    @include theme('background', 'background');
+    .theme-dark & {
+      border: 1px solid transparent;
+      @include theme('border-color', 'border');
+    }
     h2 {
       font-size: 16px;
       line-height: 60px;
       font-weight: 600;
       padding-left: 1.75em;
       background: url('#{$image-path}/emozi.png') no-repeat left center !important;
+      @include theme('color', 'nav-block-name');
+      .theme-dark & {
+        background: url('#{$image-path}/emozi-white.png') no-repeat left center !important;
+        background-size: 22px 22px !important;
+      }
     }
   }
 
+
   ._dataTable {
+    overflow: auto;
+    table {
+      min-width: 620px;
+    }
     th, td {
       border-right: 5px solid #f5f5f5;
+      .theme-dark & {
+        border-color:#2c3038;
+      }
       &:last-child {
         border-right: 0;
       }
@@ -37,6 +55,9 @@
       td {
         border-bottom: 0;
         border-top: 3px solid #f5f5f5;
+        .theme-dark & {
+          border-color:#2c3038;
+        }
         text-align: center;
       }
       .custom-checkbox {

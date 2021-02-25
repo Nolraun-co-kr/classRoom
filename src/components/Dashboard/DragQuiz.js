@@ -3,7 +3,6 @@ import { DragSource, DropTarget } from 'react-dnd';
 import SurveyItem from './SurveyItem';
 const style = {
   marginBottom: '.5rem',
-  backgroundColor: 'white',
   cursor: 'move'
 };
 // eslint-disable-next-line react/display-name

@@ -86,7 +86,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className={'dashboard__schedule has-header mt-30'}>
+      <div className={'dashboard__schedule has-header dashboard__schedule--active mt-30'}>
         <div className="dashboard__schedule-header">
           <h2 className={'i-schedule'}>진도율&성취율 운영대시보드</h2>
         </div>

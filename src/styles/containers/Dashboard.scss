@@ -2,6 +2,9 @@
   padding: 30px;
   min-height: calc(100vh - 60px);
   letter-spacing: -.025em;
+  @media screen and (max-width: 768px) {
+    padding: 15px;
+  }
 
   .mt-30 {
     margin-top: 30px;
@@ -10,17 +13,34 @@
 
 .dashboard__notice {
   display: flex;
+  @media screen and (max-width: 1440px) {
+    display: block;
+  }
   .box {
     flex: 1;
+    width: calc(50% - 15px);
     padding:0 30px;
     border-radius: 5px;
     @include theme('background', 'background');
+    @media screen and (max-width: 1440px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 768px) {
+      padding:0 15px;
+    }
     & ~ .box {
       margin-left: 30px;
+      @media screen and (max-width: 1440px) {
+        margin-left: 0;
+        margin-top: 20px;
+      }
     }
 
     .box__body {
       padding: 30px 0;
+      @media screen and (max-width: 768px) {
+        padding: 15px 0;
+      }
     }
     .box__noticeItem {
       display: flex;
@@ -38,6 +58,10 @@
         text-overflow: ellipsis;
         display: flex;
         align-items: center;
+        @include theme('color', 'nav-block-name');
+        @media screen and (max-width: 768px) {
+          max-width: calc(100% - 80px);
+        }
 
         .new {
           display: none;
@@ -63,12 +87,19 @@
         width: 110px;
         flex: none;
         text-align: center;
+        @media screen and (max-width: 768px) {
+          width: 80px;
+        }
       }
       .date {
         color:#999;
         width: 110px;
         flex: none;
         text-align: right;
+        @include theme('color', 'default-color');
+        @media screen and (max-width: 768px) {
+          width: 80px;
+        }
       }
     }
     .box__noticeList {}
@@ -88,6 +119,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        @include theme('color', 'nav-block-name');
         span {
           color:#ff0000;
           margin-right: 5px;
@@ -100,6 +132,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        @include theme('color', 'default-color');
       }
       .date {
         white-space: nowrap;
@@ -122,6 +155,8 @@
       border-radius: 5px;
       height: 75px;
       overflow: hidden;
+      @include theme('border-color', 'border');
+      overflow: auto;
       & ~ .box__taskItem {
         margin-top: 17px;
       }
@@ -149,6 +184,7 @@
             color:#000;
             margin-left: 5px;
             line-height: 1em;
+            @include theme('color', 'nav-block-name');
           }
           i {
             font-style: normal;
@@ -179,6 +215,9 @@
             margin-left: 10px;
             padding-left: 10px;
             border-left: 1px solid #ddd;
+            @include theme('color', 'default-color');
+            @include theme('border-color', 'border');
+
 
           }
         }
@@ -196,6 +235,8 @@
         z-index: 1;
         padding-bottom: 5px;
         border-bottom: 1px solid #666;
+        @include theme('color', 'default-color');
+        @include theme('border-color', 'border');
       }
     }
     .box__header {
@@ -204,25 +245,40 @@
       justify-content: space-between;
       height: 75px;
       border-bottom: 1px solid #ddd;
-
+      @include theme('border-color', 'border');
+      @media screen and (max-width: 768px) {
+        height: 60px;
+      }
       a {
         color:#666666;
         font-size:.875rem;
+        @include theme('color', 'default-color');
       }
 
       h2 {
         font-size: 1.125rem;
         font-weight: 600;
         padding-left: 1.75em;
+        line-height: 1.5em;
+        @include theme('color', 'nav-block-name');
 
         &.i-notice {
           background: url('#{$image-path}/dashboard-icon-1.png') no-repeat left center;
+          .theme-dark & {
+            background: url('#{$image-path}/dashboard-icon-1-white.png') no-repeat left center;
+          }
         }
         &.i-system {
           background: url('#{$image-path}/i-system.png') no-repeat left center;
+          .theme-dark & {
+            background: url('#{$image-path}/i-system-white.png') no-repeat left center;
+          }
         }
         &.i-task {
           background: url('#{$image-path}/dashboard-icon-2.png') no-repeat left center;
+          .theme-dark & {
+            background: url('#{$image-path}/dashboard-icon-2-white.png') no-repeat left center;
+          }
         }
       }
     }
@@ -233,20 +289,38 @@
   padding: 30px;
   border-radius: 5px;
   @include theme('background', 'background');
+  @media screen and (max-width: 768px) {
+    padding: 15px;
+  }
 
+  &.dashboard__schedule--active {
+    border: 1px solid #2e8bc5;
+  }
 
   .schedule__term {
     display: flex;
     align-items: center;
     margin-top: 15px;
     line-height: 24px;
+    @media screen and (max-width: 450px) {
+      display: block;
+    }
     h3 {
       background: url('#{$image-path}/i-calendar.png') no-repeat left center;
       padding-left: 2em;
+      line-height: 1.25em;
+      @include theme('color', 'nav-block-name');
+      .theme-dark & {
+        background: url('#{$image-path}/dashboard-icon-4-white.png') no-repeat left center;
+      }
     }
     p {
       color:#7a91ad;
       margin-left: 5px;
+      @media screen and (max-width: 450px) {
+        margin:0;
+        padding-left: 2em;
+      }
     }
   }
   &.has-header {
@@ -268,9 +342,14 @@
         font-size: 1.125rem;
         font-weight: 600;
         padding-left: 1.75em;
+        line-height: 1.5em;
+        @include theme('color', 'nav-block-name');
 
         &.i-schedule {
           background: url('#{$image-path}/dashboard-icon-4.png') no-repeat left center;
+          .theme-dark & {
+            background: url('#{$image-path}/dashboard-icon-4-white.png') no-repeat left center;
+          }
         }
       }
     }
@@ -280,9 +359,12 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
+    @include theme('border-color', 'border');
+
 
     &.schedule--close {
-      border: 1px solid #ddd !important;
+      border: 1px solid #ddd;
+      @include theme('border-color', 'border');
       box-shadow: none !important;
       .cell:not(.col__title) {
         display: none !important;
@@ -301,7 +383,7 @@
       &:hover {
         .schedule__header,
         .col__title {
-          background:#dddddd !important;
+          @include theme('background', 'border');
         }
         .dnd {
           display: block !important;
@@ -335,6 +417,7 @@
     align-items: center;
     height: 40px;
     padding: 0 12px;
+    @include theme('background', 'schedulebg');
     .switch-box {
       margin-left: auto;
       display: flex;
@@ -387,6 +470,12 @@
       font-size: 14px;
       background:#eee;
       border-radius: 2em;
+      @include theme('color', 'default-color');
+      @media screen and (max-width: 768px) {
+        padding:0 5px;
+        line-height: 20px;
+        font-size: 12px;
+      }
     }
     h3 {
       font-size: 1.25rem;
@@ -400,6 +489,10 @@
       padding: 5px;
       border-radius: 2em;
       margin:0 20px;
+      @include theme('background', 'background');
+      @media screen and (max-width: 768px) {
+        margin:0 5px;
+      }
       span {
         font-size: .875rem;
         color:#666666;
@@ -408,17 +501,20 @@
           margin-left: 5px;
           padding-left: 5px;
           border-left: 1px solid #ddd;
+          @include theme('border-color', 'border');
         }
       }
     }
     p {
       font-size: 1rem;
       color:#000;
+      @include theme('color', 'nav-block-name');
     }
   }
   .schedule__content {
     display: flex;
     justify-content: flex-start;
+    overflow: auto;
 
     .schedule__col {
       &:first-child {
@@ -437,6 +533,7 @@
       .cell {
         height: 35px;
         border-bottom: 1px dashed #ddd;
+        @include theme('border-color', 'border');
         background: rgba(235,122,31,.1);
         padding:0 5px;
         display: flex;
@@ -454,15 +551,21 @@
           line-height: 34px;
           display: block;
           min-width: 50px;
+          @include theme('color', 'default-color');
           strong {
             font-size: 1em;
             color:#000;
+            @include theme('color', 'nav-block-name');
           }
         }
         .insert-btn {
           font-size: 12px;
           background:#fff;
           border: 1px solid #ddd;
+          @include theme('border-color', 'border');
+          @include theme('background', 'background');
+          @include theme('color', 'nav-block-name');
+
           line-height: 20px;
           padding:0 10px;
           border-radius: 2em;
@@ -478,6 +581,8 @@
         border: none;
         border-bottom: 1px solid #ddd;
         background: #fff;
+        @include theme('background', 'schedulebg');
+        @include theme('border-color', 'border');
         .schedule__type {
           width: 50px;
           cursor: pointer;
@@ -529,6 +634,7 @@
               font-size: 12px;
               line-height: 1em;
               margin-top: 3px;
+              @include theme('color', 'nav-block-name');
             }
           }
           span {
@@ -600,6 +706,8 @@
           border-radius: 5px;
           color:#999999;
           line-height: 1.25em;
+          @include theme('border-color', 'border');
+          @include theme('color', 'default-color');
         }
       }
 
@@ -621,6 +729,7 @@
       font-size: 1.25rem;
       font-weight: 600;
       line-height: 40px;
+      @include theme('color', 'nav-block-name');
     }
 
     button {
@@ -630,6 +739,7 @@
       color:#fff;
       background:#666666;
       font-size: 14px;
+      @include theme('background', 'default-color');
     }
   }
 }
@@ -638,17 +748,30 @@
   display: flex;
   margin:0 -30px;
   border-bottom: 1px solid #ddd;
+  @include theme('border-color', 'border');
+  @media screen and (max-width: 768px) {
+    margin: 0 -15px;
+  }
   button {
     height: 65px;
     font-size:18px;
-    width: 135px;
-    flex: none;
+    flex: 1;
+    max-width: 135px;
     line-height: 1em;
     color:#666;
+    @include theme('color', 'default-color');
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      height: 50px;
+    }
     span {
       display: block;
       font-size: 12px;
       margin-top: 3px;
+      @media screen and (max-width: 768px) {
+        font-size: 10px;
+      }
     }
     &.active {
       color:#2e8bc5;

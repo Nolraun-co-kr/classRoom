@@ -1,5 +1,5 @@
 import React from 'react';
-import { GrClose } from 'react-icons/gr';
+import { IoClose } from 'react-icons/all';
 
 const Modal = ({ title, onClickClose, children, maxWidth }) => {
   return (
@@ -8,7 +8,7 @@ const Modal = ({ title, onClickClose, children, maxWidth }) => {
         <header className={'_modal__header'}>
           <h2>{title}</h2>
           <button onClick={onClickClose}>
-            <GrClose />
+            <IoClose />
           </button>
         </header>
         <div className={'_modal__body _modal__body--bg-none'}>

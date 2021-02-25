@@ -1,0 +1,11 @@
+
+@include theme('color', 'nav-block-name');
+
+@include theme('color', 'default-color');
+
+@include theme('border-color', 'border');
+
+@include theme('background', 'background');
+@include theme('background', 'content-bg');
+@include theme('background', 'schedulebg');
+@include theme('background', 'modalbg');

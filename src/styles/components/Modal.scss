@@ -9,12 +9,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  .theme-dark & {
+    border: 1px solid #000;
+  }
+
+  ._dataTable {
+    overflow : auto;
+    table {
+      min-width: 1200px;
+    }
+
+  }
 
   .schedule__tabs {
     margin: 0;
     background:#fff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    @include theme('background', 'background');
 
     & + ._modal__block {
       border-top-left-radius: 0;
@@ -45,15 +57,20 @@
   align-items: center;
   justify-content: space-between;
   background:#eee;
+  @include theme('background', 'modalbg');
+
   padding:0 20px;
   h2 {
     font-weight: 600;
     flex: 1;
+    @include theme('color', 'nav-block-name');
   }
   button {
     flex: none;
     width: 16px;
     height: 16px;
+    font-size: 20px;
+    @include theme('color', 'nav-block-name');
 
     svg {
       vertical-align: super;
@@ -66,6 +83,7 @@
   @include theme('background', 'background');
   &._modal__body--bg-none {
     background: #eee;
+    @include theme('background', 'modalbg');
     padding:0 20px 20px;
   }
 }
@@ -144,6 +162,9 @@
 
 ._modal__foot {
   background:#ddd;
+  .theme-dark & {
+    background:#1d1f22;
+  }
   padding: 20px;
   ._modal__actions {
     justify-content: flex-end;
@@ -162,12 +183,16 @@
   background:#fff;
   border-radius: 5px;
   overflow: hidden;
+  @include theme('background', 'background');
   &.bg-none {
     background: none;
     padding: 0;
   }
   &._modal__block--chart {
     background:#e5eaf0;
+    .theme-dark & {
+      background:#1d1f22;
+    }
     ._modal__block-header {
       height: 95px;
       border: none;
@@ -177,6 +202,10 @@
       margin:0 -20px;
       background:#fff;
       padding:20px;
+      .theme-dark & {
+        background:#1d1f22;
+        border-top: 1px solid #50555c;
+      }
 
       canvas {
         width: 100%;
@@ -191,6 +220,7 @@
   .help-text {
     font-size: 14px;
     color:#999;
+    @include theme('color', 'default-color');
     line-height: 1.25em;
     padding-left: 1.125em;
     background: url('#{$image-path}/icon-help.png') no-repeat left  5px !important;
@@ -226,6 +256,7 @@
 
     & ~ ._modal__block-body {
       border-top: 1px solid #ddd;
+      @include theme('border-color', 'border');
     }
 
     .custom-checkbox {
@@ -239,6 +270,7 @@
     align-items: center;
     height: 55px;
     border-bottom: 1px solid #ddd;
+    @include theme('border-color', 'border');
     &.border-none {
       border: none;
       height: 40px;
@@ -255,6 +287,7 @@
       font-size: 1.125rem;
       color:#000;
       line-height: 30px;
+      @include theme('color', 'nav-block-name');
 
       &.i-quiz {
         background: url('#{$image-path}/title-icon-quiz.png') no-repeat left center;
@@ -311,6 +344,10 @@
     display: flex;
     height: 40px;
     align-items: center;
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      height: auto;
+    }
 
     & ~ .flex {
       margin-top: 10px;
@@ -350,15 +387,41 @@
 
   .window-cofing {
     h4 {
+      @include theme('color', 'nav-block-name');
       width: 135px;
     }
   }
 
   .timeform {
     margin-left: 45px;
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+      width: 100%;
+      flex: none;
+      position: relative;
+      padding-top: 20px;
+      margin-top: 10px;
+
+      .flex {
+        align-items: flex-start;
+        .select {
+          flex: 0;
+          margin-top: 5px;
+        }
+      }
+    }
     h4 {
       margin-right: 10px;
+      @media screen and (max-width: 768px) {
+        margin-left: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        @include theme('color', 'nav-block-name');
+      }
     }
+
   }
 
   .select {
@@ -379,7 +442,12 @@
       width: 100px;
       font-size: 14px;
       color:#666666;
+      @include theme('border-color', 'border');
+      @include theme('color', 'default-color');
       background: #fff url('#{$image-path}/nav-toggle-down.png') no-repeat calc(100% - 15px) center;
+      .theme-dark &{
+        background: #2c3038 url('#{$image-path}/nav-toggle-down.png') no-repeat calc(100% - 15px) center;
+      }
     }
   }
 
@@ -394,6 +462,9 @@
       padding:0 15px;
       font-size: 14px;
       color:#666666;
+      @include theme('background', 'background');
+      @include theme('color', 'default-color');
+      @include theme('border-color', 'border');
     }
   }
   ._btn {
@@ -433,6 +504,9 @@
 
   .row {
     margin: 0;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
     & ~ .row {
       margin-top: 10px;
     }
@@ -442,6 +516,7 @@
     flex: none;
     line-height: 20px;
     padding: 10px 0;
+    @include theme('color', 'nav-block-name');
     &.required {
       &:after {
         content: '*';
@@ -456,6 +531,11 @@
       margin-top: 10px;
     }
 
+    .flex {
+      & > p {
+        @include theme('color', 'nav-block-name');
+      }
+    }
     .file-btn {
       input {
         display: none;
@@ -466,6 +546,8 @@
         border: 1px solid #999;
         line-height: 38px;
         margin-right: 10px;
+        @include theme('border-color', 'border');
+        @include theme('color', 'default-color');
       }
     }
     .input {
@@ -505,6 +587,7 @@
 
   p {
     font-size: 1rem;
+    @include theme('color', 'nav-block-name');
     & ~ p {
       margin-top: 5px;
     }
@@ -542,7 +625,7 @@
 }
 
 ._modal__block--evaluation {
-  background:#e5eaf0;
+  background:#e5eaf0 !important;
 
 }
 
@@ -555,13 +638,26 @@
     align-items: center;
     padding:0 30px;
     border-radius: 5px;
+    @include theme('background', 'background');
     & ~ .evaluation-item {
       margin-top: 10px;
+    }
+    @media screen and (max-width: 768px) {
+      height: auto;
+      padding: 10px;
+      display: block;
     }
 
     strong {
       width: 210px;
       flex: none;
+      @include theme('color', 'nav-block-name');
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+      }
+
     }
     .btn-underline {
       color:#2f8bc5;
@@ -595,10 +691,16 @@
 .evaluation-feedback {
   .row {
     display: flex;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
   }
   .insertForm__name {
     width: 110px;
     flex: none;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
   .insertForm__content {
     flex: 1;
@@ -608,6 +710,8 @@
 .evaluation-score {
   display: flex;
   align-items: center;
+
+  @include theme('color', 'nav-block-name');
 
   .input {
     width: 100px;
@@ -634,6 +738,8 @@
   p {
     margin-top: 5px;
     color:#000;
+    @include theme('color', 'nav-block-name');
+
     span {
       color:#6ea24d;
     }
@@ -650,6 +756,10 @@
     display: flex;
     align-items: center;
     margin:0 -10px;
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin: 0;
+    }
   }
   .col-info {
     padding:0 10px;
@@ -659,9 +769,17 @@
       border-left: 1px solid #ddd;
       line-height: 10px;
     }
+    @media screen and (max-width: 768px) {
+      display: block;
+      padding: 0;
+      border: none !important;
+      line-height: 20px !important;
+    }
     strong {
       font-weight: 400;
       color:#000;
+      @include theme('color', 'nav-block-name');
+
     }
   }
 }
@@ -671,10 +789,13 @@
     margin-top: 20px;
     padding-top: 15px;
     border-top:1px solid #ddd;
+    @include theme('border-color', 'border');
   }
   .title {
     font-size: 1rem;
     margin-bottom: 10px;
+    @include theme('color', 'nav-block-name');
+
   }
   .CodeMirror {
     border-radius: 0;

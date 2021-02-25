@@ -1,6 +1,8 @@
 .lectureCalendar {
   padding:25px;
   background:#fff;
+  @include theme('background', 'background');
+
   .react-calendar__navigation__prev2-button {
     display: none;
   }
@@ -13,6 +15,7 @@
   }
   .react-calendar {
     border: none;
+    @include theme('background', 'background');
   }
   .react-calendar__viewContainer {
     border-top: 1px solid #ddd;
@@ -24,6 +27,8 @@
     line-height: 33px;
     border: 1px solid transparent;
     margin:0 auto;
+    @include theme('color', 'nav-block-name');
+    text-decoration: none;
   }
   .react-calendar__tile--active {
     background:#2e8bc5 !important;
@@ -44,15 +49,25 @@
     }
   }
 
+  .react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus {
+    .theme-dark & {
+      background:#2c3038;
+    }
+  }
+
   .react-calendar__tile:disabled {
     background: none !important;
     abbr {
       color:#c7c7c7 !important;
+      .theme-dark &{
+        opacity: .5;
+      }
     }
   }
   .react-calendar__navigation button {
     background: none !important;
     font-size: 20px;
+    @include theme('color', 'nav-block-name');
     &.react-calendar__navigation__next-button {
       text-indent: -999px;
       overflow: hidden;
