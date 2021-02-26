@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b52a3121-0f80-45e8-b7a3-0912a2011d71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashaboardQuizModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashaboardQuizModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/EvaluationChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/EvaluationChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/VideoPlayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/VideoPlayer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/VideoPlayer/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,8 @@
       <workItem from="1613965483961" duration="996000" />
       <workItem from="1614150945114" duration="941000" />
       <workItem from="1614211152677" duration="12446000" />
-      <workItem from="1614272363644" duration="15863000" />
+      <workItem from="1614272363644" duration="16404000" />
+      <workItem from="1614322202004" duration="304000" />
     </task>
     <servers />
   </component>

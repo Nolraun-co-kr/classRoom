@@ -43,6 +43,7 @@
     "videojs-landscape-fullscreen": "^11.1.0",
     "videojs-max-quality-selector": "^0.9.1",
     "videojs-offset": "^2.1.2",
+    "videojs-youtube": "^2.6.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

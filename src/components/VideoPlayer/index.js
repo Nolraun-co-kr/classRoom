@@ -71,22 +71,27 @@ const Index = ({ vdata, setVdata, limitTime }) => {
     muted: false,
     sources: [
       {
-        src: '//vjs.zencdn.net/v/oceans.mp4?720',
-        type: 'video/mp4',
-        label: '720P',
-        selected: false
-      },
-      {
-        src: '//vjs.zencdn.net/v/oceans.mp4?480',
-        type: 'video/mp4',
-        label: '480P',
-        selected: true
-      },
-      {
-        src: '//vjs.zencdn.net/v/oceans.mp4?360',
-        type: 'video/mp4',
-        label: '360P'
+        src: 'https://www.youtube.com/watch?v=hAJ3clKru-M',
+        type: 'video/youtube'
       }
+
+      // {
+      //   src: '//vjs.zencdn.net/v/oceans.mp4?720',
+      //   type: 'video/mp4',
+      //   label: '720P',
+      //   selected: false
+      // },
+      // {
+      //   src: '//vjs.zencdn.net/v/oceans.mp4?480',
+      //   type: 'video/mp4',
+      //   label: '480P',
+      //   selected: true
+      // },
+      // {
+      //   src: '//vjs.zencdn.net/v/oceans.mp4?360',
+      //   type: 'video/mp4',
+      //   label: '360P'
+      // }
     ],
     html5: {
       hls: {

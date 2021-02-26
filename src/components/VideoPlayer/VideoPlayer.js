@@ -5,6 +5,7 @@ import 'video.js/dist/video-js.min.css';
 import TrackRow from './TrackRow';
 import 'videojs-landscape-fullscreen';
 require('videojs-offset');
+require('videojs-youtube');
 
 require('@silvermine/videojs-quality-selector')(videojs);
 
