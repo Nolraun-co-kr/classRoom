@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import Chart from 'chart.js';
 
 const EvaluationChart = () => {
   const canvasRef = useRef(null);
@@ -12,7 +11,7 @@ const EvaluationChart = () => {
         backgroundColor: '#6fa44c',
         borderColor: '#6fa44c',
         borderWidth: 1,
-        data: [12, 19, 3, 5, 2]
+        data: [6, 5, 4, 3, 2]
       }
     ]
   };
@@ -29,9 +28,9 @@ const EvaluationChart = () => {
   useEffect(() => {
     const ctx = canvasRef.current?.getContext('2d');
     if (!ctx) return;
-    // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars,no-undef
     const chart = new Chart(ctx, {
-      type: 'line',
+      type: 'bar',
       data,
       options
     });

@@ -7,6 +7,7 @@ import LoginBoard from '../../components/Login/LoginBoard';
 const noticeData = [
   {
     id: 1,
+
     title: '신규 LMS 오픈'
   },
   {

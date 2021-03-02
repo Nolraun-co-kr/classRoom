@@ -655,9 +655,7 @@ const DashaboardQuizModal = ({
               </div>
               <div className="_modal__block-body">
                 {
-                  false && (
                     <EvaluationChart />
-                  )
                 }
               </div>
             </div>

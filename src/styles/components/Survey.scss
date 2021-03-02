@@ -9,27 +9,61 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include theme('border-color', 'border');
+    @media screen and (max-width: 1200px) {
+      display: block;
+      border: 1px solid #ddd;
+      @include theme('border-color', 'border');
+      border-top: none;
+      height: auto;
+    }
   }
   .survey__title {
     font-size: 1.5rem;
     font-weight: 600;
     @include theme('color', 'nav-block-name');
+    @media screen and (max-width: 1200px) {
+      text-align: center;
+      padding: 15px 10px;
+      border-bottom: 1px solid #ddd;
+      @include theme('border-color', 'border');
+      font-size:1.25rem;
+    }
   }
   .survey__info {
     margin-left: auto;
     display: flex;
     align-items: center;
+    @media screen and (max-width: 1200px) {
+
+      padding: 15px 10px;
+      display: block;
+    }
     .block {
       display: flex;
       align-items: center;
       color:#666666;
+      .theme-dark &{
+        color:#fff;
+      }
+      @media screen and (max-width: 1200px) {
+        justify-content: center;
+      }
     }
     .block--clock {
       margin-left: 40px;
+      @media screen and (max-width: 1200px) {
+        margin: 20px 0 0;
+      }
       strong {
         padding-left: 2em;
         background: url('#{$image-path}/i-clock.png') no-repeat left center !important;
         @include theme('color', 'nav-block-name');
+        .theme-dark &{
+          background: url('#{$image-path}/i-clock-white.png') no-repeat left center !important;
+          background-size: auto 20px !important;
+
+        }
       }
       .clock {
         display: flex;
@@ -45,7 +79,9 @@
           border-radius: 5px;
           text-align: center;
           border: 1px solid #ddd;
-          @include theme('border-color', 'border');
+          .theme-dark & {
+            border-color:#fff;
+          }
         }
       }
 
@@ -53,6 +89,8 @@
     strong {
       color:#000000;
       margin-right: 5px;
+      @include theme('color', 'nav-block-name');
+
     }
 
   }
@@ -63,6 +101,12 @@
     height: 100px;
     padding:0 30px;
     position: relative;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1200px) {
+      height: auto;
+      padding: 20px 0;
+    }
 
     .btn {
       display: flex;
@@ -76,25 +120,67 @@
       svg {
         margin-right: 5px;
       }
+      @media screen and (max-width: 1200px) {
+        padding:0 5px;
+      }
     }
 
     .right {
       display: flex;
       align-items: center;
+      @media screen and (max-width: 1200px) {
+        flex: 1;
+      }
+      @media screen and (max-width: 768px) {
+        width: calc(100% + 6px);
+        margin:10px -3px 0;
+      }
 
       .btn {
         margin-left: 10px;
+
+        @media screen and (max-width: 1200px) {
+          width: 100%;
+          justify-content: center;
+        }
+        @media screen and (max-width: 768px) {
+          margin:0 3px;
+          flex: 1;
+          justify-content: center;
+
+          svg {
+            display: none;
+          }
+        }
       }
     }
     .left{
       margin-right: auto;
       display: flex;
       align-items: center;
+      @media screen and (max-width: 1200px) {
+        flex: none;
+      }
+      @media screen and (max-width: 768px) {
+        width: calc(100% + 10px);
+        margin:0 -5px;
+      }
 
       .btn {
         border-color:#2e8bc5;
         color:#2e8bc5;
         margin-right: 10px;
+        @media screen and (max-width: 1200px) {
+          text-indent: -9999px;
+          overflow: hidden;
+          margin-right: 3px;
+        }
+        @media screen and (max-width: 768px) {
+          margin:0 5px;
+          flex: 1;
+          justify-content: center;
+        }
+
 
         &.active {
           background:#2e8bc5;
@@ -109,20 +195,37 @@
       transform: translate(-50% , -50%);
       display: flex;
       align-items: center;
+      @media screen and (max-width: 1200px) {
+        order: 5;
+        position: static;
+        transform: none;
+        width: 100%;
+        flex: none;
+        justify-content: center;
+        margin-top: 20px;
+      }
 
       .survey__progress {
         display: flex;
         align-items: center;
+        @include theme('color', 'nav-block-name');
 
         strong {
           font-weight: 600;
           font-size: 1.25rem;
+
+          @media screen and (max-width: 1200px) {
+            font-size: 1rem;
+          }
         }
         .bar {
           width: 200px;
           background:#e5eaf1;
           border-radius: 2em;
           overflow: hidden;
+          @media screen and (max-width: 768px) {
+            width: 120px;
+          }
           span {
             border-radius: 2em;
             display: block;
@@ -147,10 +250,16 @@
         & ~ p {
           border-left: 1px solid #ddd;
         }
+        @media screen and (max-width: 1200px) {
+          font-size: 1rem;
+        }
 
         strong {
           margin-right: 10px;
           font-size:1.25rem;
+          @media screen and (max-width: 1200px) {
+            font-size: 1rem;
+          }
         }
         span {
           color:#2e8bc5;;
@@ -165,6 +274,11 @@
       background: #999;
       padding: 30px;
       display: flex;
+      @media screen and (max-width: 1200px) {
+        padding: 5px;
+        border-radius: 5px;
+        display: block;
+      }
     }
 
     .survey__content-block-list {
@@ -212,6 +326,12 @@
       & ~ .survey__content-block {
         margin-top: 40px;
       }
+
+      .survey__type2 {
+        ._dataTable table {
+          min-width: 768px;
+        }
+      }
     }
 
     .survey__body-answer {
@@ -222,12 +342,23 @@
       width: 320px;
       flex: none;
       margin-left: 10px;
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+      }
+      ._dataTable table {
+        min-width: 100%;
+      }
     }
     .survey__body-inner {
       display: flex;
       border-radius: 5px;
       overflow: hidden;
       flex: 1;
+      @media screen and (max-width: 1200px) {
+        display: block;
+      }
     }
     .survey__content {
       flex: 1;
@@ -236,6 +367,9 @@
       position: relative;
       padding:0 40px;
       @include theme('background', 'background');
+      @media screen and (max-width: 1200px) {
+        padding:0 15px;
+      }
     }
     .survey__init {
       position: absolute;
@@ -253,6 +387,11 @@
       width: 80px;
       flex: none;
       background:#dfeaf2;
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
     }
     .survey__nav-state-img {
       height:60px;
@@ -261,14 +400,29 @@
       justify-content: center;
       font-size: 40px;
       color:#adbfcc;
+      @media screen and (max-width: 1200px) {
+        width: 60px;
+        flex: none;
+      }
     }
     .survey__nav-list {
+      @media screen and (max-width: 1200px) {
+        display: flex;
+        height: 60px;
+        align-items: center;
+        overflow: auto;
+      }
       .survey__nav-item {
         position: relative;
         width: 40px;
         height: 40px;
         display: block;
         margin:0 auto;
+        @media screen and (max-width: 1200px) {
+          width: 40px;
+          flex: none;
+          margin:0 10px !important;
+        }
         i {
           position: absolute;
           z-index: 5;
@@ -339,6 +493,8 @@
 .survey__select-type {
   padding: 40px 0;
   display: flex;
+  flex-wrap: wrap;
+  margin:0 -5px;
 }
 
 .survey__select-type-item {
@@ -347,6 +503,32 @@
   padding: 40px 0;
   text-align: center;
   background:#f2f2f2;
+  @media screen and (max-width: 1200px) {
+    width: calc(33.333% - 10px);
+    margin:0 5px !important;
+    flex: none;
+    &:nth-child(n + 4) {
+      margin-top: 10px !important;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    width: calc(50% - 10px);
+    &:nth-child(n + 3) {
+      margin-top: 10px !important;
+    }
+  }
+  .theme-dark & {
+    background: none;
+    border: 1px solid #ddd;
+    color:#999;
+
+    .custom-checkbox {
+      span {
+        background: none !important;
+        border: 5px solid #fff ;
+      }
+    }
+  }
   & ~ .survey__select-type-item {
     margin-left: 10px;
   }
@@ -379,6 +561,9 @@
   display:flex;
   align-items: center;
   justify-content: flex-end;
+  @media screen and (max-width: 768px) {
+    justify-content: flex-start;
+  }
 
   button {
     height: 60px;
@@ -389,6 +574,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 768px) {
+      width: auto;
+      padding:0 10px;
+      height: 45px;
+      font-size: 16px;
+    }
 
     @include theme('color', 'default-color');
 
@@ -438,6 +629,9 @@
 
   ._modal__block{
     padding: 10px 30px;
+    @media screen and (max-width: 768px) {
+      padding:10px;
+    }
   }
   ._modal__block-body {
 
@@ -447,6 +641,9 @@
       }
       span {
         margin-right: 5px;
+        .theme-dark & {
+          color:#fff;
+        }
       }
     }
   }
@@ -506,6 +703,9 @@
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  @media screen and (max-width: 768px) {
+    padding: 15px;
+  }
   .survey__type1-description {
     color:#666;
     font-size: 1rem;
@@ -517,6 +717,16 @@
   .survey__type1-selector {
     .flex {
       height: auto;
+      @media screen and (max-width: 768px) {
+        display: block;
+
+        .custom-checkbox {
+          margin: 0;
+          & ~ .custom-checkbox {
+            margin-top: 10px !important;
+          }
+        }
+      }
 
       &.column {
         display: block;
@@ -524,6 +734,7 @@
     }
     .block {
       .custom-checkbox {
+
         & ~ .custom-checkbox {
           margin-top: 5px;
         }

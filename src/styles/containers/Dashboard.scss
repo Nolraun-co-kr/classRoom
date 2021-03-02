@@ -372,6 +372,13 @@
       .col__title {
         border: none !important;
       }
+      @media screen and (max-width: 768px) {
+         .schedule__header {
+           height: auto;
+           min-height: 40px;
+           padding: 5px 12px;
+         }
+      }
     }
   }
 
@@ -417,6 +424,7 @@
     align-items: center;
     height: 40px;
     padding: 0 12px;
+    flex-wrap: wrap;
     @include theme('background', 'schedulebg');
     .switch-box {
       margin-left: auto;
@@ -481,6 +489,18 @@
       font-size: 1.25rem;
       color:#2e8bc5;
       font-weight: 600;
+    }
+    .schedule__header-block {
+      background: none !important;
+      margin: 0 !important;
+      padding:0 !important;
+      justify-content: flex-end;
+      margin-left: auto !important;
+      @media screen and (max-width: 768px) {
+        margin-top: 10px !important;
+        width: 100%;
+        flex: none;
+      }
     }
     div {
       display: flex;
@@ -776,6 +796,59 @@
     &.active {
       color:#2e8bc5;
       border-bottom:4px solid #2e8bc5;
+    }
+  }
+}
+
+.trading__header-component {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  border: 1px solid #ddd;
+  @include theme('border-color', 'border');
+  border-radius: 3px;
+  margin-right: 10px;
+
+  .select{
+    width: 150px;
+    flex: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    @include theme('border-color', 'border');
+    position: relative;
+    &:after {
+      background: url('#{$image-path}/nav-toggle-down.png') no-repeat center;
+      width: 8px;
+      height: 4px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      content:'';
+    }
+    select {
+      width: 100%;
+      height: 33px;
+      background: none;
+      padding:0 10px;
+      font-size: 14px;
+      .theme-dark &{
+        color:#fff !important;
+      }
+    }
+  }
+  button {
+    height: 33px !important;
+    width: 35px !important;
+    flex: none !important;
+    color:#666 !important;
+
+    .theme-dark &{
+      color:#999 !important;
+    }
+    svg {
+      vertical-align: middle !important;
+      margin-top: -4px;
     }
   }
 }

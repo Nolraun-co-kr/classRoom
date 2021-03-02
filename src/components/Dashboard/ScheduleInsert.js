@@ -28,29 +28,32 @@ const ScheduleInsert = ({
         </div>
         <p>하미영 교수</p>
 
-        <label className="switch-box">
-          <p>다시 분할하기</p>
-          <label htmlFor="" className={'switch'}>
-            <input type="checkbox"/>
-            <span>
+        <div className={'schedule__header-block'}>
+
+          <label className="switch-box">
+            <p>다시 분할하기</p>
+            <label htmlFor="" className={'switch'}>
+              <input type="checkbox"/>
+              <span>
               <i />
             </span>
+            </label>
           </label>
-        </label>
-        <button className={'toggle'} onClick={() => setOpen(!open)}>
-          {!open
-            // eslint-disable-next-line multiline-ternary
-            ? (
-              <>
-                열기 <IoIosArrowDown />
-              </>
-              ) : (
-              <>
-                닫기 <IoIosArrowUp />
-              </>
-              )}
+          <button className={'toggle'} onClick={() => setOpen(!open)}>
+            {!open
+              // eslint-disable-next-line multiline-ternary
+              ? (
+                <>
+                  열기 <IoIosArrowDown />
+                </>
+                ) : (
+                <>
+                  닫기 <IoIosArrowUp />
+                </>
+                )}
 
-        </button>
+          </button>
+        </div>
       </div>
       <div className="schedule__content">
         <div className="schedule__col">

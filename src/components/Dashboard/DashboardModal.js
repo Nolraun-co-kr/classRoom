@@ -1,12 +1,13 @@
 import React from 'react';
 import { IoClose } from 'react-icons/all';
 
-const Modal = ({ title, onClickClose, children, maxWidth }) => {
+const Modal = ({ title, onClickClose, children, maxWidth, headerComponent }) => {
   return (
     <div className={'_modal'}>
       <div className={'_modal__content'} style={{ maxWidth: `${maxWidth}px` }}>
         <header className={'_modal__header'}>
           <h2>{title}</h2>
+          {headerComponent}
           <button onClick={onClickClose}>
             <IoClose />
           </button>

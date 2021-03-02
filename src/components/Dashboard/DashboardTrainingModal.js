@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import Editor from '../Editor';
-import { BsArrowDown, HiCheck } from 'react-icons/all';
+import { BsArrowDown, BsArrowLeft, BsArrowRight, HiCheck } from 'react-icons/all';
 import DashboardModal from './DashboardModal';
 import CodeEditor from '../CodeEditor/Editor';
 
@@ -15,6 +15,18 @@ const DashboardTrainingModal = ({
   const handleClickChangeTab = useCallback((value) => {
     setTab(value);
   }, [tab]);
+
+  const handleClickCheckAll = (e) => {
+    if (e.target.checked) {
+      document.querySelectorAll('.custom-checkbox input').forEach(input => {
+        input.checked = true;
+      });
+    } else {
+      document.querySelectorAll('.custom-checkbox input').forEach(input => {
+        input.checked = false;
+      });
+    }
+  };
 
   return (
     <div className={'insertForm'}>
@@ -221,7 +233,7 @@ const DashboardTrainingModal = ({
                   </select>
                 </div>
               </div>
-              <div className={'_dataTable _dataTable--border'}>
+              <div className={'_dataTable _dataTable--border _dataTable--trading'}>
                 <table>
                   <colgroup>
                     <col width={'70px'}/>
@@ -239,8 +251,8 @@ const DashboardTrainingModal = ({
                     <th>
                       선택
                       <br/>
-                      <label className={'custom-checkbox'} htmlFor={'ak1'}>
-                        <input type="checkbox" id={'ak1'} />
+                      <label className={'custom-checkbox'} htmlFor={'all-ak1'}>
+                        <input type="checkbox" id={'all-ak1'} onChange={handleClickCheckAll} />
                         <span className={'mr-0'} />
                       </label>
                     </th>
@@ -299,8 +311,8 @@ const DashboardTrainingModal = ({
                   </tr>
                   <tr>
                     <td>
-                      <label className={'custom-checkbox'} htmlFor={'ak1'}>
-                        <input type="checkbox" id={'ak1'} />
+                      <label className={'custom-checkbox'} htmlFor={'ak2'}>
+                        <input type="checkbox" id={'ak2'} />
                         <span className={'mr-0'} />
                       </label>
                     </td>
@@ -343,6 +355,18 @@ const DashboardTrainingModal = ({
                   title={'채점하기'}
                   maxWidth={'1024'}
                   onClickClose={() => setShowEvalModal(!showEvalModal)}
+                  /* eslint-disable-next-line react/no-children-prop */
+                  headerComponent={(
+                    <div className={'trading__header-component'}>
+                      <button> <BsArrowLeft /> </button>
+                      <div className="select">
+                        <select name="" id="">
+                          <option value="">학생선택</option>
+                        </select>
+                      </div>
+                      <button> <BsArrowRight /> </button>
+                    </div>
+                  )}
                   /* eslint-disable-next-line react/no-children-prop */
                   children={(
                     <>
