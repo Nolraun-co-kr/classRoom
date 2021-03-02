@@ -5,16 +5,19 @@ const MobileHomeNav = () => {
   return (
     <nav className={'mobileHomeNav'}>
       <Link to={'/'} className={'active'}>
-        내 강좌
+        대시보드
       </Link>
       <Link to={'/'} >
-        내 학습모듈
+        내강좌
       </Link>
       <Link to={'/'} >
-        내 학습활동
+        그룹
       </Link>
       <Link to={'/'} >
-        강좌 마스터피스
+        채팅
+      </Link>
+      <Link to={'/'} >
+        캘린더
       </Link>
     </nav>
   );
