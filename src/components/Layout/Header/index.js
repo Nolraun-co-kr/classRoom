@@ -13,7 +13,8 @@ const Header = ({ gradient, handleChangeTheme, theme, onChangeOpenUserMenu, onCh
       <div className={'mobile-header-title'}>
         <button className={'menu'} onClick={onChangeOpenMobileNav} />
         <h2>
-          <img src="/assets/images/sy-logo.png" alt="" style={{ height: '30px' }}/>
+          {/* <img src="/assets/images/sy-logo.png" alt="" style={{ height: '30px' }}/> */}
+          주요메뉴
         </h2>
       </div>
 
